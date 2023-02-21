@@ -1,5 +1,6 @@
         /* 웹폰트 */
         @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
         /* 여백 초기화 */
         * {
             margin: 0;
@@ -9,6 +10,7 @@
             font-family: "NexonLv1Gothic";
 
         }
+
         /* 링크 초기화 */
         a {
             text-decoration: none;
@@ -16,15 +18,22 @@
         }
 
         /* 제목 초기화 */
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: normal;
         }
 
         /* 목록 초기화 */
-        ul,li,ol {
+        ul,
+        li,
+        ol {
             list-style: none;
         }
-        
+
         /* 전체영역 */
 
         body {
@@ -36,16 +45,17 @@
             text-align: center;
             padding-bottom: 40px;
             border-bottom: 1px dashed #dcdcdc;
-            }
-        
+        }
+
 
 
         #header h1 a {
             font-size: 80px;
             font-weight: 800;
             color: #0243f1;
-            
+
         }
+
         #header nav ul li {
             display: inline;
         }
@@ -56,8 +66,9 @@
             padding: 10px 20px;
             margin: 6px 3px;
             display: inline-block;
-            transition: background-color 0.3s color 0,3s;
+            transition: background-color 0.3s color 0, 3s;
         }
+
         #header nav ul li a:hover {
             background-color: #0243f1;
             color: #fff;
@@ -68,35 +79,44 @@
             color: #fff;
         }
 
-        @media (max-width: 600px){
-            body{
+        @media (max-width: 600px) {
+            body {
                 padding: 20px;
             }
-            #header h1{
+
+            #header h1 {
                 margin-bottom: 10px;
             }
-            #header h1 a{
+
+            #header h1 a {
                 font-size: 40px;
             }
-            #header nav ul li a{
+
+            #header nav ul li a {
                 padding: 5px 10px;
                 margin: 3px 1px;
                 font-size: 14px;
             }
+
+
         }
+
         /* */
         /* 메인영역 */
         #main {
             padding: 20px 0px;
             border-bottom: 1px dashed #dcdcdc;
         }
+
         .main__menu {
             padding: 20px 0px;
             border-bottom: 1px dashed #dcdcdc;
         }
+
         .main__sample {
             padding: 20px 0px;
         }
+
         .main__sample .sample {
             margin-top: 100px;
         }
@@ -107,7 +127,7 @@
 
         .main__sample .sample h3 {
             font-size: 20px;
-            
+
         }
 
         .main__sample .sample p {
@@ -125,7 +145,7 @@
 
         .main__sample .notice {
             border-left: 5px solid #0243f1;
-            padding : 13px 10px 10px 15px;
+            padding: 13px 10px 10px 15px;
             background-color: #f6f6f6;
         }
 
@@ -136,8 +156,8 @@
         .main__sample .notice h4 {
             margin-bottom: 5px;
         }
-        
-        
+
+
 
 
         /* 푸터영역 */
@@ -145,6 +165,3 @@
             padding: 40px;
             text-align: center;
         }
-
-
-
