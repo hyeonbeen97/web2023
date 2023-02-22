@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 그리드</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #D5CCC9;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #9D8980;
+        }
+        #section {
+            width: 100%;
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            width: 100%;    
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .cotainer {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        #section .cotainer {
+            display: grid;
+            grid-template-areas: 
+            "artcle1 artcle1 artcle1"
+            "artcle2 artcle2 artcle2"
+            "artcle3 artcle4 artcle5"
+            ;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: 100px 200px 480px;
+            
+        }
+        #artcle1 {
+            background-color: #74574A;
+            grid-area: artcle1;
+
+        }
+        #artcle2 {
+            background-color: #684D43;
+            grid-area: artcle2;
+        }
+        #artcle3 {
+            background-color: #594139;
+            grid-area: artcle3;
+        }
+        #artcle4 {
+            background-color: #4A352F;
+            grid-area: artcle4;
+        }
+        #artcle5 {
+            background-color: #fff;
+            grid-area: artcle5;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="cotainer"></div>
+        </header>
+        <nav id="nav">
+            <div class="cotainer"></div>
+        </nav>
+        <section id="section">
+            <div class="cotainer">
+                <artcle id="artcle1"></artcle>    
+                <artcle id="artcle2"></artcle>    
+                <artcle id="artcle3"></artcle>    
+                <artcle id="artcle4"></artcle>    
+                <artcle id="artcle5"></artcle>    
+            </div>
+        </section>       
+        <footer id="footer">
+            <div class="cotainer"></div>
+        </footer>
+    </div>
+    
+</body>
+</html>
