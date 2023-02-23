@@ -48,66 +48,121 @@
     <main id="main">
         <div class="main__menu">
             <ul>
-                <li><a href="#">0.1 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                <li><a href="#">02. 데이터 이펙트 : 0부터 50까지 출력하기</a></li>
+                <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
+                <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수 출력하기</a></li>
+                <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 5의 배수(파란색) 7의 배수(빨간색) 출력하기</a></li>
+                <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
+                <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
             </ul>
         </div>
         <div class="main__sample">
             <div id="sample01" class="sample">
                 <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
                 <p>for문을 이용해 1부터 ~ 100까지 출력하는 예제 입니다.</p>
-<pre class="line-numbers"><code class="language-js">{ 
-    for(let i = 1; i&lt;=100; i++){ //반복문
-    console.log(i)
-}
+<pre class="line-numbers"><code class="language-js">
+for(let i = 1; i&lt;=100; i++){ //반복문
+    console.log(i)}
+
 //1,2,3,4,5,6~~~~100
 </code></pre>
             </div>    
             <div id="sample02" class="sample">
                     <h3>02. 데이터 이펙트 : 0부터 50까지 출력하기</h3>
                     <p>for문을 이용해 0부터 ~ 50까지 출력하는 예제 입니다.</p>
-<pre class="line-numbers"><code class="language-js">{ 
-    for(let i = 0; i&lt;=50; i++){ //반복문
+<pre class="line-numbers"><code class="language-js"> 
+for(let i = 0; i&lt;=50; i++){ //반복문
     console.log(i)
     }
-}
+
 //0,1,2,3,4~~~~50
 </code></pre>
             </div>
             <div id="sample04" class="sample">
                 <h3>03. 데이터 이펙트 : 0부터 100까지 짝수만 출력하기</h3>
                 <p>for문을 이용해 0부터 ~ 100까지의 짝수만 출력하는 예제 입니다.</p>
-<pre class="line-numbers"><code class="language-js">{
-    for(let i = 0; i&lt;=100; i+=2){  //i = i + 2
+<pre class="line-numbers"><code class="language-js">
+for(let i = 0; i&lt;=100; i+=2){  //i = i + 2
     console.log(i)
-    }
 }
+
 //2,4,6,8~~~~98,100
 </code></pre>
             </div>
             <div id="sample04" class="sample">
                 <h3>04. 데이터 이펙트 : 0부터 100까지 5의 배수만 출력하기</h3>
                 <p>for문을 이용해 0부터 ~ 100까지의 5의 배수만 출력하는 예제 입니다.</p>
-<pre class="line-numbers"><code class="language-js">{
-    for(let i = 0; i&lt;=100; i+=5){  // i+=5 5의 배수는 5로 바꾼다.
+<pre class="line-numbers"><code class="language-js">
+for(let i = 0; i&lt;=100; i+=5){  // i+=5 5의 배수는 5로 바꾼다.
+    console.log(i)
+}
+
+//5,10,15,20~~~~95,100
+</code></pre>
+            </div>
+            <div id="sample05" class="sample">
+                <h3>05. 데이터 이펙트 : 0부터 100까지 5의 배수만 출력하기 if문</h3>
+                <p>for문을 이용해 0부터 ~ 100까지의 5의 배수만 출력하는 if문 예제 입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+for(let i = 0; i&lt;=100; i++){  // 같은 답을 if문으로 바꿔 표현  i 를 5로 나눴을때 0인 수만 표현.
+    if( i % 5 == 0){
     console.log(i)
     }
 }
+
 //5,10,15,20~~~~95,100
 </code></pre>
             </div>
-            <div id="sample04" class="sample">
-                <h3>05. 데이터 이펙트 : 0부터 100까지 5의 배수만 출력하기 if문</h3>
-                <p>for문을 이용해 0부터 ~ 100까지의 5의 배수만 출력하는 if문 예제 입니다.</p>
-<pre class="line-numbers"><code class="language-js">{
-    for(let i = 0; i&lt;=100; i++){  // 같은 답을 if문으로 바꿔 표현  i 를 5로 나눴을때 0인 수만 표현.
-        if( i % 5 == 0){
-        console.log(i)
+            <div id="sample06" class="sample">
+                <h3>06. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
+                <p>for문을 이용해 0부터 ~ 100까지의 홀수는 빨간색 짝수는 파란색으로 출력하는 if문 예제 입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+for(let i = 0; i&lt;=100; i++){
+    if(i % 2 == 0){
+        document.write("&lt;span style = 'color : blue'>"+i+"&lt;/span>")
+};
+if(i % 2 == 1){
+    document.write("&lt;span style = 'color : red'>"+i+"&lt;/span>")
+};
+
+    /// 0123456~~~~~9899100
+</code></pre>
+            </div>
+            <div id="sample06" class="sample">
+                <h3>07. 데이터 이펙트 : for문을 이용해서 100칸 테이블</h3>
+                <p>충첩for문을  이용해 5x5 테이블 만들기 예제 입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+let table = "&lt;table border='1'>";
+    for(let i =1; i&lt;=5; i++){
+        table += "&lt;tr>";
+        for(let j = 1; j&lt;=5; j++){
+            table += "&lt;td>1&lt;/td>"
         }
+        table += "&lt;/tr>";
     }
-}
-//5,10,15,20~~~~95,100
+table += "&lt;/table>"
+
+document.write(table)
 </code></pre>
             </div>
+            
+            <div id="sample08" class="sample">
+                <h3>08. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
+                <p>중첩for문을 이용해 구구단을 만드는 예제 입니다.</p>
+<pre class="line-numbers"><code class="language-js">
+for(let i=2; i&lt;=9; i++){
+    document.write(i + "단", "&lt;br>");
+
+    for(let j=1; j&lt;=9; j++){
+        document.write(i + "*" + j + "=" + i*j);
+        document.write("&lt;br>");
+}
+document.write("&lt;br>&lt;br>");
+
+///2단부터 9단까지 나온다.
+</code></pre>
+            </div>           
         </div>      
     </main>
         <footer id="footer">
@@ -117,48 +172,63 @@
         <script src="assets/js/prism.js"></script>
         <script>
             //0.1 1부터 100까지 출력하기
-            for(let i = 1; i<=100; i++){
-                // console.log(i)
-                // document.write(i)
-            }
+            // for(let i = 1; i<=100; i++){
+            //     // console.log(i)
+            //     // document.write(i)
+            // }
 
-             //0.2 0부터 50까지 출력하기
-             for(let i = 0; i<=50; i++){
-                console.log(i)
+            //  //0.2 0부터 50까지 출력하기
+            //  for(let i = 0; i<=50; i++){
+            //     console.log(i)
                 
-                // document.write(i)
-            }
+            //     // document.write(i)
+            // }
 
-            //0.3 0부터 100까지 짝수만 출력하기
-            for(let i = 0; i<=100; i+=2){  //i = i + 2
-                console.log(i)
+            // //0.3 0부터 100까지 짝수만 출력하기
+            // for(let i = 0; i<=100; i+=2){  //i = i + 2
+            //     console.log(i)
                 
-                // document.write(i)
-            }
+            //     // document.write(i)
+            // }
 
-            //0.4 0부터 100까지 5의 배수만 출력하기
-            for(let i = 0; i<=100; i+=5){  
-                console.log(i)
+            // //0.4 0부터 100까지 5의 배수만 출력하기
+            // for(let i = 0; i<=100; i+=5){  
+            //     console.log(i)
                 
-                // document.write(i)
-            }
+            //     // document.write(i)
+            // }
 
-            //0.4-2 
-            for(let i = 0; i<=100; i++){
-                if( i % 5 == 0){
-                    console.log(i)
-                }
+            // //0.4-2 
+            // for(let i = 0; i<=100; i++){
+            //     if( i % 5 == 0){
+            //         console.log(i)
+            //     }
                 
-            }
+            // }
 
-            //0.6 0부터 100까지 5의 배수만 출력하고 짝수는 
-            for(let i = 0; i<=100; i+=5){  
-                console.log(i)
+            // //0.6 0부터 100까지 5의 배수만 출력하고 짝수는 
+            // for(let i = 0; i<=100; i+=5){  
+            //     console.log(i)
                 
-                // document.write(i)
-            }
+            //     // document.write(i)
+            // }
             
+            //  for(let i = 0; i<=100; i++){
+            //      if(i % 2 == 0){
+            //          document.write("<span style = 'color : blue'>"+i+"</span>")
+            //      };
+            //      if(i % 2 == 1){
+            //          document.write("<span style = 'color : red'>"+i+"</span>")
+            //      };
+            //  }
 
+            //0.5 데이터 이펙투  : for문을 이용해서 테이블 만들기
+            {
+                let table = "<table>";
+                table += "</table>";
+
+                document.write(table);
+            }
         </script>
 
 
