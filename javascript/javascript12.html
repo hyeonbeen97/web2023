@@ -116,7 +116,7 @@ for(let i = 0; i&lt;=100; i++){  // 같은 답을 if문으로 바꿔 표현  i �
             </div>
             <div id="sample06" class="sample">
                 <h3>06. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
-                <p>for문을 이용해 0부터 ~ 100까지의 홀수는 빨간색 짝수는 파란색으로 출력하는 if문 예제 입니다.</p>
+                <p>for문을 이용해 0부터 ~ 100까지의 값을 if문과 span을 사용해 홀수는 빨간색 짝수는 파란색으로 출력하는 예제 입니다.</p>
 <pre class="line-numbers"><code class="language-js">
 for(let i = 0; i&lt;=100; i++){
     if(i % 2 == 0){
@@ -131,12 +131,12 @@ if(i % 2 == 1){
             </div>
             <div id="sample06" class="sample">
                 <h3>07. 데이터 이펙트 : for문을 이용해서 100칸 테이블</h3>
-                <p>충첩for문을  이용해 5x5 테이블 만들기 예제 입니다.</p>
+                <p>충첩for문을  이용해 100x100 테이블 만들기 예제 입니다.<br>기본 테이블 만들기와 비슷함.</p>
 <pre class="line-numbers"><code class="language-js">
 let table = "&lt;table border='1'>";
-    for(let i =1; i&lt;=5; i++){
+    for(let i =1; i&lt;=10; i++){
         table += "&lt;tr>";
-        for(let j = 1; j&lt;=5; j++){
+        for(let j = 1; j&lt;=10; j++){
             table += "&lt;td>1&lt;/td>"
         }
         table += "&lt;/tr>";
