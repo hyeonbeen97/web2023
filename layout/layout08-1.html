@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>8번 반복</title>
+     <style>
+          * {
+               padding: 0;
+               margin: 0;
+          }
+
+          .clearfix::before,
+          .clearfix::after {
+               display: block;
+               content: "";
+               line-height: 0;
+          }
+          .clearfix::after {clear: both;}
+
+          body {
+               background-color: #E1F5FE;
+          }
+          #wrap {
+               width: 1200px;
+               margin: 0 auto;
+          }
+          #header {
+               width: 100%;
+               height: 100px;
+               background-color: #B3E5FC;
+          }
+          #nav {
+               width: 100%;
+               height: 100px;
+               background-color: #81D4FA;
+          }
+          #section {
+               width: 100%;
+               height: 780px;
+          }
+          #footer {
+               width: 100%;
+               height: 100px;
+               background-color: #0288D1;
+          }
+          #aside {
+               width: 30%;
+               height: 780px;
+               background-color: #9b0505;
+               float: left;
+          }
+          #artcle1 {
+               width: 70%;
+               height: 260px;
+               background-color: #831313;
+               float: left;
+          }
+          #artcle2 {
+               width: 70%;
+               height: 260px;
+               background-color: #1d0457;
+               float: left;
+          }
+          #artcle3 {
+               width: 70%;
+               height: 260px;
+               background-color: #0ee089;
+               float: left;
+          }
+
+          @media(max-width:1220px){
+               #wrap {
+                    width: 96%;
+               }
+               #artcle1 {
+                    width: 70%;
+                    height: 260px;
+               }
+               #artcle2 {
+                    width: 35%;
+                    height: 520px;
+               }
+               #artcle3 {
+                    width: 35%;
+                    height: 520px;
+               }
+          }
+          @media (max-width:768px){
+               #wrap {
+                    width: 100%;
+               }
+               #artcle1 {
+                    width: 70%;
+                    height: 390px;
+               }
+               #artcle2 {
+                    width: 70%;
+                    height: 390px;
+               }
+               #artcle3 {
+                    display: none;
+               }
+          }
+
+          @media (max-width:600px){
+               #wrap {
+                    width: 100%;
+               }
+               #aside {
+                    width: 100%;
+                    height: 200px
+               }
+               #artcle1 {
+                    width: 100%;
+                    height: 430px;
+               }
+               #artcle2 {
+                    width: 100%;
+                    height: 150px;
+               }
+               #artcle3 {
+                    display: none;
+               }
+          }
+
+     </style>
+</head>
+<body>
+     <div id="wrap">
+          <div id="header"></div>
+          <div id="nav"></div>
+          <div id="section" class="clearfix">
+               <div id="aside"></div>
+               <div id="artcle1"></div>
+               <div id="artcle2"></div>
+               <div id="artcle3"></div>
+          </div>
+          <div id="footer"></div>
+     </div>
+     
+</body>
+</html>
