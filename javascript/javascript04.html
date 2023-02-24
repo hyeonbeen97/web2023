@@ -93,7 +93,7 @@
                     <h4>false 나오는 값, true 나오는 값</h4>
                     <p> false : 0 , null , undefined , false , ""(빈문자열)
                         true : 1, "0", "1" "ABC" "배열[]" "객체{}" ,true
-                    <p>숫자, 문자 , 배열 ,객체 //모두 true 0 제외
+                    <p>숫자, 문자 , 배열 ,객체 //모두 true가 나오며 0은 제외
                 </div>
             </div>
             <div id="sample02" class="sample">
@@ -326,30 +326,35 @@
         //     }
         // }
 
-        // let table = "<table border='1'>";
-        // let num = 1;
-        // for (let i = 0; i < 5; i++) {
-        //     table += "<tr>"
-        //     for (let j = 0; j < 5; j++) {
-        //         table += "<td>" + num + "</td>"
-        //         num++;
-        //     }
-        //     table += "</tr>"
-        // }
+         let table = "<table border='1'>";
+         let num = 1;
+         for (let i = 0; i < 5; i++) {
+            table += "<tr>"
+            for(let j = 0; j < 5; j++) {
+                table += "<td>" + num + "</td>"
+                num++;
+                if(i % 2 == 0){
+                 document.write("<span style='color:red'>"+i+"</sapn>")
+             } else {
+                 document.write(`<span style='color:blue'>${i}</sapn>`)
+             }                
+            };                              
+        }
+            table += "</tr>"
 
-        // table += "</table>";
+        table += "</table>";
 
-        // document.write(table);
+        document.write(table);
 
 
-        // //1부터 25 까지
-        // let num = 0;
-        // for(let i= 1; i<=25; i++){
-        //     document.write(i);
-        //     document.write("<br>");
-        //     num++;
-        // }
-        // document.write(num);
+        //  1부터 25 까지
+        //  let num = 0;
+        //  for(let i= 1; i<=25; i++){
+        //      document.write(i);
+        //      document.write("<br>");
+        //      num++;
+        //  }
+        //  document.write(num);
 
 
 
