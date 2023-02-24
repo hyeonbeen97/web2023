@@ -333,18 +333,19 @@
             for(let j = 0; j < 5; j++) {
                 table += "<td>" + num + "</td>"
                 num++;
-                if(i % 2 == 0){
-                 document.write("<span style='color:red'>"+i+"</sapn>")
-             } else {
-                 document.write(`<span style='color:blue'>${i}</sapn>`)
-             }                
+
+                if(num % 2 == 0){
+                    document.write("<span style='color:red'>"+num+"</sapn>");
+                } else if (num % 2 ==1){
+                    document.write("<span style='color:blue'>"+num+"</sapn>");
+                }
             };                              
         }
-            table += "</tr>"
+             table += "</tr>"
 
-        table += "</table>";
+         table += "</table>";
 
-        document.write(table);
+         document.write(table);
 
 
         //  1부터 25 까지
