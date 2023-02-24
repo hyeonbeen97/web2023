@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript :  데이터 제어하기</title>
+    <title>Javascript : 데이터 제어하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/default.min.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/javascript192x192.png">
-    
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/ico/javascript192x192.png">
+
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">javascript</a></h1>
@@ -22,7 +24,7 @@
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
-                <li  class="active"><a href="javascript04.html">데이터 제어하기</a></li>
+                <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
             <ul>
                 <li><a href="javascript05.html">문자열 객체</a></li>
@@ -32,7 +34,7 @@
                 <li><a href="javascript09.html">브라우저 객체</a></li>
                 <li><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
-                
+
             </ul>
             <ul class="last">
                 <li><a href="javascript12.html">데이터 효과</a></li>
@@ -51,7 +53,7 @@
                 <li><a href="#">01 if문</a></li>
                 <li><a href="#">02 if문 생략</a></li>
                 <li><a href="#">03 if문 삼항연산자 </a></li>
-                <li><a href="#">04 if문 다중  if</a></li>
+                <li><a href="#">04 if문 다중 if</a></li>
                 <li><a href="#">05 if문 중첩 if</a></li>
 
                 <li><a href="#">06 switch문</a></li>
@@ -63,41 +65,42 @@
                 <li><a href="#">12 continue문</a></li>
             </ul>
         </div>
-    </div>
-    <div class="main__sample">
-        <div id="sample01" class="sample">
-            <h3>01. if문</h3>
-            <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면 실행되지 않습니다.</p>
+        </div>
+        <div class="main__sample">
+            <div id="sample01" class="sample">
+                <h3>01. if문</h3>
+                <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면
+                    실행되지 않습니다.</p>
 
-            <div class="script">                    
-<pre><code class="language-js">
+                <div class="script">
+                    <pre><code class="language-js">
     if(0){
         document.write("실행되었습니다.(true)")
     } else {
         document.write("실행되었습니다.(false)")
     };
 </code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(false)
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>false 나오는 값, true 나오는 값</h4>
+                    <p> false : 0 , null , undefined , false , ""(빈문자열)
+                        true : 1, "0", "1" "ABC" "배열[]" "객체{}" ,true
+                    <p>숫자, 문자 , 배열 ,객체 //모두 true 0 제외
+                </div>
             </div>
-            <div class="result">
-                <details>
-                    <summary>결과 확인하기</summary>
-                    <div>
-                        실행되었습니다.(false)
-                    </div>
-                </details>
-            </div>
-            <div class="notice">
-                <h4>false 나오는 값,  true 나오는 값</h4>
-                <p> false : 0 , null , undefined , false , ""(빈문자열)
-                    true : 1, "0", "1" "ABC" "배열[]" "객체{}" ,true  
-                <p>숫자, 문자 , 배열 ,객체 //모두 true  0 제외
-            </div>
-        </div>
-        <div id="sample01" class="sample">
-            <h3>02. if문 생략</h3>
-            <p>위 if문을 아래 if문으로 생략하여 쓸수있다.</p>
-            <div class="script">                    
-<pre><code class="language-js">
+            <div id="sample01" class="sample">
+                <h3>02. if문 생략</h3>
+                <p>위 if문을 아래 if문으로 생략하여 쓸수있다.</p>
+                <div class="script">
+                    <pre><code class="language-js">
     const num = 100;
 
     if(num) {
@@ -109,22 +112,22 @@
     if(num) document.write("실행되었습니다.(true)");
     else document.write("실행되었습니다.(false)");
 </code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            "실행되었습니다.(true)"
+                        </div>
+                    </details>
+                </div>
             </div>
-            <div class="result">
-                <details>
-                    <summary>결과 확인하기</summary>
-                    <div>
-                        "실행되었습니다.(true)"
-                    </div>
-                </details>
-            </div>
-        </div>
-        <div id="sample01" class="sample">
-            <h3>03. 삼항연산자</h3>
-            <p>위의 코드와 아래 코드는 같지만 더 효율적이게 쓰기 위해서는 아래의 삼항연산자 방식으로 쓴다.</p>
+            <div id="sample01" class="sample">
+                <h3>03. 삼항연산자</h3>
+                <p>위의 코드와 아래 코드는 같지만 더 효율적이게 쓰기 위해서는 아래의 삼항연산자 방식으로 쓴다.</p>
 
-            <div class="script">                    
-<pre><code class="language-js">
+                <div class="script">
+                    <pre><code class="language-js">
     const num = 100;
 
     if(num == 100){
@@ -135,26 +138,26 @@
 
     (num == 100) ? document.write("true") : document.write("false");
 </code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(false)
+                        </div>
+                    </details>
+                </div>
+                <div class="notice">
+                    <h4>더 효율적인 방법</h4>
+                    <p> 뒷내용을 읽지 않아 효율적이다.
+                </div>
             </div>
-            <div class="result">
-                <details>
-                    <summary>결과 확인하기</summary>
-                    <div>
-                        실행되었습니다.(false)
-                    </div>
-                </details>
-            </div>
-            <div class="notice">
-                <h4>더 효율적인 방법</h4>
-                <p> 뒷내용을 읽지 않아 효율적이다.
-            </div>
-        </div>
-        <div id="sample01" class="sample">
-            <h3>04. 다중 if문</h3>
-            <p>if문을 다중으로 사용할 수 있다.</p>
+            <div id="sample01" class="sample">
+                <h3>04. 다중 if문</h3>
+                <p>if문을 다중으로 사용할 수 있다.</p>
 
-            <div class="script">                    
-<pre><code class="language-js">
+                <div class="script">
+                    <pre><code class="language-js">
     const num = 120;
 
     if(num == 90){
@@ -169,22 +172,22 @@
         document.write("실행되었습니다(num == 90)");
     };
 </code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다(num == 120)
+                        </div>
+                    </details>
+                </div>
             </div>
-            <div class="result">
-                <details>
-                    <summary>결과 확인하기</summary>
-                    <div>
-                        실행되었습니다(num == 120)
-                    </div>
-                </details>
-            </div>
-        </div>
-        <div id="sample01" class="sample">
-            <h3>05. 중첩 if문</h3>
-            <p>if문은 중첩 시킬 수 있습니다.</p>
+            <div id="sample01" class="sample">
+                <h3>05. 중첩 if문</h3>
+                <p>if문은 중첩 시킬 수 있습니다.</p>
 
-            <div class="script">                    
-<pre><code class="language-js">
+                <div class="script">
+                    <pre><code class="language-js">
     const num = 100;
 
     if(num == 100){
@@ -199,17 +202,17 @@
                 document.write("실행되었습니다.(4)");
     };
 </code></pre>
-            </div>
-            <div class="result">
-                <details>
-                    <summary>결과 확인하기</summary>
-                    <div>
-                        실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)
-                    </div>
-                </details>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)
+                        </div>
+                    </details>
+                </div>
             </div>
         </div>
-    </div>
     </main>
     <footer id="footer">
         <a href="mailto:esansi@naver.com">esansi@naver.com</a>
@@ -324,20 +327,20 @@
         // }
 
         let table = "<table border='1'>";
-            let num = 1;
-            for(let i= 0; i<5 ; i++){
-                table +="<tr>"
-                for(let j =0; j<5; j++){
-                    table += "<td>"+num+"</td>"
-                    num++;
-                }
-                table +="</tr>"
+        let num = 1;
+        for (let i = 0; i < 5; i++) {
+            table += "<tr>"
+            for (let j = 0; j < 5; j++) {
+                table += "<td>" + num + "</td>"
+                num++;
             }
-            
-        table +="</table>";
-        
+            table += "</tr>"
+        }
+
+        table += "</table>";
+
         document.write(table);
-    
+
 
         // //1부터 25 까지
         // let num = 0;
@@ -349,7 +352,7 @@
         // document.write(num);
 
 
-        
+
     </script>
 
 </body>
