@@ -51,18 +51,40 @@
 
 
     let table = "<table border='1'>";
-        let num = 1;
+        let num = 1 
         
         for (let i = 0; i < 5; i++) { 
             table += "<tr></tr>"
             for(let j = 0; j < 5; j++) {
-                table += "<td id='ex'>" + num + "</td>" 
-                num++;
+                table += "<td>" + num + "</td>" 
+                num++
+                if(num % 2 == 0){                    
                 };                                
             };
-            table += "</table>";
+        }
+        table += "</table>";
+
+        (num % 2 == 0) ? document.write("<span style = 'color : blue'>"+table+"</span>") : document.write("<span style = 'color : red'>"+table+"</span>")
+    
         
-            (num % 2 == 0) ? document.write("<span style = 'color : blue'>"+table+"</span>") : document.write("<span style = 'color : red'>"+table+"</span>")
+            // (num % 2 == 0) ? document.write("<span style = 'color : blue'>"+table+"</span>") : document.write("<span style = 'color : red'>"+table+"</span>")
+    
+    
+     // (num % 2 == 0) ? document.write("<span id='class' : blue'>"+table+"</span>") : document.write("<span id ='class2'>"+table+"</span>")
+        
+        // if(num % 2 ==0){
+        //     document.write("<span style = 'color : blue'>"+table+"</span>");
+        //     if(num % 2 == 1){
+        //         document.write("<span style = 'color : red'>"+table+"</span>");
+        //     }
+        // }
+
+        // (num % 2 == 0) ? document.write("<span style = 'color : blue'>"+table+"</span>") : document.write("<span style = 'color : red'>"+table+"</span>")
+        
+        // : document.write("<span style = 'color : red'>"+table+"</span>");
+        // document.write("<span style = 'color : blue'>"+table+"</span>");
+        
+        //             document.write("<span style = 'color : blue'>"+i+"</span>")
 </script>
 
 </html>
