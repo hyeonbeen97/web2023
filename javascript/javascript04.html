@@ -329,18 +329,15 @@
         let table = "<table border='1'>";
         let num = 1;
         for (let i = 0; i < 5; i++) {
-            table += "<tr>"
+            table += "<tr></tr>"
             for (let j = 0; j < 5; j++) {
                 if (num % 2 === 0) { // check if number is even
                     table += "<td style='color: red'>" + num + "</td>";
                 } else { // number is odd
                     table += "<td style='color: blue'>" + num + "</td>";
-                }
-                num++;
-
+                } num++;
             };
         }
-        table += "</tr>"
 
         table += "</table>";
 
