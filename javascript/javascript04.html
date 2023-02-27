@@ -73,7 +73,7 @@
                     실행되지 않습니다.</p>
 
                 <div class="script">
-<pre><code class="language-js">
+                    <pre><code class="language-js">
     if(0){
         document.write("실행되었습니다.(true)")
     } else {
@@ -100,7 +100,7 @@
                 <h3>02. if문 생략</h3>
                 <p>위 if문을 아래 if문으로 생략하여 쓸수있다.</p>
                 <div class="script">
-<pre><code class="language-js">
+                    <pre><code class="language-js">
     const num = 100;
 
     if(num) {
@@ -127,7 +127,7 @@
                 <p>위의 코드와 아래 코드는 같지만 더 효율적이게 쓰기 위해서는 아래의 삼항연산자 방식으로 쓴다.</p>
 
                 <div class="script">
-<pre><code class="language-js">
+                    <pre><code class="language-js">
     const num = 100;
 
     if(num == 100){
@@ -157,7 +157,7 @@
                 <p>if문을 다중으로 사용할 수 있다.</p>
 
                 <div class="script">
-<pre><code class="language-js">
+                    <pre><code class="language-js">
     const num = 120;
 
     if(num == 90){
@@ -187,7 +187,7 @@
                 <p>if문은 중첩 시킬 수 있습니다.</p>
 
                 <div class="script">
-<pre><code class="language-js">
+                    <pre><code class="language-js">
     const num = 100;
 
     if(num == 100){
@@ -326,27 +326,31 @@
         //     }
         // }
 
-         let table = "<table border='1'>";
-         let num = 1;
-         for (let i = 0; i < 5; i++) {
+        let table = "<table border='1'>";
+        let num = 1;
+        for (let i = 0; i < 5; i++) {
             table += "<tr>"
-            for(let j = 0; j < 5; j++) {
-                table += "<td>" + num + "</td>"
+            for (let j = 0; j < 5; j++) {
+                if (num % 2 === 0) { // check if number is even
+                    table += "<td style='color: red'>" + num + "</td>";
+                } else { // number is odd
+                    table += "<td style='color: blue'>" + num + "</td>";
+                }
                 num++;
 
-                if(num % 2 == 0){
-                    document.write("<span style='color:red'>"+num+"</sapn>");
-                } else if (num % 2 ==1){
-                    document.write("<span style='color:blue'>"+num+"</sapn>");
-                }
-            };                              
+            };
         }
-             table += "</tr>"
+        table += "</tr>"
 
-         table += "</table>";
+        table += "</table>";
 
-         document.write(table);
+        document.write(table);
 
+        // if (num % 2 == 0) {
+        //     document.write("<span style='color:red'>" + num + "</sapn>");
+        // } else if (num % 2 == 1) {
+        //     document.write("<span style='color:blue'>" + num + "</sapn>");
+        // }
 
         //  1부터 25 까지
         //  let num = 0;
