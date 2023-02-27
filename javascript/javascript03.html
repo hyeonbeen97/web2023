@@ -52,10 +52,10 @@
                 <li><a href="#">02. 익명 함수</a></li>
                 <li><a href="#">03. 매개변수 함수</a></li>
                 <li><a href="#">04. 리턴값 함수</a></li>
-                <li><a href="#">01. 화살표 함수 : 선언적 함수</a></li>
-                <li><a href="#">02. 화살표 함수 : 익명 함수</a></li>
-                <li><a href="#">03. 화살표 함수 : 매개변수 함수</a></li>
-                <li><a href="#">04. 화살표 함수 : 리턴값 함수</a></li>
+                <li><a href="#">05. 화살표 함수 : 선언적 함수</a></li>
+                <li><a href="#">06. 화살표 함수 : 익명 함수</a></li>
+                <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
+                <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
 
                 <li><a href="#">04. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 함수</a></li>
                 <li><a href="#">04. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 함수 + 괄호 생략</a></li>
@@ -123,7 +123,7 @@ func();
                 </div>
             </div>
         <div class="main__sample">
-            <div id="sample02" class="sample">
+            <div id="sample03" class="sample">
                 <h3>03. 매개변수 함수</h3>
                 <p>변수는 데이터를 저장하는 저장소입니다.</p>
                 <div class="script">
@@ -145,7 +145,7 @@ func("실행되었습니다.!!<br>");
             </div>
         </div>
         <div class="main__sample">
-            <div id="sample02" class="sample">
+            <div id="sample04" class="sample">
                 <h3>04. 리턴 함수</h3>
                 <p>변수는 데이터를 저장하는 저장소입니다.</p>
                 <div class="script">
@@ -166,6 +166,96 @@ document.write(func())
                     </details>
                 </div>
             </div>
+        </div>
+        <div class="main__sample">
+            <div id="sample05" class="sample">
+                <h3>05. 화살표 함수 : 선언적 함수</h3>
+                <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                <div class="script">
+<pre><code class="language-js">
+func=()=>{
+    document.write("222222<br>")
+}
+func()
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            222222.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="main__sample">
+            <div id="sample06" class="sample">
+                <h3>06. 화살표 함수 : 익명 함수</h3>
+                <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                <div class="script">
+<pre><code class="language-js">
+const func =()=>{
+    document.write("222222<br>")
+}
+func();
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            222222
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="main__sample">
+            <div id="sample07" class="sample">
+                <h3>07. 화살표 함수 : 매개변수 함수</h3>
+                <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                <div class="script">
+<pre><code class="language-js">
+func=(str)=>{
+    document.write(str);s
+}
+func("222222<br>")
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            222222
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="main__sample">
+            <div id="sample08" class="sample">
+                <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                <p>변수는 데이터를 저장하는 저장소입니다.</p>
+                <div class="script">
+<pre><code class="language-js">
+func=()=>{
+    const str ="222222<br>"
+    return str;
+}
+document.write(func())
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            222222
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
 
 
     </main>
