@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃02 -float 유형</title>
+    <title>레이아웃17 - flex 유형 반응형</title>
     <style>
         * {
             padding: 0;
@@ -13,7 +13,6 @@
         body {
             background-color: #E8F5E9;
         }
-
         #wrap {
             width: 1200px;
             margin: 0 auto;
@@ -28,54 +27,71 @@
             height: 100px;
             background-color: #A5D6A7;
         }
-        #aside {
+        #main {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .artcle1 {
             width: 25%;
             height: 780px;
             background-color: #81C784;
-            float: left;
         }
-        #section {
+        .artcle2 {
             width: 50%;
             height: 780px;
-            background-color: #4CAF50;
-            float: left
+            background-color: #66BB6A;
         }
-        #article {
+        .artcle3 {
             width: 25%;
             height: 780px;
-            background-color: #66BB6A;
-            float: left;
+            background-color: #4CAF50;
         }
-        
+
         #footer {
             width: 100%;
             height: 100px;
             background-color: #43A047;
-            clear:both;
         }
-        @media (max-whith: 1300px){
+
+        @media (max-width:1220px){
             #wrap {
                 width: 96%;
             }
         }
-        @media (max-whith: 768px){
+
+        @media (max-width:768px){
             #wrap {
                 width: 100%;
             }
-            #aside {
-                width: 60%;
+            .artcle1 {
+                width: 35%;
                 height: 630px;
             }
-            #section {
-                width: 40%;
+            .artcle2 {
+                width: 65%;
                 height: 630px;
             }
-            #article {
+            .artcle3 {
                 width: 100%;
                 height: 150px;
-
             }
+        }
 
+        @media (max-width:600px){
+            .artcle1 {
+                width: 100%;
+                height: 200px;
+            }
+            .artcle2 {
+                width: 100%;
+                height: 430px;
+            }
+            .artcle3 {
+                width: 100%;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -83,11 +99,12 @@
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <aside id="aside"></aside>
-        <section id="section"></section>
-        <article id="article"></article>        
+        <main id="main">
+            <div class="artcle1"></div>
+            <div class="artcle2"></div>
+            <div class="artcle3"></div>
+        </main>
         <footer id="footer"></footer>
     </div>
-    
 </body>
 </html>
