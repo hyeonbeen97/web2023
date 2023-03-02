@@ -286,31 +286,25 @@ document.write(table);
     document.write(num[2],"&lt;br>")
     document.write(num[3],"&lt;br>")
     document.write(num[4],"&lt;br>")
-    document.write("&lt;br>")
 
     //for
     for(let i=0 ; i&lt;num.length;i++){
         document.write(num[i],"&lt;br>")
     }
-    document.write("&lt;br>")
     //forEach 
     num.forEach(function(el){
         document.write(el,"&lt;br>")
     });
-    document.write("&lt;br>")
     //forEach :화살표 함수 : 
     num.forEach((el)=>{
         document.write(el,"&lt;br>")
     });
-    document.write("&lt;br>")
     //forEach :화살표 함수 : 괄호생략
     num.forEach(el=>{
         document.write(el,"&lt;br>")
     });
-    document.write("&lt;br>")
     //forEach :화살표 함수 : 중괄호 생략
     num.forEach(el => document.write(el,"&lt;br>"));
-    document.write("&lt;br>")
 
     //forEach (값, 인덱스 , 배열)
     num.forEach(function(element, index,array){
