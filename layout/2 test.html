@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1차 평가 평가문항 2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #e7e6a0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "aside artcle1 aisde2"
+                "aside artcle2 aisde2"
+                "footer footer footer"
+            ;
+            grid-template-rows: 100px 100px 390px 390px 100px;
+            grid-template-columns: 300px 600px 300px;
+        }
+        #header {
+            background-color: #3f3707;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #9c6717;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #fab700;
+            grid-area: aside;
+        }
+        #artcle1 {
+            background-color: #865c1d;
+            grid-area: artcle1;
+        }
+        #artcle2 {
+            background-color: #e7c085;
+            grid-area: artcle2;
+        }
+        #aisde2 {
+            background-color: #f0a753;
+            grid-area: aisde2;
+        }
+        #footer {
+            background-color: #b5f36e;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <wrap id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <artcle1 id="artcle1"></artcle1>
+        <artcle2 id="artcle2"></artcle2>
+        <aisde2 id="aisde2"></aisde2>
+        <footer id="footer"></footer>
+    </wrap>
+</body>
+</html>
