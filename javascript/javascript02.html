@@ -197,6 +197,7 @@
     const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
         for(let i = 0; i&lt;9; i++){
             console.log(arr[i]);
+        };
 </code></pre>
                 </div>
                 <div class="result">
@@ -315,72 +316,72 @@ document.write(table);
                     <details>
                         <summary>결과 확인하기</summary>
                         <div>
-<p>100
-    200
-    300
-    400
-    500
-</p>
-    <p>
-    100
-    200
-    300
-    400
-    500
-</p>
-<p>
-    100
-    200
-    300
-    400
-    500
-</p>
-<p>
-    100
-    200
-    300
-    400
-    500
-</p>
-<p>
-    100
-    200
-    300
-    400
-    500
-</p>
-<p>
-    100
-    200
-    300
-    400
-    500
-</p>
-<p>
-    100
-    0
-    100,200,300,400,500
-</p>
-    200
-<p>
-    1
-    100,200,300,400,500
-</p>
-    300
-<p>
-    2
-    100,200,300,400,500
-</p>
-    400
-<p>
-    3
-    100,200,300,400,500
-</p>
-    500
-<p>
-    4
-</p><br>
-    100,200,300,400,500
+                            <p>100
+                                200
+                                300
+                                400
+                                500
+                            </p>
+                                <p>
+                                100
+                                200
+                                300
+                                400
+                                500
+                            </p>
+                            <p>
+                                100
+                                200
+                                300
+                                400
+                                500
+                            </p>
+                            <p>
+                                100
+                                200
+                                300
+                                400
+                                500
+                            </p>
+                            <p>
+                                100
+                                200
+                                300
+                                400
+                                500
+                            </p>
+                            <p>
+                                100
+                                200
+                                300
+                                400
+                                500
+                            </p>
+                            <p>
+                                100
+                                0
+                                100,200,300,400,500
+                            </p>
+                                200
+                            <p>
+                                1
+                                100,200,300,400,500
+                            </p>
+                                300
+                            <p>
+                                2
+                                100,200,300,400,500
+                            </p>
+                                400
+                            <p>
+                                3
+                                100,200,300,400,500
+                            </p>
+                                500
+                            <p>
+                                4
+                            </p><br>
+                                100,200,300,400,500
                         </div>
                     </details>
                 </div>
@@ -390,10 +391,10 @@ document.write(table);
                 <p>for문을 for of 문으로 간략히 사용할 수 있다.</p>
                 <div class="script">
 <pre><code class="language-js">
-const arr = [100,200,300,400,500]
-for(let i of arr){
-    document.write(i)
-}
+    const arr = [100,200,300,400,500]
+    for(let i of arr){
+        document.write(i)
+    }
 </code></pre>
                 </div>
                 <div class="result">
@@ -410,15 +411,15 @@ for(let i of arr){
                 <p>for...in 루프는 객체의 모든 열거 가능한 속성을 반복하며, 객체의 속성 이름을 순회할 수 있는 루프입니다.</p>
                 <div class="script">
 <pre><code class="language-js">
-const arr = [100,200,300,400,500]
-for(let i in arr){
-    document.write(i);
-}
+    const arr = [100,200,300,400,500]
+    for(let i in arr){
+        document.write(i);
+    }
 
 const arr = [100,200,300,400,500]
-for(let i in arr){
-    document.write(arr[i]);
-}
+    for(let i in arr){
+        document.write(arr[i]);
+    }
 </code></pre>
                 </div>
                 <div class="result">
@@ -437,19 +438,19 @@ for(let i in arr){
                 map()은 다음과 같은 구문으로 사용할 수 있습니다.</p>
                 <div class="script">
 <pre><code class="language-js">
-const num = [100,200,300,400,500,600]
+    const num = [100,200,300,400,500,600]
 
-num.forEach(function(el,i,a){
-    console.log(el)
-    console.log(i)
-    console.log(a)
-});
+    num.forEach(function(el,i,a){
+        console.log(el)
+        console.log(i)
+        console.log(a)
+    });
 
-num.map(function(el,i,a){
-    console.log(el)
-    console.log(i)
-    console.log(a)
-});
+    num.map(function(el,i,a){
+        console.log(el)
+        console.log(i)
+        console.log(a)
+    });
 </code></pre>
                 </div>
                 <div class="result">
@@ -626,7 +627,7 @@ num.map(function(el,i,a){
     for(let key in obj){
         console.log(key)
         console.log(obj[key])
-    }
+    };
 </code></pre>
                 </div>
                 <div class="result">
@@ -653,10 +654,10 @@ num.map(function(el,i,a){
     {a: 900, b: 1000, c: "javascript"}
     ]
     obj.map((el) => {
-    console.log(el)
-    console.log(el.a)
-    console.log(el.b)
-    console.log(el.c)
+    console.log(el);
+    console.log(el.a);
+    console.log(el.b);
+    console.log(el.c);
 });
 </code></pre>
                 </div>
@@ -719,7 +720,7 @@ num.map(function(el,i,a){
         b: 1300,
         c: "javascript"
     }
-    const spread = {...obj, d:"react"} //키 값 추가 가능
+    const spread = {...obj, d:"react"}   //키 값 추가 가능
 
     console.log(spread.a);
     console.log(spread.b);

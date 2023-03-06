@@ -85,9 +85,9 @@
                 <p>선언적 함수는 function 키워드와 함수 이름을 사용하여 선언된다.</p>
                 <div class="script">
 <pre><code class="language-js">
-function func(){
-    document.write("김현빈");
-}
+    function func(){
+        document.write("김현빈");
+    }
 func();
 </code></pre>
                 </div>
@@ -107,10 +107,10 @@ func();
                 <p>익명 함수는 함수 이름 대신 변수에 함수를 할당하는 방식으로 작성됩니다. 이러한 함수는 일회성으로 사용되는 경우에 유용하다</p>
                 <div class="script">
 <pre><code class="language-js">
-const func=function(){
-    document.write("김현빈");
-}
-func();
+    const func=function(){
+        document.write("김현빈");
+    }
+    func();
 </code></pre>
                 </div>
                 <div class="result">
@@ -128,10 +128,10 @@ func();
                 <p>함수를 호출할 떄 전달하는 변수를 '매개변수' 라고 한다.</p>
                 <div class="script">
 <pre><code class="language-js">
-function func(str){
-    document.write(str)        
-}
-func("실행되었습니다.!!<br>");
+    function func(str){
+        document.write(str)        
+    }
+    func("실행되었습니다.!!<br>");
 </code></pre>
                 </div>
                 <div class="result">
@@ -150,11 +150,11 @@ func("실행되었습니다.!!<br>");
                 <p>함수를 통해 처리된 결과를 반환 시켜주는 명령어 </p>
                 <div class="script">
 <pre><code class="language-js">
-function func(){
-    const str= "함수가 실행되었습니다.";
-    return str ;
-}
-document.write(func())
+    function func(){
+        const str= "함수가 실행되었습니다.";
+        return str ;
+    }
+    document.write(func())
 </code></pre>
                 </div>
                 <div class="result">
@@ -173,10 +173,10 @@ document.write(func())
                 <p>선언적 함수를 화살표 함수로 봐꾸어 간략하게 입력하는 방식</p>
                 <div class="script">
 <pre><code class="language-js">
-func=()=>{
-    document.write("실행되었습니다.<br>")
-}
-func()
+    func=()=>{
+        document.write("실행되었습니다.<br>")
+    }
+    func()
 </code></pre>
                 </div>
                 <div class="result">
@@ -195,10 +195,10 @@ func()
                 <p>익명 함수를 화살표 함수로 봐꾸어 간략하게 입력하는 방식</p>
                 <div class="script">
 <pre><code class="language-js">
-const func =()=>{
-    document.write("실행되었습니다.<br>")
-}
-func();
+    const func =()=>{
+        document.write("실행되었습니다.<br>")
+    }
+    func();
 </code></pre>
                 </div>
                 <div class="result">
@@ -217,10 +217,10 @@ func();
                 <p>매개변수 함수를 화살표 함수로 봐꾸어 간략하게 입력하는 방식</p>
                 <div class="script">
 <pre><code class="language-js">
-func=(str)=>{
-    document.write(str);
-}
-func("실행되었습니다.<br>")
+    func=(str)=>{
+        document.write(str);
+    }
+    func("실행되었습니다.<br>")
 </code></pre>
                 </div>
                 <div class="result">
@@ -239,11 +239,11 @@ func("실행되었습니다.<br>")
                 <p>리턴값 함수를 화살표 함수로 봐꾸어 간략하게 입력하는 방식</p>
                 <div class="script">
 <pre><code class="language-js">
-func=()=>{
-    const str ="실행되었습니다.<br>"
-    return str;
-}
-document.write(func())
+    func=()=>{
+        const str ="실행되었습니다.<br>"
+        return str;
+    }
+    document.write(func())
 </code></pre>
                 </div>
                 <div class="result">
