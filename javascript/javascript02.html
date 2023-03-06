@@ -279,16 +279,16 @@ document.write(table);
 <pre><code class="language-js">
     const num =[100,200,300,400,500];
 
-    document.write(num[0],"&lt;br>")
-    document.write(num[1],"&lt;br>")
-    document.write(num[2],"&lt;br>")
-    document.write(num[3],"&lt;br>")
-    document.write(num[4],"&lt;br>")
+    document.write(num[0],"&lt;br>");
+    document.write(num[1],"&lt;br>");
+    document.write(num[2],"&lt;br>");
+    document.write(num[3],"&lt;br>");
+    document.write(num[4],"&lt;br>");
 
     //for
     for(let i=0 ; i&lt;num.length;i++){
         document.write(num[i],"&lt;br>")
-    }
+    };
     //forEach 
     num.forEach(function(el){
         document.write(el,"&lt;br>")
@@ -391,10 +391,10 @@ document.write(table);
                 <p>for문을 for of 문으로 간략히 사용할 수 있다.</p>
                 <div class="script">
 <pre><code class="language-js">
-    const arr = [100,200,300,400,500]
+    const arr = [100,200,300,400,500];
     for(let i of arr){
         document.write(i)
-    }
+    };
 </code></pre>
                 </div>
                 <div class="result">
@@ -414,12 +414,12 @@ document.write(table);
     const arr = [100,200,300,400,500]
     for(let i in arr){
         document.write(i);
-    }
+    };
 
 const arr = [100,200,300,400,500]
     for(let i in arr){
         document.write(arr[i]);
-    }
+    };
 </code></pre>
                 </div>
                 <div class="result">
@@ -538,7 +538,7 @@ const arr = [100,200,300,400,500]
         a: 300,
         b: 400,
         c: "javascript"
-    }
+    };
     console.log(obj.a);
     console.log(obj.b);
     console.log(obj.c);
@@ -566,7 +566,7 @@ const arr = [100,200,300,400,500]
         a: 300,
         b: 400,
         c: "javascript"
-    }
+    };
     console.log(Object.keys(obj));
     console.log(Object.values(obj));
     console.log(Object.entries(obj));
@@ -623,7 +623,7 @@ const arr = [100,200,300,400,500]
         a: 700,
         b: 800,
         c: "javascript"
-    }
+    };
     for(let key in obj){
         console.log(key)
         console.log(obj[key])
@@ -652,7 +652,7 @@ const arr = [100,200,300,400,500]
 <pre><code class="language-js">
     const obj = [
     {a: 900, b: 1000, c: "javascript"}
-    ]
+    ];
     obj.map((el) => {
     console.log(el);
     console.log(el.a);
@@ -682,7 +682,7 @@ const arr = [100,200,300,400,500]
         a: 1100,
         b: 1200,
         c: "javascript"
-    }
+    };
     console.log(obj.hasOwnProperty("a")); //true
     console.log(obj.hasOwnProperty("b")); //true
     console.log(obj.hasOwnProperty("c")); //true
@@ -719,7 +719,7 @@ const arr = [100,200,300,400,500]
         a: 1200,
         b: 1300,
         c: "javascript"
-    }
+    };
     const spread = {...obj, d:"react"}   //키 값 추가 가능
 
     console.log(spread.a);
@@ -749,7 +749,7 @@ const arr = [100,200,300,400,500]
         a: 1400,
         b: 1500,
         c: "javascript"
-    }
+    };
 
     const {a,b,c} = obj;
 
