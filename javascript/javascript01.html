@@ -166,46 +166,16 @@
                     </div>
                 </div>
                 <!-- //sample03 -->
-                <div id="sample04" class="sample">
-                    <h3>05. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
-                    <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다. 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정 할 수도 없습니다.</p>
-                    <div class="script">
-<pre><code>
-    const x = 100;
-    const y = 200;
-    const z = "javascript";
 
-    x = 300;    
-    y = 400;
-    z = "react";
-
-    console.log(x);
-    console.log(y);
-    console.log(z);
-</code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                Assignment to constant variable<br>
-                                Assignment to constant variable<br>
-                                Assignment to constant variable<br>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-                <!-- //sample04 -->
                 <div id="sample04" class="sample">
-                    <h3>05. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
-                    <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다. 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정 할 수도 없습니다.</p>
-                    <div class="script">
+                    <h3>04. 상수 : 지역변수</h3>
+                    <p>자바스크립트에서 지역변수는 함수 내에서 선언된 변수로서, 해당 함수 내에서만 접근할 수 있는 변수를 말합니다. 지역변수는 함수가 호출될 때 생성되며, 함수가 종료되면 소멸합니다.</p>
 <pre><code>
-    let x = 100;  //전역변수 함수 밖에 있는 변수 값
+    let x = 100;  //전역변수 
     let y = 200;   
 
     function func(){
-        let x = 300;   //지역 변수  함수 안에 있는 변수값    let을 지우면 전역변수의 값이 변수의 특성으로 변경된다.
+        let x = 300;   //지역 변수     
         let y = 400;
         z = "javascript" //전역변수
 
@@ -233,10 +203,15 @@
                             </div>
                         </details>
                     </div>
-                </div>
+                    <div class="notice">
+                        <h4>전역변수, 지역변수</h4>
+                        <p> 전역변수 : 함수 밖에 있는 변수 <br>
+                            지역변수 : 함수 안에 있는 변수
+                            지역 변수에서 let을 지우면 전역변수의 값이 변수의 특성으로 변경된다.<p>
+                    </div>
                 <!-- //sample04 -->
                 <div id="sample05" class="sample">
-                    <h3>06. 배열 : 데이터 저장(여러개) : 표현방법1</h3>
+                    <h3>05. 배열 : 데이터 저장(여러개) : 표현방법1</h3>
                     <p>배열은 데이터 저장 방법이 다양하다. 1-1</p>
                     <div class="script">
 <pre><code>
@@ -661,6 +636,7 @@
                 </div>
             </div>
         </div>
+        
     </main>
     <!-- //main -->
     <footer id="footer">
