@@ -665,6 +665,42 @@
                         </details>
                     </div>
                 </div>
+                <div id="sample16" class="sample">
+                    <h3>17. ++ 식별자,예약자</h3>
+                    <p>식별자(Identifier)는 자바스크립트에서 변수, 함수, 클래스 등의 이름을 지정할 때 사용하는 단어나 문장입니다. </p>
+                    <p>예약어(reserved words)는 자바스크립트에서 이미 사용되고 있거나 나중에 사용될 예정인 특별한 단어입니다.</p>
+                    <div class="script">
+<pre><code>
+{
+    let x = 100, y = "200", z;
+    const func = function(){}
+
+    document.write(x);
+    document.write(typeof(x));      //문자인지 숫자인지 구별 해주는  typeof
+    document.write("<br>");
+
+    document.write(y);
+    y = Number(y);                  //우변을 좌변으로 넘긴다. 문자를 숫자로 바꾼다. 형 변환
+    document.write(typeof(y));
+    document.write("<br>");
+
+    document.write(func);
+    document.write(typeof(func));    //함수도 나온다.
+    document.write("<br>");
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100number
+                                200number
+                                function(){}
+                            </div>
+                        </details>
+                    </div>
+                </div>
             </div>
         </div>
         
