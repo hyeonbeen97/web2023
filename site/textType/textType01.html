@@ -174,7 +174,26 @@
             margin-bottom: 15px;
             line-height: 1.5;
         }
-        .text__btn {}
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 0.3s;
+        }
     </style>
 </head>
 
