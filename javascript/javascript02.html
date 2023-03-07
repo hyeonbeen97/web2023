@@ -294,19 +294,19 @@
 
     //for
     for(let i=0 ; i&lt;num.length;i++){
-        document.write(num[i],"&lt;br>")
+        document.write(num[i],"&lt;br>");
     };
     //forEach 
     num.forEach(function(el){
-        document.write(el,"&lt;br>")
+        document.write(el,"&lt;br>");
     });
     //forEach :화살표 함수 : 
     num.forEach((el)=>{
-        document.write(el,"&lt;br>")
+        document.write(el,"&lt;br>");
     });
     //forEach :화살표 함수 : 괄호생략
     num.forEach(el=>{
-        document.write(el,"&lt;br>")
+        document.write(el,"&lt;br>");
     });
     //forEach :화살표 함수 : 중괄호 생략
     num.forEach(el => document.write(el,"&lt;br>"));
@@ -316,7 +316,7 @@
         document.write(element,"&lt;br>");
         document.write(index,"&lt;br>");
         document.write(array,"&lt;br>");
-    })
+    });
 
 </code></pre>
                 </div>
@@ -401,7 +401,7 @@
 <pre><code class="language-js">
     const arr = [100,200,300,400,500];
     for(let i of arr){
-        document.write(i)
+        document.write(i);
     };
 
 </code></pre>
@@ -451,15 +451,15 @@
     const num = [100,200,300,400,500,600]
 
     num.forEach(function(el,i,a){
-        console.log(el)
-        console.log(i)
-        console.log(a)
+        console.log(el);
+        console.log(i);
+        console.log(a);
     });
 
     num.map(function(el,i,a){
-        console.log(el)
-        console.log(i)
-        console.log(a)
+        console.log(el);
+        console.log(i);
+        console.log(a);
     });
 
 </code></pre>
@@ -500,7 +500,7 @@
     
     console.log(arr1);   //배열
     console.log(...arr1);  //...데이터
-    console.log(...arr1,...arr2)
+    console.log(...arr1,...arr2);
 
 </code></pre>
                 </div>
@@ -641,8 +641,8 @@
         c: "javascript"
     };
     for(let key in obj){
-        console.log(key)
-        console.log(obj[key])
+        console.log(key);
+        console.log(obj[key]);
     };
 
 </code></pre>
@@ -710,7 +710,7 @@
     console.log("b" in obj);
     console.log("c" in obj);
     console.log("d" in obj);
-    
+
 </code></pre>
                 </div>
                 <div class="result">
