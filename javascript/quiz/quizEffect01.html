@@ -20,14 +20,14 @@
         <div class="quiz__wrap">
             <div class="quiz">
                 <div class="quiz__header">
-                    <h2 class="quiz__title">웹디자인 기능사 <em> 2012년도 기출문제</h2>
+                    <h2 class="quiz__title"> <span></span> <em> </h2>
                 </div>
                 <div class="quiz__main">
                     <div class="quiz__question">
-                        <span>1.</span> 인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가?
+                        <em></em>. <span></span>
                     </div>
                     <div class="quiz__view">
-                        <div class="dog__wrap like">
+                        <div class="dog__wrap">
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -51,8 +51,8 @@
                         </div>
                     </div>
                     <div class="quiz__answer">
-                        <button class="confirm">정답 확인하기</button>
-                        <div class="result">연비 대비</div>
+                        <button class="confirm"></button>
+                        <div class="result"></div>
                     </div>
                 </div>
                 <div class="quiz__footer"></div>
@@ -64,6 +64,44 @@
         <a href="mailto:esansi@naver.com">esansi@naver.com</a>
     </footer>
     <!--//footer-->
+
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap")
+        const quizTitle = quizWrap.querySelector(".quiz__title span")
+        const quizTime = quizWrap.querySelector(".quiz__title em")
+        const quizQusetion = quizWrap.querySelector(".quiz__question span")
+        const quizQusetionNum = quizWrap.querySelector(".quiz__question em")
+        const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm")
+        const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result")
+        
+        // 문제 정보
+        const infoType = "웹디자인 기능사";
+        const infoTime = "2012년 1회";
+        const infoNumber = "1";
+        const infoQuestion = "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가?"
+        const infoConfirm = "정답 확인하기"
+        const infoAnswer = "연변대비"
+
+        //문제 출력
+        quizTitle.innerText = infoType;
+        quizTime.innerText = infoTime;
+        quizQusetionNum.innerText = infoNumber;
+        quizQusetion.innerText = infoQuestion;
+        quizAnswerConfirm.innerText = infoConfirm;
+        quizAnswerResult.innerText = infoAnswer;
+
+        //정답 숨기기
+        quizAnswerResult.style.display = "none";
+
+        //정답 확인
+        quizAnswerConfirm.addEventListener("click", function(){
+            quizAnswerResult.style.display = "block";
+            quizAnswerConfirm.style.display = "none";
+        })
+
+    
+    </script>
 </body>
 
 </html>
