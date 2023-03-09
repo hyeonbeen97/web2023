@@ -614,42 +614,20 @@
     static, super, switch, this, throw, true, try, typeof
     var, void, while, with, yield
 
-    비트연산자
-
-    let sum =80
-    let num =16
-    
-    document.write(sum & num);
-    document.write(sum ^ num);
-    document.write(sum | num);
-    document.write(sum &lt;&lt; num);
-    document.write(sum &gt;&gt; num);
-
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                16<br>
-                                64<br>
-                                80<br>
-                                5242880<br>
-                                0<br>
                             </div>
                         </details>
-                    </div>
-                    <div class="notice">
-                        <h4>비트연산자</h4>
-                        <p> 전역변수 : 함수 밖에 있는 변수 <br>
-                            지역변수 : 함수 안에 있는 변수
-                            지역 변수에서 let을 지우면 전역변수의 값이 변수의 특성으로 변경된다.<p>
                     </div>
                 </div>
                 <div id="sample16" class="sample">
                     <h3> 연산자(전치,후치), 비트연산자</h3>
-                    <p>비트 연산자는 컴퓨터에서 이진수(binary)를 다루는 데 사용되는 연산자로, 이진수를 비트(bit) 단위로 처리합니다. <br>
-                        이진수는 0과 1로 이루어진 숫자 체계이며, 컴퓨터에서 모든 데이터는 0과 1의 이진수 형태로 저장됩니다.</p>
+                    <p>전치와 후치는 증감 연산자를 통해 수행됩니다. 증감 연산자는 변수의 값을 1 증가시키거나 감소시키는 역할을 합니다.</p>
+                    <p>전치와 후치는 증감 연산자를 통해 수행됩니다. 증감 연산자는 변수의 값을 1 증가시키거나 감소시키는 역할을 합니다.</p>
                     <div class="script">
 <pre><code>
     {
@@ -703,6 +681,17 @@
         console.log(c)
     }
 
+    비트연산자
+
+    let sum =80
+    let num =16
+    
+    document.write(sum & num);
+    document.write(sum ^ num);
+    document.write(sum | num);
+    document.write(sum &lt;&lt; num);
+    document.write(sum &gt;&gt; num);
+
 </code></pre>
                     </div>
                     <div class="result">
@@ -726,9 +715,21 @@
                                 30<br>
                                 20<br>
                                 61<br>                                
-                                30<br>                                
+                                30<br>
+                                
+                                비트연산자 결과 --
+                                16<br>
+                                64<br>
+                                80<br>
+                                5242880<br>
+                                0<br>
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4>비트연산자</h4>
+                        <p> 비트 연산자는 컴퓨터에서 이진수(binary)를 다루는 데 사용되는 연산자로, 이진수를 비트(bit) 단위로 처리합니다. <br>
+                            이진수는 0과 1로 이루어진 숫자 체계이며, 컴퓨터에서 모든 데이터는 0과 1의 이진수 형태로 저장됩니다..<p>
                     </div>
                 </div>
                 <div id="sample16" class="sample">
