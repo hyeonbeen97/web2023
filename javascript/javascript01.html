@@ -214,19 +214,20 @@
                                     <h3>05.상수 : 데이터 저장(여러개) : 표현방법1 </h3>
                                     <p>상수는 데이터를 저장하고, 변경하고, 추가할 수 없습니다.</p>
                                     <div class="script">
-                <pre><code>
-                    const x = 100;
-                    const y = 200;
-                    const z = "javascript";
+<pre><code>
+    const x = 100;
+    const y = 200;
+    const z = "javascript";
 
-                    x = 300;    //Assignment to constant variable.
-                    y = 400;
-                    z = "react";
+    x = 300;    //Assignment to constant variable.
+    y = 400;
+    z = "react";
 
-                    console.log(x);
-                    console.log(y);
-                    console.log(z);                
-                </code></pre>
+    console.log(x);
+    console.log(y);
+    console.log(z);
+
+</code></pre>
                                     </div>
                                     <div class="result">
                                         <details>
@@ -484,10 +485,10 @@
                     <div class="script">
   <pre><code>
     const obj = {
-    a: 100,
-    b: [200,300],
-    c: {x:400, y: 500},
-    d: "javascript"
+        a: 100,
+        b: [200,300],
+        c: {x:400, y: 500},
+        d: "javascript"
     };
 
     console.log(obj.a);
@@ -613,19 +614,42 @@
     static, super, switch, this, throw, true, try, typeof
     var, void, while, with, yield
 
+    비트연산자
+
+    let sum =80
+    let num =16
+    
+    document.write(sum & num);
+    document.write(sum ^ num);
+    document.write(sum | num);
+    document.write(sum &lt;&lt; num);
+    document.write(sum &gt;&gt; num);
+
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                16<br>
+                                64<br>
+                                80<br>
+                                5242880<br>
+                                0<br>
                             </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <h4>비트연산자</h4>
+                        <p> 전역변수 : 함수 밖에 있는 변수 <br>
+                            지역변수 : 함수 안에 있는 변수
+                            지역 변수에서 let을 지우면 전역변수의 값이 변수의 특성으로 변경된다.<p>
                     </div>
                 </div>
                 <div id="sample16" class="sample">
                     <h3> 연산자(전치,후치), 비트연산자</h3>
-                    <p>객체 안 배열 객체 함수가 들어간 값 구하기</p>
+                    <p>비트 연산자는 컴퓨터에서 이진수(binary)를 다루는 데 사용되는 연산자로, 이진수를 비트(bit) 단위로 처리합니다. <br>
+                        이진수는 0과 1로 이루어진 숫자 체계이며, 컴퓨터에서 모든 데이터는 0과 1의 이진수 형태로 저장됩니다.</p>
                     <div class="script">
 <pre><code>
     {
@@ -964,30 +988,40 @@
         // }
 
         // //04. 변수 : 지역변수 + 전역변수
+        // {
+        //     let x = 100;  //전역변수 함수 밖에 있는 변수 값
+        //     let y = 200;   
+
+        //     function func(){
+        //         let x = 300;   //지역 변수  함수 안에 있는 변수값    let을 지우면 전역변수의 값이 변수의 특성으로 변경된다.
+        //         let y = 400;
+        //         z = "javascript" //전역변수
+
+        //         function fux(){
+        //             let x =500;
+        //             console.log(x)
+        //         }
+
+        //         console.log("함수 안"+x)
+        //         console.log("함수 안"+y)
+        //         console.log("함수 안"+z)
+        //     }
+        //     func()
+
+        //     console.log("함수 밖"+x)
+        //     console.log("함수 밖"+y)
+        //     console.log("함수 밖"+z)
+
+        // }
         {
-            let x = 100;  //전역변수 함수 밖에 있는 변수 값
-            let y = 200;   
-
-            function func(){
-                let x = 300;   //지역 변수  함수 안에 있는 변수값    let을 지우면 전역변수의 값이 변수의 특성으로 변경된다.
-                let y = 400;
-                z = "javascript" //전역변수
-
-                function fux(){
-                    let x =500;
-                    console.log(x)
-                }
-
-                console.log("함수 안"+x)
-                console.log("함수 안"+y)
-                console.log("함수 안"+z)
-            }
-            func()
-
-            console.log("함수 밖"+x)
-            console.log("함수 밖"+y)
-            console.log("함수 밖"+z)
-
+            let sum =80
+            let num =16
+            
+            console.log(sum & num);
+            console.log(sum ^ num);
+            console.log(sum | num);
+            console.log(sum << num);
+            console.log(sum >> num);
         }
     </script>
 </body>
