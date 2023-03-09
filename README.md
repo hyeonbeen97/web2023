@@ -8,7 +8,7 @@
 데이터 제어하기 : https://hyeonbeen97.github.io/web2023/javascript/javascript04.html   
    
 퀴즈게임01 : https://hyeonbeen97.github.io/web2023/javascript/quiz/quizEffect01.html    
-퀴즈게임02 : https://hyeonbeen97.github.io/web2023/javascript/quiz/quizEffect02.htmㅣ          
+퀴즈게임02 : https://hyeonbeen97.github.io/web2023/javascript/quiz/quizEffect02.htm          
  
 # 사이트            
 헤더 유형01 : https://hyeonbeen97.github.io/web2023/site/headerType/headerType01.html         
