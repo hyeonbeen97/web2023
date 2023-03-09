@@ -89,7 +89,6 @@
 }
 
 /* main */
-#main {}
 /* quiz__wrap */
 .quiz__wrap {
     display: flex;
@@ -111,10 +110,6 @@
     color: #3b3b3b;
     text-align: center;
 }
-.quiz__header {}
-
-.quiz__main {}
-
 .quiz__question {
     padding: 20px;
     font-size: 24px;
