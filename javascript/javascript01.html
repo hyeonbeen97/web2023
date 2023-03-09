@@ -737,7 +737,6 @@
                     <p>type of는 JavaScript에서 변수의 데이터 타입을 반환하는 연산자입니다. 다음과 같이 사용합니다. </p>
                     <div class="script">
 <pre><code>
-
     let x = 100, y = "200", z;
     const func = function(){}
 
@@ -754,16 +753,15 @@
     document.write(typeof(func));    //함수도 나온다.
     document.write("<br>");
 
-
 </code></pre>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                100number
-                                200number
-                                function(){}
+                                100number<br>
+                                200number<br>
+                                function(){}<br>
                             </div>
                         </details>
                     </div>
@@ -1014,16 +1012,32 @@
         //     console.log("함수 밖"+z)
 
         // }
-        {
-            let sum =80
-            let num =16
+        // {
+        //     let sum =80
+        //     let num =16
             
-            console.log(sum & num);
-            console.log(sum ^ num);
-            console.log(sum | num);
-            console.log(sum << num);
-            console.log(sum >> num);
-        }
+        //     console.log(sum & num);
+        //     console.log(sum ^ num);
+        //     console.log(sum | num);
+        //     console.log(sum << num);
+        //     console.log(sum >> num);
+        // }
+
+        // let x = 100, y = "200", z;
+        // const func = function(){}
+
+        // document.write(x);
+        // document.write(typeof(x));      //문자인지 숫자인지 구별 해주는  typeof
+        // document.write("<br>");
+
+        // document.write(y);
+        // y = Number(y);                  //우변을 좌변으로 넘긴다. 문자를 숫자로 바꾼다. 형 변환
+        // document.write(typeof(y));
+        // document.write("<br>");
+
+        // document.write(func);
+        // document.write(typeof(func));    //함수도 나온다.
+        // document.write("<br>");
     </script>
 </body>
 
