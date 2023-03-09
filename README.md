@@ -1,16 +1,11 @@
 # web2023
-수업시간 예제
 
-# HTML
-인라인구조 와 블록 구조
-시멘틱 태그
 
-# JAVASCRIPT
-변수, 상수, 배열, 격체
-## class Table 코딩
+#javascript
+퀴즈게임01 : https://hyeonbeen97.github.io/web2023
 
-## 레이아웃 연습
-
-### 레이아웃01
-
-### 레이아웃02
+#사이트
+이미지 유형01 : https://hyeonbeen97.github.io/web2023/site/imageType/imageType01.html
+카드 유형01 : https://hyeonbeen97.github.io/web2023/site/cardType/cardType01.html
+텍스트 유형01 : https://hyeonbeen97.github.io/web2023/site/textType/textType01.html
+슬라이드 유형01 : https://hyeonbeen97.github.io/web2023
