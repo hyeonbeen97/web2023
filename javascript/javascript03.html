@@ -367,11 +367,9 @@
     function func(num, str1, str2){
         document.write(num + "." + str1 + "가" + str2 + "되었습니다.");
     };
-    func("1","함수","실행")
-    document.write("<br>")
-    func("2","자바스크립트","실행")
-    document.write("<br>")
-    func("3","리액트","실행")
+    func("1","함수","실행");
+    func("2","자바스크립트","실행");
+    func("3","리액트","실행");
 
 </code></pre>
                 </div>
@@ -403,15 +401,10 @@
     const youStr2 = "자바스크립트";
     const youStr3 = "리액트";
     const youCom1 = "실행";
-    const youBr1 = "<br>";
 
     func(youNum1, youStr1, youCom1);
-    document.write("<br>")
     func(youNum2, youStr2, youCom1);
-    document.write("<br>")
     func(youNum3, youStr3, youCom1);    
-    document.write("<br>")
-    document.write("<br>")
 
 </code></pre>
                 </div>
@@ -439,9 +432,7 @@
     const num = [1,2,3]
     const info = ["함수","자바스크립트","리액트","실행"]
     func(num[0],info[0],info[3]);
-    document.write("<br>")
     func(num[1],info[1],info[3]);
-    document.write("<br>")
     func(num[2],info[2],info[3]);
 
 </code></pre>
@@ -470,9 +461,7 @@
     const num = [1,2,3]
     const info = ["함수","자바스크립트","리액트","실행"]
     func(num[0],info[0],info[3]);
-    document.write("<br>")
     func(num[1],info[1],info[3]);
-    document.write("<br>")
     func(num[2],info[2],info[3]);
 
 </code></pre>
@@ -511,13 +500,12 @@
             num: 3,
             name: "함리액트",
             word: "실행"
-        }
-    ]
+        };
+    ];
+    
     func(info[0].num,info[0].name,info[0].word);
-    document.write("<br>");
-    func(info[1].num,info[1].name,info[1].word,);
-    document.write("<br>");
-    func(info[2].num,info[2].name,info[2].word,);
+    func(info[1].num,info[1].name,info[1].word);
+    func(info[2].num,info[2].name,info[2].word);
 
 </code></pre>
                 </div>
@@ -589,13 +577,13 @@
 
         this.result = function(){
             document.write(this.num+"."+ this.name+ "가" + this.word + "되었습니다.<br>")
-        }
-    }
+        };
+    };
 
     //인스턴스 생성
-    const info1 = new Func("1", "함수", "실행")
-    const info2 = new Func("2", "자바스크립트", "실행")
-    const info3 = new Func("3", "리액트1", "실행")
+    const info1 = new Func("1", "함수", "실행");
+    const info2 = new Func("2", "자바스크립트", "실행");
+    const info3 = new Func("3", "리액트1", "실행");
     
     info1.result();
     info2.result();
@@ -625,14 +613,14 @@
         this.num = num;
         this.name = name;
         this.word = word;
-    }
+    };
     Func.prototype.result = function(){
         document.write(this.num+"."+ this.name+ "가" + this.word + "되었습니다.<br>")
     };
     //인스턴스 생성
-    const info1 = new Func("1", "함수", "실행")
-    const info2 = new Func("2", "자바스크립트", "실행")
-    const info3 = new Func("3", "리액트1", "실행")
+    const info1 = new Func("1", "함수", "실행");
+    const info2 = new Func("2", "자바스크립트", "실행");
+    const info3 = new Func("3", "리액트1", "실행");
 
     info1.result();
     info2.result();
