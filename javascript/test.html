@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //0부터 100까지 출력 for문
+    {
+        for(let i =0; i<=100; i++){
+            document.write(i);
+        };
+    };
+    document.write("<br>")
+    //100칸 테이블
+    {
+        let table = "<table border=1>"
+
+        for(let i = 1; i <=10; i++){
+            table += "<tr></trr>"
+            for(let j = 1; j <=10; j++){
+                table += "<td>1</td>"
+            };
+        };
+        table += "</table>"
+        document.write(table);
+    }
+    //구구단 20단
+    {
+        for(let i = 20; i <=20; i++){
+            document.write(i+"단","<br>");
+            for(let j = 1; j <=9; j++){
+                document.write(i+"*"+j+"="+i*j,"<br>");
+            };
+        };
+    };
+    document.write("<br>")
+
+    //1부터 100까지 짝수의 합
+    {
+        let sum = 0;
+
+        for(let i = 1; i <=100; i++){
+            if(i % 2  == 0){
+                sum += i
+            };
+        };
+        document.write(sum);
+    };
+    document.write("<br>")
+    //1부터  100까지 짝수는 파란색 홀수는 빨간색
+    {
+        for(let i = 1; i <=100; i++){
+            (i % 2 == 0) ? document.write("<sapn style = 'color : blue'>"+i+"</span>") : document.write("<sapn style = 'color: red'>"+i+"</span>");
+        }
+    }
+    document.write("<br>")
+    // 배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+    {
+        let x = [1,2,3,4,5,6,7,8,9,10];
+    
+        x.forEach(function(el){
+            document.write(el)  
+        });
+    }
+    document.write("<br>")
+    // 함수유형
+    {
+        function func(){
+            document.write("함수")
+        };
+        func();
+    }
+    document.write("<br>") 
+    {
+        const func = function(){
+            document.write("함수")
+        };
+        func();
+    }
+
+    document.write("<br>")
+
+    {
+        function func(str){
+            document(str);
+        };
+        func("함수");       
+    }  
+
+    document.write("<br>")
+
+    {
+        function func(){
+            const str = "함수"
+            return str;
+        };
+        document.write(func());        
+    }
+
+</script>
+</html>
