@@ -94,11 +94,13 @@
     display: flex;
     justify-content: center ;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 .quiz__wrap .quiz {
     width: 500px;
     background-color: #EEEEEE;
     border: 8px ridge #E8D5C4;
+    margin: 10px;
 }
 .quiz__title {
     background-color: #ffe1b4;
@@ -124,7 +126,7 @@
     padding: 20px;
     text-align: center;
     font-size: 24px;
-    border-bottom: 6px ridge #FFF1DC;
+    /* border-bottom: 6px ridge #FFF1DC; */
 }
 .quiz__answer .input{
     background-color: #fff;
@@ -157,12 +159,14 @@
     font-family: "MabinogiClassic";
     padding: 10px 20px;
     font-size: 22px;
+    /* display: none; */
+
 }
 .quiz__view {
     border-bottom: 6px ridge #FFF1DC;
     overflow: hidden;
 }
-.quiz__footer {
+/* .quiz__footer {
     border-top: 6px ridge #FFF1DC;
     padding: 20px;
     font-family: "MabinogiClassic";
@@ -171,6 +175,19 @@
 .quiz__footer::before {
     content: "🔻  Tip";
     color: rgb(255, 115, 0);
+    display: none;
+} */
+.quiz__desc {
+    /* border-top: 6px ridge #FFF1DC; */
+    padding: 20px;
+    font-family: "MabinogiClassic";
+    background-color: #E8D5C4;
+    border-top: 6px ridge #FFF1DC;
+}
+.quiz__desc::before {
+    content: "🔻  Tip ";
+    color: rgb(255, 115, 0);
+    /* display: none; */
 }
 
 
@@ -187,9 +204,61 @@
 .dog .face::after, 
 .dog .ears::before, 
 .dog .ears::after, 
+
 .dog__wrap {
     transition: 0.2s ease-in;
   }
+  .dog__wrap {
+    position: relative;
+  }
+.dog__wrap .true {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    background-color: #f88d12d7;
+    color: #fff;
+    font-family: "MabinogiClassic";
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 70%;
+    top: 100px;
+    opacity: 0;
+}
+.dog__wrap .false {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    background-color: #455d6b;
+    font-family: "MabinogiClassic";
+    color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    right: 70%;
+    top: 100px;
+    opacity: 0;
+}
+.dog__wrap.like .true {
+    opacity: 1;
+    animation: wobble 0.6s;
+}
+.dog__wrap.dislike .false{
+    opacity: 1;
+    animation: wobble 0.6s;
+
+}
+@keyframes wobble {
+    0% {transform: translateX(0) rotate(0deg);}
+    15% {transform: translateX(-25%) rotate(-5deg);}
+    30% {transform: translateX(20%) rotate(3deg);}
+    45% {transform: translateX(-15%) rotate(-3deg);}
+    60% {transform: translateX(10%) rotate(2deg);}
+    75% {transform: translateX(-5%) rotate(-1deg);}
+    100% {transform: translateX(0%) rotate(0deg);}
+}
+
 .card-container {
     position: relative;
     width: 360px;
