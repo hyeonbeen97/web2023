@@ -250,13 +250,13 @@
         // quizQusetion[2].textContent = quizInfo[2].infoQuestion;
         
         //for문 이용 세번째 방법
-        // for(let i =0; i<quizInfo.length; i++){
-        //     quizTitle[i].innerHTML = quizInfo[i].infoType+" "+ quizInfo[i].infoTime;
-        //     quizQusetionNum[i].textContent = quizInfo[i].infoNumber;
-        //     quizQusetion[i].textContent = quizInfo[i].infoQuestion;
-        //     quizAnswerResult[i].textContent = quizInfo[i].infoAnswer;
-        //     quizDesc[i].textContent = quizInfo[i].infoDesc;
-        // }
+        for(let i =0; i<quizInfo.length; i++){
+            quizTitle[i].innerHTML = quizInfo[i].infoType+" "+ quizInfo[i].infoTime;
+            quizQusetionNum[i].textContent = quizInfo[i].infoNumber;
+            quizQusetion[i].textContent = quizInfo[i].infoQuestion;
+            quizAnswerResult[i].textContent = quizInfo[i].infoAnswer;
+            quizDesc[i].textContent = quizInfo[i].infoDesc;
+        }
 
         quizInfo.forEach(function(e, i){
             quizTitle[i].innerHTML = quizInfo[i].infoType+" "+ quizInfo[i].infoTime;
@@ -267,7 +267,7 @@
         
         });
 
-        //정답 % 해설 숨기기
+        //정답 & 해설 숨기기
 
         // quizAnswerResult[0].style.display = "none";
         // quizAnswerResult[1].style.display = "none";
