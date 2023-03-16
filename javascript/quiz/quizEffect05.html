@@ -253,7 +253,7 @@
                 infoType: "정보처리 기능사",
                 infoTime: "2007년 (5회)",
                 infoNumber: "20070513",
-                infoQuestion: "오퍼랜드(Operand) 자체가 연산대상이 되는 주소지정방식은?? <br><br> <img style ='width:300px' src ='assets/img/13.bmp'>",
+                infoQuestion: "다음 보기의 연산은? <br><br> <img style ='width:300px' src ='assets/img/13.bmp'>",
                 infoChoice: {
                     1: "AND 연산",
                     2: "OR 연산",
@@ -971,11 +971,9 @@
                 const dogWrap = quizWrap.querySelectorAll(".dog__wrap")
 
                 if(userAnswer == question.infoAnswer){
-                    console.log("정답")
                     dogWrap[number].classList.add("like");
                     quizScore++;
                 } else {
-                    console.log("오답")
                     dogWrap[number].classList.add("dislike");
                     
                 };
