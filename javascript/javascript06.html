@@ -76,10 +76,10 @@
                 <div class="script">
 <pre><code class="language-js">
     const arrNum1 = [100,200,300,400,500];
-    const text1 = arrNum1.join('');  //100200300400500
-    const text2 = arrNum1.join(' '); //100 200 300 400 500
-    const text3 = arrNum1.join('*'); //100*200*300*400*500 
-    const text4 = arrNum1.join('-'); //100-200-300-400-500
+    const text1 = arrNum1.join('');  
+    const text2 = arrNum1.join(' '); 
+    const text3 = arrNum1.join('*'); 
+    const text4 = arrNum1.join('-'); 
 
     console.log(text1)
     console.log(text2)
@@ -87,6 +87,17 @@
     console.log(text4)
 
 </code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100200300400500<br>
+                            100 200 300 400 500<br>
+                            100*200*300*400*500<br>
+                            100-200-300-400-500<br>
+                        </div>
+                    </details>
                 </div>
             </div>
             <div id="sample01" class="sample">
@@ -106,6 +117,15 @@
 
 </code></pre> 
                 </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 200 300 400 500 600<br>
+                            100 200 300 400 <br>
+                        </div>
+                    </details>
+                </div>
             </div>
             <!-- sample01 -->
             <div id="sample01" class="sample">
@@ -124,6 +144,15 @@
     console.log(arrNum2);
 
 </code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            600 100 200 300 400 500 600<br>
+                            200 300 400 500<br>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>

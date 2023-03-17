@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
     //선언적 함수
     //함수가 실행되었습니다.1<br>
     {
-        function func(){
+        function func() {
             document.write("함수가 실행되었습니다.1<br>")
         };
         func();
@@ -21,7 +23,7 @@
     //익명 함수
     //함수가 실행되었습니다.2<br>
     {
-        const func = function(){
+        const func = function () {
             document.write("함수가 실행되었습니다.2<br>");
         };
         func();
@@ -29,7 +31,7 @@
     //매개변수 함수
     //함수가 실행되었습니다.3<br>
     {
-        function func(str){
+        function func(str) {
             document.write(str)
         };
         func("함수가 실행되었습니다.3<br>");
@@ -37,7 +39,7 @@
     //리턴값 함수
     //함수가 실행되었습니다.4 <br>
     {
-        function func(){
+        function func() {
             const str = "함수가 실행되었습니다.4<br>"
             return str;
         };
@@ -103,18 +105,18 @@
     //함수가 실행되었습니다.12<br>
     {
         func = str => str;
-        
+
         document.write(func("함수가 실행되었습니다.12<br>"));
     }
     document.write("<br><b>함수 유형 : 함수와 매개변수를 이용한 형태</b><br>");
     //함수 유형 : 함수와 매개변수를 이용한 형태
     {
-        function func(num, str1, str2){
+        function func(num, str1, str2) {
             document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
         }
-        func("1","함수", "실행");
-        func("2","함수", "실행");
-        func("3","함수", "실행");
+        func("1", "함수", "실행");
+        func("2", "함수", "실행");
+        func("3", "함수", "실행");
     }
     document.write("<br><b>함수 유형 : 함수와 변수를 이용한 형태</b><br>");
     //함수 유형 : 함수와 변수를 이용한 형태
@@ -126,7 +128,7 @@
         const youStr1 = "함수";
         const youStr2 = "자바스크립트";
         const youStr3 = "리액트";
-        
+
         const youCom1 = "실행"
 
 
@@ -142,42 +144,42 @@
                 num: "1",
                 name: "함수",
                 com: "실행"
-            },{
+            }, {
                 num: "2",
                 name: "자바스크립트",
                 com: "실행"
-            },{
+            }, {
                 num: "3",
                 name: "리액트",
                 com: "실행"
             }
         ];
-        function func(num, str1, str2){
+        function func(num, str1, str2) {
             document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`)
         }
-        func(info[0].num,info[0].name,info[0].com);
-        func(info[1].num,info[1].name,info[1].com);
-        func(info[2].num,info[2].name,info[2].com);
+        func(info[0].num, info[0].name, info[0].com);
+        func(info[1].num, info[1].name, info[1].com);
+        func(info[2].num, info[2].name, info[2].com);
     }
     document.write("<br><b> 함수 유형 : 객체안에 함수를 이용한 형태  </b><br>");
     //함수 유형 : 객체안에 함수를 이용한 형태
     {
         const info = {
             num1: "11",
-            name1 : "함수",
+            name1: "함수",
             com1: "실행",
             num2: "12",
-            name2 : "자바스크립트",
+            name2: "자바스크립트",
             com2: "실행",
             num3: "13",
-            name3 : "리액트",
+            name3: "리액트",
             com3: "실행",
             result1: () => {
                 document.write(`${info.num1}. ${info.name1}가 ${info.com1}되었습니다.<br>`);
             },
             result2: () => {
                 document.write(`${info.num2}. ${info.name2}가 ${info.com2}되었습니다.<br>`);
-            },            
+            },
             result3: () => {
                 document.write(`${info.num3}. ${info.name3}가 ${info.com3}되었습니다.<br>`);
             }
@@ -191,19 +193,19 @@
     document.write("<br><b> 함수 유형 : 객체 생성자 함수 </b><br>");
     //함수 유형 : 객체 생성자 함수    매개변수 + 객체안에 함수  + this + 인스턴스
     {
-        function func(num, name, com){
+        function func(num, name, com) {
             this.num = num;
             this.name = name;
             this.com = com;
 
-            this.result = function(){
+            this.result = function () {
                 document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.<br>`)
             };
         }
         //인스턴스
-        const info1 = new func("100","함수","실행");
-        const info2 = new func("200","자바스크립트","실행");
-        const info3 = new func("300","리액트","실행");
+        const info1 = new func("100", "함수", "실행");
+        const info2 = new func("200", "자바스크립트", "실행");
+        const info3 = new func("300", "리액트", "실행");
 
         //실행문
         info1.result();
@@ -213,18 +215,18 @@
     document.write("<br><b> 함수 유형 : 프로토타입 함수 </b><br>");
     //20. 함수 유형 : 프로토 타입
     {
-        function func(num, name, com){
+        function func(num, name, com) {
             this.num = num;
             this.name = name;
             this.com = com;
         };
-        func.prototype.result = function(){
+        func.prototype.result = function () {
             document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.<br>`)
         }
         //인스턴스
-        const info1 = new func("101","함수","실행");
-        const info2 = new func("202","자바스크립트","실행");
-        const info3 = new func("303","리액트","실행");
+        const info1 = new func("101", "함수", "실행");
+        const info2 = new func("202", "자바스크립트", "실행");
+        const info3 = new func("303", "리액트", "실행");
 
         //실행문
         info1.result();
@@ -234,26 +236,26 @@
     document.write("<br><b> 함수 유형 : 객체리터럴 </b><br>");
     //21. 함수 유형 : 객체리터럴  함수를 객체로 
     {
-        function func(num, name, com){
+        function func(num, name, com) {
             this.num = num;
             this.name = name;
             this.com = com;
         }
         func.prototype = {
-            result1: function(){
+            result1: function () {
                 document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.<br>`)
             },
-            result2: function(){
+            result2: function () {
                 document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.<br>`)
             },
-            result3: function(){
+            result3: function () {
                 document.write(`${this.num}. ${this.name}가 ${this.com}되었습니다.<br>`)
             }
         }
         //인스턴스
-        const info1 = new func("101","함수","실행");
-        const info2 = new func("202","자바스크립트","실행");
-        const info3 = new func("303","리액트","실행");
+        const info1 = new func("101", "함수", "실행");
+        const info2 = new func("202", "자바스크립트", "실행");
+        const info3 = new func("303", "리액트", "실행");
 
         //실행문
         info1.result1();
@@ -263,7 +265,7 @@
     document.write("<br><b>  함수종류 : 즉시 실행함수 </b><br>");
     //22. 함수종류 : 즉시 실행함수
     {
-        (function (){
+        (function () {
             document.write("500함수가 실행되었습니다<br>")
         })();
 
@@ -274,33 +276,33 @@
     document.write("<br><b>  함수종류 : 파리미트함수 </b><br>");
     //23. 함수종류 : 파라미터 함수
     {
-        function func(str = "600.함수가 실행되었습니다.<br>"){
+        function func(str = "600.함수가 실행되었습니다.<br>") {
             document.write(str);
         };
         func();
 
-        ((str = "601.함수가 실행되었습니다.<br>") =>{
+        ((str = "601.함수가 실행되었습니다.<br>") => {
             document.write(str);
         })();                                   //파리미터 함수를 즉시 실행함수로
     }
     document.write("<br><b>  함수종류 : 아큐먼트함수 </b><br>");
     //24. 함수종류 : 아큐먼트 함수
     {
-        function func(str1, str2){
+        function func(str1, str2) {
             document.write(arguments[0]);
             document.write(arguments[1]);
         }
-        func("함수실행1<br>","함수실행2<br>")
+        func("함수실행1<br>", "함수실행2<br>")
     }
     document.write("<br><b>  함수종류 : 재귀함수 </b><br>");
     //25. 함수종류 : 재귀 함수  (자기자신을 호출) if문과 같이
     {
-        function func(num){
-            if(num<=1){
+        function func(num) {
+            if (num <= 1) {
                 document.write("1이랑 같아서 반복 끝<br>");
             } else {
                 document.write("1보다 커서 반복 중<br>");
-                func(num-1)
+                func(num - 1)
             }
         }
         func(10);
@@ -317,15 +319,16 @@
         // func1();
         // func2();
 
-        function func(){
+        function func() {
             document.write("2. 함수 실행<br>")
         }
-        
-        function callback(str){
+
+        function callback(str) {
             document.write("1. 함수 실행<br>")
             str();
         }
         callback(func)
+
     }
 </script>
 
