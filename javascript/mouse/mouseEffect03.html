@@ -8,6 +8,47 @@
     <title>01. 마우스 이펙트</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
+    <style>
+        .mouse__wrap {
+            cursor: none;
+        }
+        .mouse__text {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+
+        }
+        .mouse__text p {
+            font-size: 3vw;
+            line-height: 1.6;
+            z-index: 10;
+        }
+        .mouse__text p:last-child {
+            font-size: 3vw;
+        }
+        .mouse__text p span {
+            color: rgb(0, 255, 229);
+        }      
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            background-color:rgba(255, 255, 255, 0.5);
+            background-image: url(img/mouseEffect03-min.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+
+        }  
+    </style>
 </head>
 <body class="img03 bg03 font06">
     <header id="header">
@@ -24,12 +65,50 @@
     </header>
     <!--header-->
     <main id="main">
-
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__cursor2"></div>
+            <div class="mouse__text">
+                <p>Money can't buy happiness, but sitting in a Mercedes is more comfortable than riding a bike and crying.</p>
+                <p>돈으로는 행복을 살 순 없지만, 자전거에 탄 채로 우는 것보단 </span>벤츠</span>에 앉아 우는 게 편하다.</p>
+            </div>
+        </div>
     </main>
     <!--main-->
     <footer id="footer">
         <a href="mailto:esansi@naver.com">esansi@naver.com</a></footer>
     </footer>
     <!--footer-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+    //선택자
+    const cursor = document.querySelector(".mouse__cursor");
+
+    // console.log(cursor.clientWidth);
+    // console.log(cursor.clientHeight);
+    // console.log(cursor.offsetWidth);
+    // console.log(cursor.offsetHeight);
+
+    const circle = cursor.getBoundingClientRect();
+
+    // const DOMRect = {
+    //     bottom: 200,
+    //     height: 200,
+    //     left: 0,
+    //     right: 200,
+    //     top: 0,
+    //     width: 200,
+    //     x: 0,
+    //     y: 0
+    // }
+
+    window.addEventListener("mousemove", e =>{
+        gsap.to(cursor, {
+            duration:0.5, 
+            left: e.pageX - circle.width/2, 
+            top: e.pageY - circle.height/2
+        });
+    });
+    </script>
 </body>
 </html>

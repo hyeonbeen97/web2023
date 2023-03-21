@@ -11,7 +11,7 @@
         .mouse__wrap {
             cursor: none;
         }
-        .mouse__cursol {
+        .mouse__cursor {
             position: absolute;
             left: 0;
             top: 0;
@@ -28,37 +28,37 @@
                 transform 0.6s
             ;        
         }
-        .mouse__cursol.s1 {
+        .mouse__cursor.s1 {
             background-color: rgba(red, green, blue, 0.8);
             border-color: #1d8603;
         }
 
-        .mouse__cursol.s2 {
+        .mouse__cursor.s2 {
             background-color: rgba(red, green, blue, 0.8);
             border-color: #00fa9a;
             transform: scale(2) rotateY(720deg);
         }
 
-        .mouse__cursol.s3 {
+        .mouse__cursor.s3 {
             background-color: rgba(red, green, blue, 0.8);
             border-color: #faf600;
             transform: scale(1.5) rotateX(545deg);
         }
 
-        .mouse__cursol.s4 {
+        .mouse__cursor.s4 {
             background-color: rgba(red, green, blue, 0.8);
             border-color: #f200ff;
             transform: scale(7) rotateX(1080deg) rotateY(1080deg);
         }
 
-        .mouse__cursol.s5 {
+        .mouse__cursor.s5 {
             background-color: rgba(red, green, blue, 0.8);
             border-color: #df0425;
             transform: scale(5) skew(360deg) rotateX(1080deg) rotateY(1080deg);
             border-radius: 0px;
         }
 
-        .mouse__cursol.s6 {
+        .mouse__cursor.s6 {
             background-color: rgba(red, green, blue, 0.8);
             border-color: #0a37ff;
             transform: scale(0.1);
@@ -110,7 +110,7 @@
     <!--header-->
     <main id="main">
         <div class="mouse__wrap">
-            <div class="mouse__cursol"></div>
+            <div class="mouse__cursor"></div>
             <div class="mouse__text">
                 <p>I want a car that makes me want to <span class="s1">compete</span> rather than a <span class="s2">car</span> that makes me <span class="s3">win</span>.</p>
                 <p>나는 나를 <span  class="s4">이기게</span> 해주는 차보다는 <span class="s5">경쟁</span>하고 싶도록 해주는 <span class="s6">차</span>를 원한다.</p>
@@ -152,7 +152,7 @@
         //         el.innerHTML = index+1+"00"
         //     });
         // }
-        const cursor =  document.querySelector(".mouse__cursol")
+        const cursor =  document.querySelector(".mouse__cursor")
         window.addEventListener("mousemove",function(e){
             cursor.style.left = e.clientX - 25 + "px";
             cursor.style.top = e.clientY -25 + "px";

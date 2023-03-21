@@ -54,7 +54,7 @@ body.bg02::after {
     background: rgba(0, 0, 20, 0.7);
 }
 body.bg03::after {
-    background: rgba(0, 20, 30, 0.7);
+    background: rgba(0, 0, 30, 0.9);
 }
 body.bg04::after {
     background: rgba(0, 40, 40, 0.7);
@@ -84,6 +84,7 @@ body.bg10::after {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 10000;
 }
 #header h1 {
     margin-bottom: 10px;

@@ -386,10 +386,10 @@
     top: 0;
     width: 35px;
     height: 70px;
-    background: #CB7A1D;
-    border-top: 11px solid #F7AA2B;
-    border-left: 7px solid #F7AA2B;
-    border-right: 7px solid #F7AA2B;
+    background: #67625c;
+    border-top: 11px solid #ffffff;
+    border-left: 7px solid #ffffff;
+    border-right: 7px solid #ffffff;
 }
 .dog .ears::before {
     left: 0;
@@ -401,7 +401,7 @@
 }
 .dog .face {
     position: absolute;
-    background: #F7AA2B;
+    background: #ffffff;
     width: 100%;
     height: 100%;
     border-radius: 50% 50% 0 0;
@@ -410,7 +410,7 @@
     content: "";
     display: block;
     margin: auto;
-    background: #FEFEFE;
+    background: #d6d2d2;
 }
 .dog .face::before {
     width: 15px;
@@ -438,7 +438,7 @@
     width: 12px;
     height: 12px;
     border-radius: 100%;
-    background: #451d1c;
+    background: #020000;
     margin: 0 14.5%;
 }
 .dog .teardrop {
@@ -458,7 +458,7 @@
     width: 16px;
     height: 8px;
     border-radius: 35px 35px 65px 65px;
-    background: #451d1c;
+    background: #000000;
     margin: auto;
 }
 .dog .mouth {
@@ -468,7 +468,7 @@
     height: 6px;
     margin: 0 auto;
     text-align: center;
-    background: #451d1c;
+    background: #080000;
     }
 .dog .mouth::before, .dog .mouth::after {
     content: "";
@@ -477,7 +477,7 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    border: 4px solid #451d1c;
+    border: 4px solid #000000;
     border-left-color: transparent;
     border-top-color: transparent;
     z-index: 2;
@@ -542,7 +542,7 @@
     display: block;
     width: 100%;
     margin: auto;
-    background: #F7AA2B;
+    background: #ffffff;
 }
 .dog .body::after {
     top: -2px;
@@ -554,7 +554,7 @@
     position: absolute;
     left: -60%;
     bottom: 1px;
-    background: #F7AA2B;
+    background: #ffffff;
     width: 93px;
     height: 15px;
     transform: rotate(45deg);
@@ -569,14 +569,14 @@
     left: -10%;
     width: 120%;
     height: 15%;
-    background: #F7AA2B;
+    background: #ffffff;
     border-radius: 10px 10px 0 0;
 }
 .dog .legs::before, .dog .legs::after {
     content: "";
     position: absolute;
     bottom: 1px;
-    background: #CB7A1D;
+    background: #fdf6f6;
     z-index: -1;
 }
 .dog .legs::before {
