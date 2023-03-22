@@ -124,7 +124,6 @@
 
 .quiz__answer {
     font-family: "MabinogiClassic";
-    padding: 20px;
     text-align: center;
     font-size: 24px;
     /* border-bottom: 6px ridge #FFF1DC; */
@@ -302,7 +301,7 @@
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #f88d12d7;
+    background-color: #ff0000d7;
     color: #fff;
     font-family: "MabinogiClassic";
     text-align: center;
@@ -316,7 +315,7 @@
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #455d6b;
+    background-color: #ffe139;
     font-family: "MabinogiClassic";
     color: #fff;
     position: absolute;
@@ -613,7 +612,7 @@
 
 /* like */
 .like {
-    background: #ffe5ad;
+    background: #3bd1ff;
 }
 .like .face::before {
     margin-top: 10px;
