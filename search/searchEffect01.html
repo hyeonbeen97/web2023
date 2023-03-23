@@ -294,8 +294,7 @@
         //선택자
         const searchBox = document.querySelector(".search__box input")
         const searchList = document.querySelectorAll(".search__list li")
-        
-        searchList
+        const searchInfo= document.querySelector(".search__info span")
 
         //검색
         searchBox.addEventListener("keyup", () => {
@@ -305,7 +304,7 @@
                 // const cssName = el.getAnimations("data-name")
                 const cssName = el.dataset.name;
                 
-                if(cssName.indexOf(userWord)){
+                if(cssName.indexOf(userWord)){           //indexOf  0
                     //데이터가 있을 때
                     el.classList.add("hide")
                 } else {
@@ -314,7 +313,7 @@
                 }
             })
         });
-        const searchInfo= document.querySelector(".search__info span")
+
         
         searchInfo.innerHTML = searchList.length
     </script>
