@@ -223,9 +223,10 @@
             <!-- sample05 -->
             <div id="sample06" class="sample">
                 <h3>06. switch문</h3>
-                <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면
-                    실행되지 않습니다.</p>
-
+                <p>다중 if문과 비슷하며 다중 if문으로 변경이 가능합니다.<br>
+                    조건에 맞으면 break 키워드에 맞으면 그 실행문에서 끝납니다.<br>
+                    break 키워드를 안쓰게 되면 무한으로 빠지면서 모든 case 키워드를 실행합니다.<br>
+                    defalut 키워드는 switch문의 값과 일치하는 값이 없을 때 실행합니다.</p>
                 <div class="script">
 <pre><code class="language-js">
     const num = 80;
@@ -268,8 +269,9 @@
             <!-- sample06 -->
             <div id="sample07" class="sample">
                 <h3>07. while문</h3>
-                <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면
-                    실행되지 않습니다.</p>
+                <p>while문은 조건이 참인 동안 반복적으로 코드를 실행하는 루프를 생성합니다.<br>
+                    for문과 비슷하며 for문으로 변경이 가능합니다.<br>
+                    조건식에 맞지 않으면 한번도 실행 안될 수 있습니다. 또한 무한으로 빠질 수 있습니다.</p>
 
                 <div class="script">
 <pre><code class="language-js">
@@ -300,8 +302,10 @@
             <!-- sample07 -->
             <div id="sample08" class="sample">
                 <h3>08. do while문</h3>
-                <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면
-                    실행되지 않습니다.</p>
+                <p>do-while문은 조건식을 마지막에 평가하는 반복문입니다.<br>
+                    do-while문은 코드 블록이 최소한 한 번은 실행되어야 할 때 유용합니다.<br>
+                    do-while문은 일반적으로 조건이 참이거나 거짓일 때 반복문을 실행해야 할 경우에 사용됩니다.<br>
+                    while문과 달리, 먼저 코드 블록을 실행한 다음에 조건식을 검사하여 조건이 참이면 코드 블록을 다시 실행하고, 조건이 거짓이면 반복문을 종료합니다.</p>
                 <div class="script">
 <pre><code class="language-js">
     let num2 = 0;
@@ -327,8 +331,8 @@
             <!-- sample08 -->
             <div id="sample09" class="sample">
                 <h3>09. for문</h3>
-                <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면
-                    실행되지 않습니다.</p>
+                <p>for( )문 작성 방법 : for(초기값; 조건식; 증감식){실행문}<br>
+                    for( )문 실행 순서 : 초기값 -> 조건식(true, false 초기값이 맞는지 확인) -> 실행문 -> 증감식</p>
 
                 <div class="script">
 <pre><code class="language-js">
@@ -359,8 +363,9 @@
             <!-- sample09 -->
             <div id="sample10" class="sample">
                 <h3>10. 중첩 for문</h3>
-                <p>조건문은 프로그래밍에서 가장 기본적이면서 중요한 구문 중 하나입니다. 조건문은 주어진 조건이 참(True)인 경우에만 코드 블록을 실행합니다. 만약 조건이 거짓(False)이라면
-                    실행되지 않습니다.</p>
+                <p>여러 개의 배열된 데이터를 for( )문을 이용해서 불러오는 방법입니다.<br>
+                    for( )문 안에 새로운 for( )문이 들어가 있는 것이다. ex: for(초기값; 조건식; 증감식){실행문; for(초기값; 조건식; 증감식){실행문;}}<br>
+                    실행 : (첫번째 for( )문 반복횟수) * (두번째 for( )문 반복횟수)</p>
 
                 <div class="script">
 <pre><code class="language-js">
@@ -407,7 +412,10 @@
             <!-- sample10 -->
             <div id="sample10" class="sample">
                 <h3>11. breack문</h3>
-                <p>조건 값을 도달하면 끝이난다</p>
+                <p>코드 실행 중 break문을 만나게 되면 현재 실행문을 중지시키고 다음 실행문으로 넘어가게 합니다.<br>
+                    break문은 반복문이나 switch문을 종료할 때 사용됩니다.<br>
+                    break문은 주로 for문, while문, do-while문과 같은 반복문에서 사용됩니다. 반복문 내에서 break문이 실행되면, 반복문은 즉시 종료됩니다.<br>
+                    switch문에서 break문을 사용하면, switch문에서 해당 case의 실행이 끝난 후, switch문을 즉시 종료합니다.</p>
 
                 <div class="script">
 <pre><code class="language-js">
@@ -432,7 +440,10 @@
             <!-- sample11 -->
             <div id="sample12" class="sample">
                 <h3>12. continue문</h3>
-                <p>조건 값에서만 건너 뛴다.</p>
+                <p>continue문은 반복문 내에서 사용되며, 현재 반복에서 남은 코드를 실행하지 않고 다음 반복으로 건너뛰는 역할을 합니다.<br>
+                    continue문은 보통 for문, while문 등과 함께 사용됩니다.<br>
+                    continue문은 반복문 내에서 조건문과 함께 사용하여 특정 조건을 만족하는 경우에만 현재 반복을 건너뛰도록 할 수도 있습니다.<br>
+                    이를 통해 반복문 실행 중 특정 조건에 따라 일부 작업을 생략하고 다음 작업으로 이어나갈 수 있습니다.</p>
 
                 <div class="script">
 <pre><code class="language-js">
