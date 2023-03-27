@@ -112,6 +112,12 @@
     color: #3b3b3b;
     text-align: center;
 }
+.quiz__questionnum {
+    padding: 20px;
+    font-size: 24px;
+    font-family: "MabinogiClassic";
+    border-bottom: 6px ridge #FFF1DC;
+}
 .quiz__question {
     padding: 20px;
     font-size: 24px;
@@ -125,6 +131,7 @@
 .quiz__answer {
     font-family: "MabinogiClassic";
     text-align: center;
+    padding: 15px 20px;
     font-size: 24px;
     /* border-bottom: 6px ridge #FFF1DC; */
 }
@@ -147,10 +154,23 @@
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
-
 }
 .quiz__answer .confirm:hover {
     background-color: rgb(179, 157, 124);
+}
+.quiz__answer .next{
+    background-color: #cc8d2e;
+    border: 3px ridge #FFF1DC;
+    width: 100%;
+    font-family: "MabinogiClassic";
+    padding: 15px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.quiz__answer .next:hover {
+    background-color: rgb(192, 125, 25);
 }
 .quiz__answer .result {
     background-color: #fff;
