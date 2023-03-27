@@ -294,6 +294,11 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
+.quiz__questionnum {
+    text-align: center;
+}
+
+
 
 
 

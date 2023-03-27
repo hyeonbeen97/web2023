@@ -36,6 +36,10 @@
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="quiz__questionnum"></div>
+                        <div class="quiz__questionnum2">
+                            <span></span>
+                            <span></span>
+                        </div>
                         <div class="dog__wrap">
                             <div class="true">정답입니다!</div>
                             <div class="false">오답입니다!</div>
@@ -85,7 +89,8 @@
                     <div class="quiz__desc"></div>
                 </div>
             </div>
-            <div class="quiz__check">정답 확인하기</div>
+            <div class="quiz__info">??점</div>
+            <div class="quiz__check">정답 확인!</div>
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -158,9 +163,11 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer")
         const quizDesc = quizWrap.querySelector(".quiz__desc")
         const quizQusetionNum = quizWrap.querySelector(".quiz__questionnum")
+        const quizQusetionNum2 = quizWrap.querySelector(".quiz__questionnum2 span")
 
         let quizCount = 0;
         let quizScore = 0;
+        let quizScore2 = 0;
         let index = 0;
         
         // 문제 출력
@@ -199,13 +206,19 @@
                 ${quizInfo[index].infoDesc}
             `
             let qusetionnumTag =`
-                총 문제 ${index+1} / ${quizInfo.length}
+                총 문제 : ${index+1} / ${quizInfo.length} <br>
+                남은 문제 : ${quizInfo.length - index-1}
+            `
+            let qusetionnum2Tag =`
+                맞힌 문제 : ${quizScore}<br>
+                틀린 문제 : ${quizScore2}<br>
             `
             quizTitle.innerHTML = typeTag;
             quizQusetion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
             quizQusetionNum.innerHTML = qusetionnumTag;
+            quizQusetionNum2.innerHTML = qusetionnum2Tag;
 
 
             //보기 선택자
@@ -226,7 +239,7 @@
             quizDesc.style.display = "none";
             
         }
-
+        
         function choiceSelected(answer){
             let userAnswer = answer.textContent;
             let currentAnswer = quizInfo[quizCount].infoAnswer;
@@ -235,26 +248,39 @@
                 console.log("정답");
                 dogWrap.classList.add("like");
                 dogWrap.classList.remove("dislike");
-                quizScore++;
+                quizScore++
             } else {
                 console.log("오답");
                 dogWrap.classList.add("dislike");
                 dogWrap.classList.remove("like");
+                quizScore2++
             }
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
+
+            
         }
-
         updateQuiz(quizCount)
-
+        
+        
+        
         //정답확인
         quizNext.addEventListener("click", () => {
             quizCount++;
             updateQuiz(quizCount);
-
+            
             dogWrap.classList.remove("like","dislike")
+
+            if(quizCount == quizInfo.length - 1){
+                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) *100) + "점"
+            } else {
+                updateQuiz(quizCount);
+            }
+            
         })
-        document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) *100) + "점"
+        
+        //정답 클릭
+        document.querySelector(".quiz__check").addEventListener("click");
 </script>
 </body>
 
