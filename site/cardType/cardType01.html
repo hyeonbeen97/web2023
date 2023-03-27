@@ -24,6 +24,7 @@
         img {
             vertical-align: top;
             width: 100%;
+            height: 100
         }
 
         .mt10 {margin-top: 10px !important}
@@ -54,7 +55,7 @@
             font-weight: 400;
         }
         .section {
-            padding: 120px 0;
+            padding: 120px 0; 
         }
         .section.center {
             text-align: center;
@@ -73,7 +74,15 @@
             line-height: 1.5;
         }
         /* card__type */
-        .card__wrap {}
+        .card__wrap1 {            
+            background-image: url(/site/asset/img/userSearch-type.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            height: 3258px;
+        }
+             
 
         .card__inner {
             display: flex;
@@ -81,9 +90,13 @@
         }
         .card__inner .card {
             width: 32.3333%;
-            background-color: #f8f8f8;
+            background-color: #F5EAEA;
+            border-radius: 15% 15% 0 0;
+
         }
-        .card__header {}
+        .card__header img {
+            border-radius: 15% 15% 0 0;
+        }
         .card__body {
             padding: 24px;
         }
@@ -108,7 +121,7 @@
     </style>
 </head>
 <body>
-    <section class="card__wrap section nexon">
+    <section class="card__wrap1 section nexon">
         <div class="container">
             <h2 class="section__2">가구를 고르는 방법</h2>
             <p class="section__desc">가구를 선택하기 전에 원하는 스타일을 결정합니다. 현대적인 디자인, 전통적인 디자인, 미니멀한 디자인 등 다양한 스타일이<br> 
@@ -117,34 +130,65 @@
 
                 <div class="card">
                     <figure class="card__header">
-                        <img src="../asset/img/cardType01_01.jpg" alt="기능과 사용성 검토">
+                        <img src="../asset/img/usersearch01.png" alt="기능과 사용성 검토">
                     </figure>
                     <div class="card__body">
                         <h3 class="title">기능과 사용성 검토</h3>
-                        <p class="desc">가구의 기능과 사용성도 고려해야 합니다. 예를 들어, 탁자를 선택할 때는 크기, 높이, 재질, 수납 공간 등의 기능적인 측면을 고려해야 합니다. 가구의 기능성과 사용성을 검토해 보세요.</p>
-                        <a href="#" class="btn">자세히 보기</a>
                     </div>  
                 </div>
 
                 <div class="card">
                     <figure class="card__header">
-                        <img src="../asset/img/cardType01_02.jpg" alt="공간 계획">
+                        <img src="../asset/img/usersearch02.png" alt="공간 계획">
                     </figure>
                     <div class="card__body">
                         <h3 class="title">공간 계획</h3>
-                        <p class="desc">우선 가구를 배치할 공간의 크기와 형태를 고려하여 공간 계획을 세웁니다. 이 과정에서 공간의 크기와 형태, 가구의 크기와 배치 등을 고려합니다. 공간 크기를 고려하고 가구를 선택하세요.</p>
-                        <a href="#" class="btn">자세히 보기</a>
                     </div>
                 </div>
 
                 <div class="card">
                     <figure class="card__header">
-                        <img src="../asset/img/cardType01_03.jpg" alt="스타일 결정">
+                        <img src="../asset/img/usersearch03.png" alt="스타일 결정">
                     </figure>
                     <div class="card__body">
                         <h3 class="title">스타일 결정</h3>
-                        <p class="desc">가구를 선택하기 전에 원하는 스타일을 결정합니다. 현대적인 디자인, 전통적인 디자인, 미니멀한 디자인 등 다양한 스타일이 있으므로, 자신이 원하는 스타일을 먼저 결정해야 합니다.</p>
-                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </div>
+            </artcle>
+        </div>
+    </section>
+    
+    <section class="card__wrap2 section nexon">
+        <div class="container">
+            <h2 class="section__2">가구를 고르는 방법</h2>
+            <p class="section__desc">가구를 선택하기 전에 원하는 스타일을 결정합니다. 현대적인 디자인, 전통적인 디자인, 미니멀한 디자인 등 다양한 스타일이<br> 
+            있으므로, 자신이 원하는 스타일을 먼저 결정해야 합니다.</p>
+            <artcle class="card__inner">
+
+                <div class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/usersearch01.png" alt="기능과 사용성 검토">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">기능과 사용성 검토</h3>
+                    </div>  
+                </div>
+
+                <div class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/usersearch02.png" alt="공간 계획">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">공간 계획</h3>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/usersearch03.png" alt="스타일 결정">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">스타일 결정</h3>
                     </div>
                 </div>
             </artcle>

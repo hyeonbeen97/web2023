@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+  background-color: #000;
+}
+
+div {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 20px #fff,
+    -20px 0 80px rgb(255, 179, 0),
+    20px 0 80px rgb(255, 128, 0),
+    inset 0 0 50px #fff,
+    inset 50px 0 80px rgb(255, 179, 0),
+    inset -50px 0 80px blue,
+    inset 50px 0 300px rgb(255, 179, 0),
+    inset -50px 0 300px blue;
+  animation: pulsate 1s linear infinite;
+}
+
+@keyframes pulsate {
+  50% {
+    box-shadow:
+      0 0 20px #fff,
+      20px 0 80px rgb(255, 179, 0), 
+      -20px 0 80px blue,
+      inset 0 0 50px #fff,
+      inset -50px 0 80px rgb(255, 179, 0),
+      inset 50px 0 80px blue,
+      inset -50px 0 300px rgb(255, 179, 0),
+      inset 50px 0 300px blue;
+  }
+}
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</script>
+</html>

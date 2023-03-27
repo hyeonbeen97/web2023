@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ee09b9;
+
+        }
+        figure {
+            width: 210px;
+            height: 210px;           
+            margin:50% auto ;
+            animation: rotation 7s linear infinite;
+            top: 50px;
+            left: 50px;
+            /* margin-top: -105px;
+            margin-left: -105px; */
+            transform-style: preserve-3d;
+
+            
+        }
+        .face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-origin: center;
+
+        }
+        .face div {
+            border: 6px double #00ffd5;
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .front {
+            transform: translate3d(0,0,105px);
+        }
+        .back {
+            transform: rotateY(180deg) translate3d(0,0,105px);
+        }
+        .left {
+            transform: rotateY(90deg) translate3d(0,0,105px);
+        }
+        .right {
+            transform: rotateY(-90deg) translate3d(0,0,105px);
+        }
+        .top {
+            transform: rotateX(90deg) translate3d(0,0,105px);
+        }
+        .bottom {
+            transform: rotateX(-90deg) translate3d(0,0,105px);
+        }
+        @keyframes rotation {
+            from {transform: rotateY(0) rotateX(0);}
+            to {transform: rotateY(-1080deg) rotateX(1080deg);}
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <div class="face front">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      
+        <div class="face top">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        
+        <div class="face right">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      
+        <div class="face left">
+          <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      
+        <div class="face bottom"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      
+        <div class="face back"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </figure>
+</body>
+</script>
+</html>
