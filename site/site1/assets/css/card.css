@@ -42,3 +42,36 @@
             background-position: right center;
 
         }
+
+        /* 미디어쿼리 */
+        @media(max-width: 960px){
+            .card__inner .card {
+                width: 49%;
+            }
+            .card__inner .card:last-child {
+                display: none;
+            }
+        }
+
+
+        @media(max-width: 670px){
+            .card__inner {
+                flex-wrap: wrap;
+                margin-bottom: 3%;
+            }
+            .card__inner .card {
+                width: 100%;
+                margin-bottom: 3%;
+            }
+
+            .section__h2 {
+                text-align: center;
+            }
+            .section__desc {
+                text-align: center;
+                word-break: keep-all;
+            }
+            .card__body .title {
+                font-size: 20px;
+            }
+        }

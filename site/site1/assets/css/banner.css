@@ -1,6 +1,5 @@
         /* banner__wrap */
         .banner__wrap {
-            height: 500px;
             box-sizing: border-box;
             background-image: url(../img/bannerType01.png);
             background-repeat: no-repeat;
@@ -21,4 +20,20 @@
         .banner__inner a {
             color: #fff;
             text-decoration:underline;            
+        }
+
+        @media (max-width: 960px){
+            .banner__inner h3 {
+                font-size: 40px;
+            }
+            
+        }
+
+        @media (max-width: 660px){
+            .banner__inner h3 {
+                font-size: 30px;
+            }
+            .banner__inner p {
+                margin-bottom: 50px;
+            }
         }

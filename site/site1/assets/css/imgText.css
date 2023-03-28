@@ -78,3 +78,43 @@
         .imgText__inner .img.i2 a {
             background-color: #453318;
         }
+
+        @media (max-width: 960px) {
+            .imgText__inner .text {
+                width: 100%;
+                text-align: center;
+            }
+            .imgText__inner .img {
+                width: 100%;
+                margin-bottom: 3%;
+            }
+
+            .imgText__inner .text h3 {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+            .imgText__inner .text p {
+                font-size: 18px;
+                margin-bottom: 40px;
+                font-weight: 300;
+            }
+            .imgText__inner .text ul {
+                display: none;
+            }
+        };
+
+        @media(max-width:660px) {
+            
+            .imgText__inner .img {
+                width: 100%;
+                margin-bottom: 3%;
+            }
+
+            .imgText__inner .text h3 {
+                font-size: 30px;
+            }
+            .imgText__inner .text p {
+                font-size: 16px;
+            }
+        }
+        

@@ -113,3 +113,14 @@
             background-image: url(../img/icon_plus.svg);
             transition: all 0.3s;
         }
+
+        @media (max-width:960px){
+            .text__inner .text {
+                width: 49%;
+            }
+        }
+        @media (max-width:670px){
+            .text__inner .text {
+                width: 100%;
+            }
+        }
