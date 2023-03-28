@@ -21,6 +21,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect07.html">7</a></li>
             <li><a href="quizEffect dc.html">d</a></li>
             <li><a href="quizEffect webd.html">w</a></li>
         </ul>
@@ -90,7 +91,7 @@
                 </div>
             </div>
             <div class="quiz__info">??점</div>
-            <div class="quiz__check">점수</div>
+            <div class="quiz__check"><span>점수</span></div>
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -164,6 +165,7 @@
         const quizDesc = quizWrap.querySelector(".quiz__desc")
         const quizQusetionNum = quizWrap.querySelector(".quiz__questionnum")
         const quizQusetionNum2 = quizWrap.querySelector(".quiz__questionnum2 span")
+        const quizConfirm = quizWrap.querySelector(".quiz__check span")
 
         let quizCount = 0;
         let quizScore = 0;
@@ -219,6 +221,7 @@
             quizDesc.innerHTML = descTag;
             quizQusetionNum.innerHTML = qusetionnumTag;
             quizQusetionNum2.innerHTML = qusetionnum2Tag;
+            
 
 
             //보기 선택자
@@ -258,7 +261,16 @@
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
 
-            
+            //마지막 문제일 때
+            if(quizCount == quizInfo.length-1){
+                quizAnswer.style.display = "none";
+                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) *100) + "점";
+            }  
+            if (score > 60) {
+                    quizConfirm.innerHTML += "합격입니다."
+                } else {
+                    quizConfirm.innerHTML += "불합격입니다."
+                }          
         }
         updateQuiz(quizCount)
         
@@ -271,16 +283,14 @@
             
             dogWrap.classList.remove("like","dislike")
 
-            if(quizCount == quizInfo.length - 1){
-                document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) *100) + "점"
-            } else {
-                updateQuiz(quizCount);
-            }
+            // if(quizCount == quizInfo.length - 1){
+            //     document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) *100) + "점";
+            // } else {
+            //     updateQuiz(quizCount);
+            // }
             
         })
         
-        //정답 클릭
-        document.querySelector(".quiz__check").addEventListener("click");
 </script>
 </body>
 

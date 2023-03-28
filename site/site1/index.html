@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="김현빈">
+    <meta name="description" content="향수의 향을 시각화하여 보여주는 사이트">
+    <meta name="keyword" content="향수,사이트,조말론,샤넬,향">
+    <meta name="robots" content="all">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS(섹션별) @import --> 
+  
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!--// skip -->
+    <header id="headerType">
+        <h2 class="blind">슬라이드 영역</h2>
+        <div class="header__inner">
+            <h1 class="header__logo">Furniture</h1>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">가구를 고르기</a></li>
+                    <li><a href="#">가구를 고르기2</a></li>
+                    <li><a href="#">트렌드</a></li>
+                    <li><a href="#">브랜드</a></li>
+                    <li><a href="#">문의</a></li>
+                    <li><a href="#">상담</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+    <!-- headerType -->
+
+    <main id="mainType">
+        <!-- sliderType -->
+        <section id="sliderType" class="nexon">
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">EVENT</span>
+                        <h3 class="title">가구의 선택은 색상부터</h3>
+                        <p class="desc">가구 색을 고르는 것은 방의 분위기와 느낌을 결정하는 중요한 요소 중 하나입니다.
+                            가구 색상을 선택할 때, 방의 전체적인 색상 조화를 고려해야 합니다. 일반적으로, 
+                            세 가지 색상을 조화롭게 조합하여 균형있는 디자인을 만들 수 있습니다.</p>
+                        <div class="btn">
+                            <a href="#">자세히보기</a>
+                            <a href="#">상담신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sliderType -->
+
+        <!-- imageType -->
+        <section id="imageType" class="nexon section center">
+            <div class="container">
+                <h2 class="section__h2">가구를 고르는 방법</h2>
+                <p class="section__desc">내 방에 어울리는 가구를 고르는 첫번째 방법은 [&nbsp &nbsp &nbsp &nbsp &nbsp ] 이다.</p>
+                <div class="image__inner container">
+                    <artcle class="image">
+                        <figure class="image__header">
+                            <img src="assets/img/imageType01_01.jpg" alt="색을 고르는 법">
+                        </figure>
+                        <div class="image__body">
+                            <h3 class="title">비슷한 색을 찾아라!</h3>
+                            <p class="desc">자신의 방의 색이 무엇인지 확인하고 <br>
+                            그 색에 맞는 가구를 선택한다.</p>
+                            <a href="#" class="btn">자세히보기</a>
+                        </div>
+                    </artcle>
+                    <artcle class="image">
+                        <figure class="image__header">
+                            <img src="assets/img/imageType01_02.jpg" alt="색을 고르는 법2">
+                        </figure>
+                        <div class="image__body">
+                            <h3 class="title">대비되는 색을 찾아라!</h3>
+                            <p class="desc">가구에 포인트가 필요하다면 벽이나 <br>옆 사물들과 대비되는 색을 찾는다.</p>
+                            <a href="#" class="btn">자세히보기</a>
+                        </div>
+                    </artcle>
+                </div>
+            </div>
+        </section>
+        <!-- imageType -->
+
+        <!-- imgTextType -->
+        <section id="imgTextType" class="nexon section gray">
+            <h2 class="blind">나에게 맞는인테리어</h2>
+            <div class="container">
+                <div class="imgText__inner">
+                    <article class="text" >
+                        <span>NOTICE</span>
+                        <h3>나에게 맞는<br>인테리어</h3>
+                        <p>인테리어를 선택하는 것은 매우 개인적인 결정입니다. <br>그러나 일반적으로는 다음과 같은 단계를 거쳐 진행됩니다.</p>
+                        <ul>
+                            <li><a href="#">1. 스타일 결정하기: 먼저 자신이 선호하는 스타일을 결정해야 합니다. 전통적인, 현대적인, 귀여운, 거친 등 다양한 스타일이 있으며, 이 중 하나를 선택해야 합니다.<br></a></li>
+                            <li><a href="#">2. 공간 파악하기: 다음으로는 공간을 파악해야 합니다. 방의 크기, 형태, 창문의 위치, 문의 위치 등을 고려해야 합니다.</li>
+                            <li><a href="#">3. 가구 선택하기: 가구를 선택할 때는 공간과 스타일을 고려해야 합니다. 가구의 크기, 색상, 재질 등을 결정할 때도 스타일을 기반으로 선택해야 합니다.</a></li></a></li>
+                        </ul>
+                    </article>
+                    <article class="img i1">
+                        <a href="#">공간에 맞는 인테리어 </a>
+                    </article>
+                    <article class="img i2">
+                        <a href="#">심플한 인테리어 </a>
+                    </article>
+                </div>
+        </section>
+        <!-- imgTextType -->
+
+        <!-- cardType -->
+        <section id="cardType" class="nexon section ">
+                <h2 class="section__2">가구를 고르는 방법</h2>
+                <p class="section__desc">가구를 선택하기 전에 원하는 스타일을 결정합니다. 현대적인 디자인, 전통적인 디자인, 미니멀한 디자인 등 다양한 스타일이<br> 
+                있으므로, 자신이 원하는 스타일을 먼저 결정해야 합니다.</p>
+                <artcle class="card__inner container">
+    
+                    <div class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardType01_01.jpg" alt="기능과 사용성 검토">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">기능과 사용성 검토</h3>
+                        </div>  
+                    </div>
+    
+                    <div class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardType01_02.jpg" alt="공간 계획">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">공간 계획</h3>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardType01_03.jpg" alt="스타일 결정">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">스타일 결정</h3>
+                        </div>
+                    </div>
+                </artcle>
+        </section>
+        <!-- cardType -->
+
+        <!-- bannerType -->
+        <section id="bannerType" class="nexon section center banner__wrap ">
+            <h2 class="blind">배너</h2>
+            <div class="banner__inner container">
+                <h3>셀프 플래닝</h3>
+                <p>꿈의 주방, 완벽한 우리 집, 홈오피스 또는 옷장 수납시스템을 설계해 보세요. 간단한 방식의 IKEA 플래<br>
+                    닝 툴을 활용해 색상, 스타일, 크기, 구성을 마음대로 바꿔 보면서 내게 꼭 맞는 디자인으로 꾸며 보세요.
+                    </p>
+                <a href="https://webeen.tistory.co">https://webeen.tistory.co</a>
+            </div>
+        </section>
+        <!-- bannerType -->
+
+        <!-- textType -->
+        <section id="textType" class="nexon section">
+            <div class="container">
+                <span class="section__small">notice</span>
+                <h2 class="section__h2 mb70">요즘 대세 미니멀리즘</h2>
+                <div class="text__inner">
+                    <div class="text t1">
+                        <h3 class="text__title">미니멀리즘?</h3>
+                        <p class="text__desc">미니멀리즘(minimalism)은 극도로 단순한 것을 추구하는 미술 및 디자인 용어로, 극단적으로 간결하고 단순한 것을 만드는 것을 목표로 합니다. 이는 미술 분야뿐만 아니라 일상생활에도 적용되는 철학이 될 수 있습니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">간결함</h3>
+                        <p class="text__desc">미니멀리즘의 가치 중 하나는 간결함입니다. 복잡한 것을 단순화하면서도 중요한 것들만을 추려내어 집중하는 것입니다. 이를 통해 삶이 더욱 단순하고 깨끗하며, 중요한 것에 대한 집중력을 높일 수 있다는 것입니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">미니멀 인테리어</h3>
+                        <p class="text__desc">미니멀 인테리어는 불필요한 소품이나 장식을 최소한으로 줄이고, 깔끔하고 간결한 가구와 인테리어 소품을 사용하여 조용하고 심플한 공간을 만들어냅니다. 이 스타일은 간결함과 깔끔함을 추구한다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">미니멀리즘 가구</h3>
+                        <p class="text__desc">미니멀리즘 가구는 극도로 단순하면서도 기능적이며 실용적인 가구 디자인을 의미합니다. 불필요한 장식이나 장식적인 요소를 배제하고, 필요한 기능만을 갖춘 간결한 디자인을 특징으로 합니다.간결함</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">대표적인 예시</h3>
+                        <p class="text__desc">미니멀리즘 가구의 대표적인 예시로는 플랫폼 베드, 모던 소파, 간단한 책상, 간이 침대, 빈티지 의자 등이 있습니다. 이러한 가구들은 깔끔하고 모던한 분위기를 연출하며, 공간 활용성도 뛰어납니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">간소화</h3>
+                        <p class="text__desc">미니멀리즘 가구는 소비자들이 소유하는 물건의 양을 줄이는 미니멀리즘 운동과도 관련이 있습니다. 소유하고 있는 물건의 수를 최소화함으로써 삶의 단순함과 가치를 높이는 것을 목적으로 합니다. </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <!-- textType -->
+    </main>
+    <footer id="footerType">
+        <div class="container">
+            <h2></h2>
+            <div class="footer__inner">
+                <div class="footer__menu">
+                    <div>
+                        <h3>가구 사이트</h3>
+                        <ul>
+                            <li><a href="#">소개하기</a></li>
+                            <li><a href="#">가구 고르는 방법 첫번째</a></li>
+                            <li><a href="#">나에게 맞는 인테리어</a></li>
+                            <li><a href="#">가구 고르는 방법 두번째</a></li>
+                            <li><a href="#">셀프 플래닝</a></li>
+                            <li><a href="#">요즘 대세는 미니멀리즘</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>고객문의</h3>
+                        <ul>
+                            <li><a href="#">고객지원</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">배송조회</a></li>
+                            <li><a href="#">교환 환불</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>제품문의</h3>
+                        <ul>
+                            <li><a href="#">품질 보증</a></li>
+                            <li><a href="#">제품 리콜</a></li>
+                            <li><a href="#">피드백</a></li>
+                            <li><a href="#">부품신청</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>쇼핑하기</h3>
+                        <ul>
+                            <li><a href="#">쇼핑하기</a></li>
+                            <li><a href="#">헤이오더</a></li>
+                            <li><a href="#">Furniture for Business</a></li>
+                            <li><a href="#">Furniture 모바일 앱</a></li>
+                            <li><a href="#">제품 사용 팁/가이드</a></li>
+                            <li><a href="#">제품 구매 가이드</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>서비스</h3>
+                        <ul>
+                            <li><a href="#">Furniture 서비스</a></li>
+                            <li><a href="#">배송 서비스</a></li>
+                            <li><a href="#">조립 서비스</a></li>
+                            <li><a href="#">설치 서비스</a></li>
+                            <li><a href="#">주방 서비스</a></li>
+                            <li><a href="#">구매 상담 서비스</a></li>
+                            <li><a href="#">인테리어 디자인 서비스</a></li>
+                            <li><a href="#">바이백 서비스</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Furniture 이야기</h3>
+                        <ul>
+                            <li><a href="#">Furniture 이야기</a></li>
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">집에서의 생활</a></li>
+                            <li><a href="#">지속가능한 생활</a></li>
+                            <li><a href="#">내가 아끼는 집, </a></li>
+                            <li><a href="#">나를 아끼는 집</a></li>
+                            <li><a href="#">뉴스룸</a></li>
+                            <li><a href="#">채용정보</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <address class="footer__right">
+                    2023 kimhyeonbeen 가구 사이트 Portfolio is Power<br>All Right  Reserved
+                </address>
+            </div>
+        </div>  
+    </footer>
+
+</body>
+</html>
