@@ -114,8 +114,8 @@
         let questionAll = []; //모든 퀴즈 정보
 
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")
-            .then(res => res.json())
+            fetch("json/gisa2020_01.json")    
+            .then(res => res.json())          //.then() .then  () 체인 방식
             .then(items => {
                 // console.log(items);
                 questionAll = items.map((item, index) => {

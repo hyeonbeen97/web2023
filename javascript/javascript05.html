@@ -297,6 +297,133 @@ console.log("javascript refercence".indexOf("r",12))  //15
                     </details>
                 </div>
             </div>
+            <div id="sample19" class="sample">
+                <h3>문자열 메서드 : slice</h3>
+                <div class="notice">"문자열".clice(시작위치, [끝나는 위치])</div>
+                <ul>
+                    <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="language-js">
+    "javascript".slice(0)
+    console.log("javascript".slice(0))     //javascript
+    console.log("javascript".slice(1))    //avascript
+    console.log("javascript".slice(5,10)) //cript
+    console.log("javascript".slice(-3,-1)) //ip
+    console.log("javascript".slice(-5,-2)) //cri
+
+</code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 22 -->
+            <div id="sample22" class="sample">
+                <h3>배열 메서드 : split</h3>
+                <div class="notice">"배열".clice(시작위치, [끝나는 위치])</div>
+                <ul>
+                    <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="language-js">
+    console.log("javascript".split("")) //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+    console.log("jav ascr ipt".split(" ")) //['jav', 'ascr', 'ipt']
+    console.log("javascript".split("",1)) //['j']
+    console.log("javascript".split("",2)) //['j', 'a']
+    console.log("java script".split(" ", 1)) //['java']
+    console.log("java script".split(" ", 2)) //['java', 'script']
+    console.log("java script".split(" ")) //['java', 'script']
+
+    console.log("javascript".split("j")) //['', 'avascript']
+    console.log("javascript".split("a")) //['j', 'v', 'script']
+    console.log("javascript".split("e")) //['javascript']
+    console.log("java/scr/ipt".split("/")) //['java', 'scr', 'ipt']
+    console.log("java&scr!ipt".split(/&|\!/)) //['java', 'scr', 'ipt']
+    console.log("java&scr!ipt".split("&")) //['java', 'scr', 'ipt']
+    --체인
+    console.log("javascript".split("").join(""))  //j,a,v,a,s,c,r,i,p,t  join을 넣어 배열이 아닌 문자열
+    console.log("javascript".split("").join("*"))  //j,a,v,a,s,c,r,i,p,t  
+    console.log("javascript".split("").reverse().join("/"))  // t/p/i/r/c/s/a/v/a/j   reverse는 배열만 
+</code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 30 -->
+            <div id="sample30" class="sample">
+                <h3>30. 문자열 메서드 : trim</h3>
+                <div class="notice">"문자열".trim</div>
+                <ul>
+                    <li> 문자열 앞/뒤 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="language-js">
+    console.log("javascript".trim(""))   //"javascript"
+    console.log(" javascript".trim(" "))  //"javascript"
+    console.log("javascript ".trim(""))  //"javascript"
+
+</code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 31 -->
+            <div id="sample31" class="sample">
+                <h3>31. 문자열 메서드 : trimStart</h3>
+                <div class="notice">"문자열".trimStart</div>
+                <ul>
+                    <li> 문자열 앞 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="language-js">
+    console.log(" javascript ".trimStart(""))   //"javascript "
+
+</code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 32 -->
+            <div id="sample30" class="sample">
+                <h3>32. 문자열 메서드 : trimEnd</h3>
+                <div class="notice">"문자열".trimEnd</div>
+                <ul>
+                    <li> 문자열 뒤 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
+                </ul>
+                <div class="script">
+<pre><code class="language-js">
+    console.log(" javascript ".trimEnd(""))   //" javascript"
+
+</code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                        </div>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer id="footer"><a href="mailto:esansi@naver.com">esansi@naver.com</a></footer>
@@ -304,59 +431,14 @@ console.log("javascript refercence".indexOf("r",12))  //15
     <script>hljs.highlightAll();</script>
 
     <script>
-        // console.log("javascript refercence".indexOf("javascript"))  //0
-        // console.log("javascript refercence".indexOf("javascripts"))  //-1
-        // console.log("javascript refercence".indexOf("j"))  //0
-        // console.log("javascript refercence".indexOf("J"))  //-1
-        // console.log("javascript refercence".indexOf("a"))  //1
-        // console.log("javascript refercence".indexOf("ja"))  //0
-        // console.log("javascript refercence".indexOf("jv"))  //-1
-        // console.log("javascript refercence".indexOf("refercence"))  //11
-        // console.log("javascript refercence".indexOf("r"))  //6
-        // console.log("javascript refercence".indexOf("re"))  //11
+    console.log( "javascript reference".match("javascript"))  //"javascript"
+    console.log( "javascript reference".match("reference"))   //"reference"
+    console.log("javascript reference".match("r"))            //"r"
+    console.log("javascript reference".match("R"))            //null
+    console.log("javascript reference".match(/R/i))            //"r"
+    console.log("javascript reference".match(/reference/))    //"reference"     
+    console.log("javascript reference".match(/r/g))            //"r r r"
 
-        // console.log("javascript refercence".indexOf("javascripts",0))  //0
-        // console.log("javascript refercence".indexOf("javascripts",1))  //-1
-        // console.log("javascript refercence".indexOf("refercence",0))  //11
-        // console.log("javascript refercence".indexOf("refercence",11))  //11
-        // console.log("javascript refercence".indexOf("refercence",12))  //-1
-        // console.log("javascript refercence".indexOf("r",7))  //11
-        // console.log("javascript refercence".indexOf("r",12))  //15
-
-        // console.log( "javascript reference".includes("javascript"))
-        // console.log( "javascript reference".includes("J"))
-        // console.log( "javascript reference".includes("j"))
-        // console.log( "javascript reference".includes("a"))
-        // console.log( "javascript reference".includes("reference",11))
-        // console.log( "javascript reference".includes("reference",12))
-        
-        // console.log( "javascript reference".match("javascript"))  //"javascript"
-        // console.log( "javascript reference".match("reference"))   //"reference"
-        // console.log("javascript reference".match("r"))            //"r"
-        // console.log("javascript reference".match("R"))            //null
-        // console.log("javascript reference".match(/R/i))            //null
-        // console.log("javascript reference".match(/reference/))    //"reference" 
-        
-        // console.log("javascript reference".match(/r/g))            //"r r r" 
-        // console.log("javascript reference".match(/R/ig))           //"r r r"
-
-        // console.log( "javascript reference".lastIndexOf("javascript"))  //0
-        // console.log( "javascript reference".lastIndexOf("javascripts"))  //-1
-        // console.log( "javascript reference".lastIndexOf("j"))  //0
-        // console.log( "javascript reference".lastIndexOf("a"))  //3
-        // console.log( "javascript reference".lastIndexOf("jv"))  //0
-        // console.log( "javascript reference".lastIndexOf("reference"))  //11
-        // console.log( "javascript reference".lastIndexOf("r"))  //15
-        // console.log( "javascript reference".lastIndexOf("javascript",0))  //0
-        // console.log( "javascript reference".lastIndexOf("javascript",1))  //0
-        // console.log( "javascript reference".lastIndexOf("reference",0))  //-1
-        // console.log( "javascript reference".lastIndexOf("reference",1))  //-1
-        // console.log( "javascript reference".lastIndexOf("reference",11))  //11
-        // console.log( "javascript reference".lastIndexOf("reference",12))  //11
-        
-        // console.log("reference".lastIndexOf("e",0))  //0
-        // console.log("erference".lastIndexOf("rence",4))  //0
-        // console.log("javascript reference".lastIndexOf("javascript",0))
     </script>
 
         
