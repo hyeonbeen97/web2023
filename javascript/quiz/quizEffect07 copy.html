@@ -67,7 +67,8 @@
                     <div class="cbt__info">
                         <div class="cbt__title">수험자 : <em>김현빈</em></div>
                         <div class="cbt__score">
-                            <span></span>
+                            <span>전체 문제수 : 60문항</span><br>
+                            <span>남은 문제수 : 59문항</span>
                         </div>                    
                     </div>
                     <div class="cbt__omr">
@@ -106,13 +107,12 @@
         const cbtQuiz = document.querySelector(".cbt__quiz")
         const cbtOmr = document.querySelector(".cbt__omr")
         const cbtSubmit = document.querySelector(".cbt__submit")
-        const cbtScore = document.querySelector(".cbt__score span")
 
 
 
         //데이터 불러오기
         const dataQuestion = () => {
-            fetch("json/gineungsaWD2023_01.json")
+            fetch("json/gisa2020_01.json")
                 .then(res => res.json())          //.then() .then  () 체인 방식
                 .then(items => {
                     questionAll = items.map((item, index) => {
@@ -142,6 +142,9 @@
                             formattedQuestion.desc = item.desc;
                         }
                         //장답 키워드 있으면 출력 
+                        // if (item.hasOwnProperty("keyword")) {
+                        //     formattedQuestion.keyword = item.keyword;
+                        // }
 
                         // console.log(formattedQuestion);
                         return formattedQuestion;
@@ -162,7 +165,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"><img src="" alt=""></div>
+                        <div class="cbt__question__img"><img src=""></div>
                         <div class="cbt__selects">
                                 <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
                                 <label for="select${number}_1"><span>${question.choice1}</span></label>
@@ -173,7 +176,8 @@
                                 <input type="radio" id="select${number}_4" name="select${number}" value="${number+1}_4" onclick="answerSelect(this)">
                                 <label for="select${number}_4"><span>${question.choice4}</span></label>
                         </div>
-                        <div class="cbt__desc hide">${question.desc}</div>
+                        <div class="cbt__desc">${question.desc}</div>
+                        <div class="cbt__keyword"><span></span>${question.keyword}</div>
                     </div>
                 `);
 
@@ -204,45 +208,34 @@
             cbtOmr.innerHTML = omr.join('');
         }
 
-        //정답 확인
+        //정답확인
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
 
-            questionAll.forEach((question, number) => {
-                const quizSelectsWrap = cbtSelects[number];
+            questionAll.forEach((question,number)=>{
+                const quizSelectorWrap = cbtSelects[number];
                 const userSelector = `input[name=select${number}]:checked`;
-                const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
-                const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value;
+                const numberAnswer = userAnswer ? userAnswer.slice(-1)  : undefined;
 
                 if(numberAnswer == question.answer){
-                    console.log("정답입니다.");
-                    cbtSelects[number].parentElement.classList.add("good");
+                    console.log("정답입니다.")
+                    cbtSelects[number].parentElement.classList.add("good")
                 } else {
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
                     
-                    //오답 일 경우 정답 표시
-                    const label = cbtSelects[number].querySelectorAll("label");
-                    label[question.answer-1].classList.add("correct");
+
                 }
-
-                // 설명 숨기기
-                const quizDesc = document.querySelectorAll(".cbt__desc");
-
-                if(quizDesc[number].innerText == "undefined"){
-                    quizDesc[number].classList.add("hide");
-                } else {
-                    quizDesc[number].classList.remove("hide");
-                }
-            });
+            })
+            
         }
+        const userSelector =() => {}
 
-        const answerSelect = () => {
+        let cbtSubmit = item.length
 
-        }
-
-        cbtSubmit.addEventListener("click", answerQuiz);
-        dataQuestion();
+        cbtSubmit.addEventListener("click",answerQuiz)
+        dataQuestion()
     </script>
 </body>
 

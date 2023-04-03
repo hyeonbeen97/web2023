@@ -5,6 +5,8 @@
             "question": "GoF(Gang of Four)의 디자인 패턴에서 행위 패턴에 속하는 것은?",
             "correct_answer": "Visitor",
             "incorrect_answers": ["Builder","Prototype","Bridge"],
+            "question_desc" : "dddd",
+            "question_img" :"gisa2020_01_01" ,
             "keyword": "디자인 패턴",
             "keyword_num": "24"
         },{
