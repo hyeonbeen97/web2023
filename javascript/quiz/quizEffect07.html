@@ -199,9 +199,16 @@
                     </div>
                 `)
             });
-
+            
+            let scoreTag =  `
+            ${questionAll.length}문항<br>
+            ${questionAll.length}문항<br>            
+            `
+        
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+            cbtScore.innerHTML = scoreTag;
+
         }
 
         //정답 확인
@@ -213,6 +220,9 @@
                 const userSelector = `input[name=select${number}]:checked`;
                 const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
+
+
+                
 
                 if(numberAnswer == question.answer){
                     console.log("정답입니다.");
@@ -235,8 +245,11 @@
                     quizDesc[number].classList.remove("hide");
                 }
             });
+            cbtScore.innerHTML = scoreTag;
+
         }
 
+    
         const answerSelect = () => {
 
         }
