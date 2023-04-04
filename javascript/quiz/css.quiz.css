@@ -656,7 +656,7 @@
 }
 .cbt__start > div {
     width: 50%;
-    height: 50vh;
+    height: 80vh;
     background-color: rgba(255, 255, 255, 0.01);
     border: 8px solid #dd6a6a;
 }
@@ -685,6 +685,8 @@
     border-radius: 50%;
     font-size: 30px;
     font-family: "MabinogiClassic";
+    cursor: pointer;
+    z-index: 10000;
 
   }
 
