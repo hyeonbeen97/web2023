@@ -273,10 +273,19 @@
                     </div>
                 `)
             });
-
+            
+            let scoreTag =  `
+            ${questionAll.length}문항<br>
+            ${questionAll.length}문항<br>            
+            `
+        
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+<<<<<<< HEAD
 
+=======
+            cbtScore.innerHTML = scoreTag;
+>>>>>>> e60e039603f2bb0fb94feb0e044d3ce4cccd6a17
 
         }
 
@@ -291,7 +300,14 @@
                 const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
 
+<<<<<<< HEAD
                 if (numberAnswer == question.answer) {
+=======
+
+                
+
+                if(numberAnswer == question.answer){
+>>>>>>> e60e039603f2bb0fb94feb0e044d3ce4cccd6a17
                     console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
                 } else {
@@ -314,7 +330,10 @@
                 }
 
             });
+            cbtScore.innerHTML = scoreTag;
+
         }
+<<<<<<< HEAD
         //보기 체크
         const answerSelect2 = (el) => {
             const answer = el.value; //value="${number}_1"
@@ -334,6 +353,12 @@
             label[answerNum[1] - 1].checked = true;
             const answerInputs = document.querySelectorAll(".cbt__selects input:checked")
             cbtRest.innerHTML = questionLength - answerInputs.length;
+=======
+
+    
+        const answerSelect = () => {
+
+>>>>>>> e60e039603f2bb0fb94feb0e044d3ce4cccd6a17
         }
 
         cbtSubmit.addEventListener("click", answerQuiz);
