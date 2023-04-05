@@ -198,7 +198,7 @@
 
         //데이터 불러오기
         const dataQuestion = (value) => {
-            fetch("https://hyeonbeen97.github.io/web2023/javascript/quiz/json/gineungsaWD2013_05.json")
+            fetch("json/gineungsaJC2007_05.json")
                 .then(res => res.json())          //.then() .then  () 체인 방식
                 .then(items => {
                     questionAll = items.map((item, index) => {
