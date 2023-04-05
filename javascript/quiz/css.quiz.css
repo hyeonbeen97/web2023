@@ -700,6 +700,22 @@
     border-radius: 20px;
     background-color: #e0e0fff0;
 }
+.cbt__result {
+    text-align: center;
+    padding: 15px;
+    right: 0;
+    top: 90px;
+    position: fixed;
+    width: 280px;
+    height: 100px;
+    background-color: #000000;
+    color: #FFF1DC;
+    border: 8px solid #dd6a6a;
+
+}
+.cbt__result.hide {
+    display: none;
+}
 
 /* 버블 버튼 */
 .minimal {
@@ -786,6 +802,7 @@
     left: 70%;
     top: 100px;
     opacity: 0;
+    font-size: 30px;
 }
 .dog__wrap .false {
     width: 120px;

@@ -155,9 +155,6 @@
                     </div>
                 </div>
             </div>
-            <div class="cbt__result hide">
-                총 점수<br><span>?점</span>
-            </div>
         </div>
     </main>
     <!-- //main -->
@@ -181,28 +178,24 @@
         const cbtViewSubject = document.querySelector(".cbt__view .subject");
         const cbtHeader = document.querySelector(".cbt__header h2");
         const cbtTime = document.querySelector(".cbt__time");
-        const cbtName = document.querySelector(".cbt__name");
-        const Name = document.querySelector(".name");
 
 
 
 
 
-        let quizCount = 0;
-        let quizScore = 0;
+
         let querySelectorAll = []; //모든퀴즈 정보
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
         let questionTime = "";
-        let questionTimeRemain = "10"
+        let questionTimeRemain = "1000"
 
         //시작하기
-        const startQuiz = () => {
+        const startQuiz = () =>{
             cbtStart.classList.add("hide") //모달창 제거
-            cbtName.innerHTML = `${Name.value}`
 
             //시간 설정
-            questionTime = setInterval(reduceTime, 1000)
+            questionTime = setInterval(reduceTime,1000)
         }
 
 
@@ -212,7 +205,7 @@
 
         //데이터 불러오기
         const dataQuestion = (value) => {
-            fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
+            fetch("https://hyeonbeen97.github.io/web2023/javascript/quiz/json/gineungsaWD2013_05.json")
                 .then(res => res.json())          //.then() .then  () 체인 방식
                 .then(items => {
                     questionAll = items.map((item, index) => {
@@ -244,6 +237,10 @@
                             formattedQuestion.desc = item.desc;
                         }
 
+
+
+
+
                         return formattedQuestion;
                     })
 
@@ -267,7 +264,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"><img src="https://kebab000.github.io/web2023/gineungsaJPG/${question.question_img}.jpg" alt=""></div>
+                        <div class="cbt__question_img"><img src="https://kebab000.github.io/web2023/gineungsaJPG/${question.question_img}.jpg" alt=""></div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
                                 <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
@@ -311,22 +308,22 @@
             cbtOmr.innerHTML = omr.join('');
 
             document.querySelectorAll(".cbt__question__desc").forEach(desc => {
-                if (desc.innerHTML === "undefined") {
+                if( desc.innerHTML === "undefined") {
                     desc.classList.add("hide")
                 }
             })
 
-            document.querySelectorAll(".cbt__question__img").forEach(img => {
+            document.querySelectorAll(".cbt__question_img").forEach(img => {
                 let src = img.querySelector("img").src;
 
-                if (src.includes("undefined")) {
+                if(src.includes("undefined")){
                     img.classList.add("hide")
                 }
-
+                
             })
 
             // const questionzDesc = document.querySelectorAll(".cbt__question_desc");
-
+            
             // questionzDesc.forEach(e => {
             //     if(e.innerHTML == "undefined"){
             //         e.style.display = "none";
@@ -336,9 +333,9 @@
         }
 
 
+
         //정답 확인
         const answerQuiz = () => {
-            const cbtResult = document.querySelector(".cbt__result ").classList.remove("hide")
             const cbtSelects = document.querySelectorAll(".cbt__selects");
 
             questionAll.forEach((question, number) => {
@@ -348,11 +345,9 @@
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
 
 
-
                 if (numberAnswer == question.answer) {
                     console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
-                    quizScore++
                 } else {
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
@@ -371,8 +366,11 @@
                 } else {
                     quizDesc[number].classList.remove("hide");
                 }
-                document.querySelector(".cbt__result span").innerHTML = Math.ceil((quizScore /  questionAll.length) *100) + "점"
+
+
+
             });
+            cbtScore.innerHTML = scoreTag;
 
         }
         // 보기 체크
@@ -432,8 +430,8 @@
         const reduceTime = () => {
             questionTimeRemain--;
             console.log("first")
-
-            if (questionTimeRemain == 0) endQuiz();
+            
+            if(questionTimeRemain == 0) endQuiz();
 
             cbtTime.innerText = displayTime();
 
@@ -441,32 +439,29 @@
 
         //시간 표시
         const displayTime = () => {
-            if (questionTimeRemain <= 0) {
+            if(questionTimeRemain <= 0){
                 return "0분 00초";
             } else {
                 let minutes = Math.floor(questionTimeRemain / 60);
-                let seconds = questionTimeRemain % 60 < 10 ? "0" + (questionTimeRemain % 60) : questionTimeRemain % 60;
-                
+                let seconds = questionTimeRemain % 60;
+
                 return minutes + "분 " + seconds + "초";
                 //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
-
+                
             }
         }
-        
-
-
 
         //시험 끝
-        const endQuiz = () => {
+        const endQuiz =() => {
             alert("시험끝")
         }
 
-        cbtBtn.addEventListener("click", startQuiz);
+        cbtBtn.addEventListener("click", startQuiz)
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
 
 
-
+ 
 
 
         // 버블버튼
