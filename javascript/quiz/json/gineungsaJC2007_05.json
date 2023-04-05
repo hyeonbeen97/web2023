@@ -16,7 +16,7 @@
     }, {
         "subject": "정보처리 기능사",
         "question": "진리표가 다음 표와 같이 되는 논리회로는?? <br><br>",
-        "question_img" :"gineungsaJC2007_05_03",
+        "question_img" :"gineungsaJC2007_05_02",
         "incorrect_answers": ["AND 게이트","OR 게이트","NOR 게이트"],
         "correct_answer": "NAND 게이트",
        "desc": "출력을 반대로 생각해 보면 AND와 같습니다..그러므로 NAND 입니다."
@@ -35,7 +35,7 @@
     }, {
         "subject": "정보처리 기능사",
         "question": "다음 게이트에서 입력 A, B에 대한 출력 Y의 논리식은?",
-        "question_img" :"gineungsaJC2007_05_06.jpg",
+        "question_img" :"gineungsaJC2007_05_03.jpg",
         "incorrect_answers": ["Ā + B","A +  <p style='text-decoration: overline;'>B</p>","A + B"],
         "correct_answer": "Ā +  <p style='text-decoration: overline;'>B</p>",
         "desc" : "AND 입력이 반대로 나오는 경우 입니다..NAND를 드모르간 정리 하면 됩니다."
@@ -78,7 +78,7 @@
     }, {
         "subject": "정보처리 기능사",
         "question": "다음 보기의 연산은?",
-        "question_img" :"gineungsaJC2007_05_13.jpg",
+        "question_img" :"gineungsaJC2007_05_04.jpg",
         "incorrect_answers": ["OR 연산","MOVE 연산","Complement 연산"],
         "correct_answer": "AND 연산",
         "desc" : "AND는 곱하기니까 1과1이 있을때만 1이고 나머지는 0이다."
@@ -110,7 +110,7 @@
     }, {
         "subject": "정보처리 기능사",
         "question": "주기억장치, 제어장치, 연산장치 사이에서 정보가 이동되는 경로이다. 빈 부분에 알맞은 장치는?",
-        "question_img" :"gineungsaJC2007_05_18.jpg",
+        "question_img" :"gineungsaJC2007_05_05.jpg",
         "incorrect_answers": ["① 제어장치 ② 주기억장치 ③ 연산장치","① 주기억장치 ② 제어장치 ③ 연산장치","① 제어장치 ② 연산장치 ③ 주기억장치"],
         "correct_answer": "① 주기억장치 ② 연산장치 ③ 제어장치",
         "desc" : "CPU의 기능연 연산, 제어, 기억입니다..신호를 잘보고 판단하세요"
