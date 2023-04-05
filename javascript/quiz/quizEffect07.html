@@ -95,7 +95,7 @@
                 <div class="cbt__mdal1">
                     <h2>기능사 시험 연습</h2>
                     <div class="cbt__choice">
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" id="cbtTime" onchange="changeSelect(this)" class="cbt__index">
                             <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
                             <option value="gineungsaJC2005_04">정보처리기능사 2005년 4회</option>
                             <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
@@ -119,7 +119,7 @@
                             <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
                             <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
                         </select>
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" id="cbtTime" onchange="changeSelect(this)" class="cbt__index2">
                             <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
                             <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
                             <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
@@ -145,8 +145,12 @@
                             <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
                             <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                         </select>
+                        <div class="cbt__view">
+                            당신의 이름은 <input type="text" class="name"> 입니다.<br>
+                            당신은 <span class="subject">웹디자인 기능사시험</span>을선택했습니다.
+                        </div>
                     </div>
-                    <div data-lit-hue='20' data-lit-count='100' class='lit-container'>/
+                    <div data-lit-hue='20' data-lit-count='100' class='lit-container'>
                         <button class='minimal'>시작하기</button>
                     </div>
                 </div>
@@ -169,6 +173,12 @@
         const cbtLength = document.querySelector(".cbt__length")
         const cbtBtn = document.querySelector(".minimal");
         const cbtStart = document.querySelector(".cbt__start");
+        const cbtIndex = document.querySelector(".cbt__index");
+        const cbtIndex2 = document.querySelector(".cbt__index2");
+        const cbtViewSubject = document.querySelector(".cbt__view .subject");
+        const cbtHeader = document.querySelector(".cbt__header h2");
+
+
 
 
 
@@ -177,27 +187,18 @@
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
 
+        const startQuiz = () =>{
+            cbtStart.classList.add("hide")
+        }
+
 
 
         //클릭시 시작
-        cbtBtn.addEventListener("click", () => {
-            cbtStart.style.display = "none";
-
-            // function goToSection() {
-            //     // 선택한 옵션의 값을 가져오기
-            //     const select = document.getElementById("option");
-            //     const selectedValue = select.value;
-
-            //     // 해당 값과 일치하는 요소로 이동하기
-            //     const element = document.getElementById(selectedValue);
-            //     element.scrollIntoView(fetch("json/gineungsaWD2023_01.json"));
-            // }
-        })
 
 
         //데이터 불러오기
-        const dataQuestion = () => {
-            fetch("json/gineungsaWD2023_01.json")
+        const dataQuestion = (value) => {
+            fetch("https://hyeonbeen97.github.io/web2023/javascript/quiz/json/gineungsaWD2013_05.json")
                 .then(res => res.json())          //.then() .then  () 체인 방식
                 .then(items => {
                     questionAll = items.map((item, index) => {
@@ -376,8 +377,36 @@
             cbtRest.innerHTML = questionLength - answerInputs.length;
         }
 
+        // const changeSelect = () => {
+        //     let selectedValue = cbtIndex.options[cbtIndex.selectedIndex].value;
+        //     let selectText = cbtIndex.options[cbtIndex.selectedIndex].text;
+
+        //     alert(selectText)
+        // }
+        // const changeSelect2 = () => {
+        //     let selectedValue = cbtIndex2.options[cbtIndex2.selectedIndex].value;
+        //     let selectText = cbtIndex2.options[cbtIndex2.selectedIndex].text;
+
+        //     alert(selectText)
+        // }
+
+        //제목 선택
+
+        const changeSelect = (e) => {
+            let selectValue = e.value;
+            let selectText = e.options[cbtIndex.selectedIndex].text;
+
+            console.log(selectValue)
+            console.log(selectText)
+
+            cbtViewSubject.innerHTML = selectText
+            cbtHeader.innerHTML = selectText
+            dataQuestion(value)
+        }
+
+        cbtBtn.addEventListener("click", startQuiz)
         cbtSubmit.addEventListener("click", answerQuiz);
-        dataQuestion();
+        dataQuestion(selectValue);
 
 
         // 버블버튼
