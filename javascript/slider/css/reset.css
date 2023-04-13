@@ -1,6 +1,5 @@
 /* reset */
 @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
-@import url('https://webfontworld.github.io/Cafe24Classictype/Cafe24ClassicType.css');
 @import url('https://webfontworld.github.io/Quicksand/Quicksand.css');
 @import url('https://webfontworld.github.io/Montserrat/Montserrat.css');
 @import url('https://webfontworld.github.io/ssf/BeanPole.css');
@@ -43,10 +42,7 @@ em {
     font-family: "NexonLv1Gothic";
     font-weight: 300;
 }
-.font02 {
-    font-family: "Cafe24ClassicType";
-    font-weight: 300;
-}
+
 .font03 {
     font-family: "Quicksand";
     font-weight: 300;
