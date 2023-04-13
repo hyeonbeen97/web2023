@@ -116,7 +116,6 @@
     <footer id="footer">
         <a href="mailto:esansi@naver.com">esansi@naver.com</a>
     </footer>
-    </footer>
 
     <script>
         //선택자다
@@ -160,16 +159,16 @@
             // thumnaliNodes[currentIndex].classList.add("active")
 
             //썸네일 이미지 클릭하기
-            // for(let i=0; i<thumnaliNodes.length; i++){
-            //     thumnaliNodes[i].addEventListener("click", function(){
-            //         slider.thumbnails.querySelector("img.active").classList.remove("active")
-            //         thumnaliNodes[i].classList.add("active")    
+            for(let i=0; i<thumnaliNodes.length; i++){
+                thumnaliNodes[i].addEventListener("click", function(){
+                    slider.thumbnails.querySelector("img.active").classList.remove("active")
+                    thumnaliNodes[i].classList.add("active")    
 
-            //         imageNodes[currentIndex].classList.remove("active")
-            //         currentIndex = i;
-            //         imageNodes[currentIndex].classList.add("active")                    
-            //     });
-            // };
+                    imageNodes[currentIndex].classList.remove("active")
+                    currentIndex = i;
+                    imageNodes[currentIndex].classList.add("active")                    
+                });
+            };
 
             //forEach
             thumnaliNodes.forEach(function (thumnaliNode, i) {
