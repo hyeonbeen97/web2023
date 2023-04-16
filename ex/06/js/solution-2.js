@@ -8,7 +8,7 @@ document.querySelector(".lotto__start__btn").addEventListener("click",()=>{
         function createNum(){
             let randomNum = Math.floor(Math.random() * 45) ;
 
-            for(let i =0; i<60 ; i++){
+            for(let i =0; i<10 ; i++){
                 let randomNum = Math.floor(Math.random() * 45) ;
                 
 
@@ -16,8 +16,8 @@ document.querySelector(".lotto__start__btn").addEventListener("click",()=>{
 
                     randomTot.push(randomNum);
                 }
-
-                if(randomTot.length == 5)break
+                
+                if(randomTot.length == 6)break
             }
             randomTot.sort(function(a,b){
                 return a-b;
