@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.lotto__wrap {
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #000000;
+}
+.lotto {
+  text-align: center;
+  color: #fff;
+
+}
+button {
+  display: inline-block;
+}
+.num {
+  color:#5800d4;
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 50px;
+
+}
+
+.num span {
+  text-align: center;
+}
+
+
+
+
