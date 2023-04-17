@@ -31,4 +31,7 @@ setInterval(() => {
   let totIndex = Math.round(Math.random() * item.length);
   quonte.innerHTML = `${item[totIndex].id}. ${item[totIndex].quote} `;
   author.innerHTML = `- ${item[totIndex].author}`;
-}, 1000);   
+  document.querySelector(".body").style.backgroundImage = `url(https://source.unsplash.com/random/?programming)`;
+  
+  }, 1000);
+   

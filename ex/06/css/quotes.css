@@ -4,8 +4,17 @@ body {
   align-items:center;
   flex-direction:column;
   height: 100vh;
-  background-color:#28178e;
+  background-image: url("https://source.unsplash.com/random/?programming");
   overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+.result__wrap {
+  width: 800px;
+  height: 600px;
+  border: 1px solid #fffafa;
+  background-color: rgba(0, 0, 0, 0.7)
 }
 #result {
   color: #fffafa;
