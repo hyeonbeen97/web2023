@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
 </head>
+
 <body class="bg02 img02 font08">
     <header id="header">
         <h1>Javasrcipt parallax Effect01</h1>
@@ -64,8 +66,7 @@
                     <div class="parallax__item__img"></div>
                 </figure>
                 <p class="parallax__item__desc">오늘의 선택이 내일을 결정한다.</p>
-            </section
-            ><!--//section-->
+            </section><!--//section-->
             <section id="section4" class="parallax__item">
                 <span class="parallax__item__num">04</span>
                 <h2 class="parallax__item__title">Section4</h2>
@@ -144,41 +145,49 @@
     </footer>
 
     <script>
-        window.addEventListener("scroll",() => {
+        window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-            
+
             //info
             document.querySelector(".scroll span").innerText = parseInt(scrollTop);
-    
-    
-            // document.querySelector(".info .offset1").innerText = document.getElementById("section1").offsetTop;
-            // document.querySelector(".info .offset2").innerText = document.getElementById("section2").offsetTop;
-            // document.querySelector(".info .offset3").innerText = document.getElementById("section3").offsetTop;
-            // document.querySelector(".info .offset4").innerText = document.getElementById("section4").offsetTop;
-            // document.querySelector(".info .offset5").innerText = document.getElementById("section5").offsetTop;
-            // document.querySelector(".info .offset6").innerText = document.getElementById("section6").offsetTop;
-            // document.querySelector(".info .offset7").innerText = document.getElementById("section7").offsetTop;
-            // document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop;
-            // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
+
 
             //for문
 
-            // for(let i = 1; i <= 10 ; i++){
+            // for(let i = 1; i <= 9 ; i++){
             //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
             // }
-            
-            //forEach
-            document.querySelectorAll(".info ul li").forEach((el,index)=>{
-                el.querySelector("span").innerText = document.getElementById(`section${index+1}`).offsetTop;
-            
-            })
+
+            // forEach
+            // document.querySelectorAll(".info ul li").forEach((el,index)=>{
+            //     el.querySelector("span").innerText = document.getElementById(`section${index+1}`).offsetTop;                
+            // })
+
+            // for in
+
+            // const arr = document.querySelectorAll(".info ul li")
+            // for(let index in arr){
+            //     const el = arr[index];
+            //     el.querySelector("span").innerText = document.getElementById(`section${parseInt(index)+1}`).offsetTop;
+            // }
+
+            // for of
+
+            const arr = document.querySelectorAll(".info ul li");
+            let index = 0;
+            for (const el of arr) {
+                el.querySelector("span").innerText = document.getElementById(`section${index + 1}`).offsetTop;
+                index++;
+            }
+
+
             //각 scrollTop값에 맞는 메뉴 활성화
-            document.querySelectorAll(".parallax__item").forEach((item,index) => {
-                if(scrollTop >= item.offsetTop -2) {
-                    document.querySelectorAll(".parallax__nav li").forEach((li)=>{
+            document.querySelectorAll(".parallax__item").forEach((item, index) => {
+                if (scrollTop >= item.offsetTop - 2) {
+                    document.querySelectorAll(".parallax__nav li").forEach((li) => {
                         li.classList.remove("active")
                     });
-                    document.querySelector(".parallax__nav li:nth-child("+(index+1)+")").classList.add("active")
+                    document.querySelector(".parallax__nav li:nth-child(" + (index + 1) + ")").classList.add("active")
                 }
             });
 
@@ -190,10 +199,9 @@
                     })
                 })
             })
-
-
         });
-        
+
     </script>
 </body>
+
 </html>
