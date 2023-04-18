@@ -5,7 +5,7 @@ let wiseAll = [];
 let item = [];
 
 const getRandomBackground = () => {
-  const randomIndex = Math.floor(Math.random() * 10);
+  const randomIndex = Math.floor(Math.random() * item.length);
   return `url('https://source.unsplash.com/random/?${randomIndex}')`;
 }
 
@@ -43,7 +43,7 @@ setInterval(() => {
   let totIndex = Math.round(Math.random() * item.length);
   quonte.innerHTML = `${item[totIndex].id}. ${item[totIndex].quote} `;
   author.innerHTML = `- ${item[totIndex].author}`;
-  document.querySelector("body").style.transition = "background-image 0.1s";
+  document.querySelector("body").style.transition = "all 0.1s";
   document.querySelector("body").style.backgroundImage = getRandomBackground();
 
   }, 1000);
