@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴럭스 이펙트01</title>
+    <title>패럴럭스 이펙트02</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
 </head>
 
 <body class="bg02 img02 font08">
     <header id="header">
-        <h1>Javasrcipt parallax Effect01</h1>
-        <p>패럴럭스 이펙트 : 메뉴효과</p>
+        <h1>Javasrcipt parallax Effect02</h1>
+        <p>패럴럭스 이펙트 : 사이드 메뉴</p>
         <ul>
-            <li class="active"><a href="parallaxEffect01.html">1</a></li>
-            <li><a href="parallaxEffect02.html">2</a></li>
-            <li><a href="parallaxEffect03.html">3</a></li>
-            <li><a href="parallaxEffect04.html">4</a></li>
-            <li><a href="parallaxEffect05.html">5</a></li>
-            <li><a href="parallaxEffect06.html">6</a></li>
-            <li><a href="parallaxEffect07.html">7</a></li>
+            <li class="active"><a href="parallax01.html">1</a></li>
+            <li><a href="parallax02.html">2</a></li>
+            <li><a href="parallax03.html">3</a></li>
+            <li><a href="parallax04.html">4</a></li>
+            <li><a href="parallax05.html">5</a></li>
+            <li><a href="parallax06.html">6</a></li>
+            <li><a href="parallax07.html">7</a></li>
         </ul>
     </header>
     <!-- header -->
-    <nav class="parallax__nav">
+    <nav class="parallax__dot">
         <ul>
             <li class="active"><a href="#section1">메뉴1</a></li>
             <li><a href="#section2">메뉴2</a></li>
@@ -126,80 +126,45 @@
 
     <aside class="parallax__info">
         <div class="scroll">scrollTop : <span>0</span>px</div>
-        <div class="info">
-            <ul>
-                <li>#section1 offset() : <span class="offset1">0</span>px</li>
-                <li>#section2 offset() : <span class="offset2">0</span>px</li>
-                <li>#section3 offset() : <span class="offset3">0</span>px</li>
-                <li>#section4 offset() : <span class="offset4">0</span>px</li>
-                <li>#section5 offset() : <span class="offset5">0</span>px</li>
-                <li>#section6 offset() : <span class="offset6">0</span>px</li>
-                <li>#section7 offset() : <span class="offset7">0</span>px</li>
-                <li>#section8 offset() : <span class="offset8">0</span>px</li>
-                <li>#section9 offset() : <span class="offset9">0</span>px</li>
-            </ul>
-        </div>
     </aside>
     <footer id="footer">
         <a href="mailto:esansi@naver.com">esansi@naver.com</a>
     </footer>
 
     <script>
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-            //info
-            document.querySelector(".scroll span").innerText = parseInt(scrollTop);
-
-
-            //for문
-
-            // for(let i = 1; i <= 9 ; i++){
-            //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
-            // }
-
-            // forEach
-            // document.querySelectorAll(".info ul li").forEach((el,index)=>{
-            //     el.querySelector("span").innerText = document.getElementById(`section${index+1}`).offsetTop;                
-            // })
-
-            // for in
-
-            // const arr = document.querySelectorAll(".info ul li")
-            // for(let index in arr){
-            //     const el = arr[index];
-            //     el.querySelector("span").innerText = document.getElementById(`section${parseInt(index)+1}`).offsetTop;
-            // }
-
-            // for of
-
-            const arr = document.querySelectorAll(".info ul li");
-            let index = 0;
-            for (const el of arr) {
-                el.querySelector("span").innerText = document.getElementById(`section${index + 1}`).offsetTop;
-                index++;
-            }
-
-
-            //각 scrollTop값에 맞는 메뉴 활성화
-            document.querySelectorAll(".parallax__item").forEach((item, index) => {
-                if (scrollTop >= item.offsetTop - 2) {
-                    document.querySelectorAll(".parallax__nav li").forEach((li) => {
-                        li.classList.remove("active")
-                    });
-                    document.querySelector(".parallax__nav li:nth-child(" + (index + 1) + ")").classList.add("active")
-                }
-            });
-
-            document.querySelectorAll(".parallax__nav li a").forEach((li) => {
-                li.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    document.querySelector(li.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    })
-                })
+        document.querySelectorAll(".parallax__dot li a").forEach(dot => {
+            dot.addEventListener("click", e=> {
+                e.preventDefault();
+                document.querySelector(dot.getAttribute("href")).scrollIntoView({behavior:"smooth"});
             })
         });
+
+        window.addEventListener("scroll",()=>{
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scroll span").innerText = parseInt(scrollTop);
+
+            document.querySelectorAll(".parallax__item").forEach((item,num) => {
+                if(scrollTop > item.offsetTop){
+                    document.querySelectorAll(".parallax__dot li").forEach(li => {
+                        li.classList.remove("active");    
+                    });
+                    document.querySelector(".parallax__dot li:nth-child("+(num+1)+")").classList.add("active");
+                }
+            })
+            
+        });
+
+
+        
+        // window.scroll(0,10000);
+        // window.scroll({left:100, top: 4000});
+        // window.scroll({left:100, top: 4000, behavior:"smooth"});
+        // window.scrollTo({left:100, top: 4000}); 
+        // window.scrollTo({left:100, top: 4000, behavior:"smooth"});
+        // window.scrollBy({left:100, top: 4000});
+        // window.scrollBy({left:100, top: 4000, behavior:"smooth"});
+
 
     </script>
 </body>
