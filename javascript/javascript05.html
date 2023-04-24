@@ -85,14 +85,103 @@
             </ul>
         </div>
         <div class="main__sample">
-            <div id="sample06" class="sample">
-                <h3>06.includes() </h3>
-                <div class="notice">"문자열".includes(검색값, [위치값])</div>
+            <div id="sample01" class="sample">
+                <h3>01. 문자열 메서드 : at()</h3>
+                <div class="notice">"문자열".at()</div>
                 <ul>
-                    <li>문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</li>
-                    <li>대소문자를 구별합니다.</li>
+                    <li> 문자열에서 지정된 인덱스에 있는 문자를 반환합니다. 인덱스가 음수이면 문자열의 끝에서부터 거꾸로 인덱싱됩니다.</li>
                 </ul>
                 <div class="script">
+<pre><code class="language-js">
+        const str = 'hello';
+        console.log(str.at(1)); // 'e'
+        console.log(str.at(-1)); // 'o'
+    
+</code></pre> 
+                </div>
+            </div>
+
+        <!-- sample01 -->
+
+        <div id="sample02" class="sample">
+            <h3>02. 문자열 메서드 : charAt()</h3>
+            <div class="notice">"문자열".charAt()</div>
+            <ul>
+                <li>문자열에서 지정된 인덱스에 있는 문자를 반환합니다. </li>
+                <li>인덱스가 문자열의 길이보다 크거나 같으면 빈 문자열을 반환합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'hello';
+    console.log(str.at(1)); // 'e'
+    console.log(str.at(-1)); // 'o'
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample02 -->
+        <div id="sample03" class="sample">
+            <h3>03. 문자열 메서드 : charCodeAt()</h3>
+            <div class="notice">"문자열".charCodeAt()</div>
+            <ul>
+                <li>문자열에서 지정된 인덱스에 있는 문자의 유니코드 값을 반환합니다. </li>
+                <li>인덱스가 문자열의 길이보다 크거나 같으면 NaN을 반환합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'hello';
+    console.log(str.charCodeAt(1)); // 101 (e의 유니코드 값)
+    console.log(str.charCodeAt(10)); // NaN
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample03 -->
+
+        <div id="sample04" class="sample">
+            <h3>04. 문자열 메서드 : charCodeAt()</h3>
+            <div class="notice">"문자열".charCodeAt()</div>
+            <ul>
+                <li>메서드: 문자열에서 지정된 인덱스에 있는 문자의 유니코드 코드 포인트 값을 반환합니다. </li>
+                <li>인덱스가 문자열의 길이보다 크거나 같으면 undefined를 반환합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = '👋🏻hello';
+    console.log(str.codePointAt(0)); // 128075 (👋의 코드 포인트 값)
+    console.log(str.codePointAt(2)); // 104 (h의 코드 포인트 값)
+    console.log(str.codePointAt(10)); // undefined
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample04 -->
+
+        <div id="sample05" class="sample">
+            <h3>05. 문자열 메서드 : concat()</h3>
+            <div class="notice">"문자열".concat()</div>
+            <ul>
+                <li>메서드: 인수로 전달된 문자열들을 현재 문자열과 연결한 새로운 문자열을 반환합니다. </li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str1 = 'hello';
+    const str2 = 'world';
+    console.log(str1.concat(' ', str2)); // 'hello world'
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample05 -->
+
+        <div id="sample06" class="sample">
+            <h3>06. 문자열 메서드 : .includes(검색값, [위치값])</h3>
+            <div class="notice">"문자열".includes()</div>
+            <ul>
+                <li>문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</li>
+                <li>대소문자를 구별합니다.</li>
+            </ul>
+            <div class="script">
 <pre><code class="language-js">
     console.log( "javascript reference".includes("javascript"))
     console.log( "javascript reference".includes("J"))
@@ -102,128 +191,109 @@
     console.log( "javascript reference".includes("reference",12))
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            100200300400500<br>
-                            100 200 300 400 500<br>
-                            100*200*300*400*500<br>
-                            100-200-300-400-500<br>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <div id="sample07" class="sample">
-                <h3>07. indexOf()</h3>
-                <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
+        </div>
+        <!-- sample06 -->
+
+        <div id="sample07" class="sample">
+            <h3>07. 문자열 메서드 : .indexOf()(검색값, [위치값])</h3>
+            <div class="notice">"문자열".indexOf()</div>
+            <ul>
                 <ul>
                     <li>문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
                     <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
                     <li>대소문자를 구별합니다.</li>
                 </ul>
-                <div class="script">
+            </ul>
+            <div class="script">
 <pre><code class="language-js">
-console.log("javascript refercence".indexOf("javascript"))  //0
-console.log("javascript refercence".indexOf("javascripts"))  //-1
-console.log("javascript refercence".indexOf("j"))  //0
-console.log("javascript refercence".indexOf("J"))  //-1
-console.log("javascript refercence".indexOf("a"))  //1
-console.log("javascript refercence".indexOf("ja"))  //0
-console.log("javascript refercence".indexOf("jv"))  //-1
-console.log("javascript refercence".indexOf("refercence"))  //11
-console.log("javascript refercence".indexOf("r"))  //6
-console.log("javascript refercence".indexOf("re"))  //11
-
-console.log("javascript refercence".indexOf("javascripts",0))  //0
-console.log("javascript refercence".indexOf("javascripts",1))  //-1
-console.log("javascript refercence".indexOf("refercence",0))  //11
-console.log("javascript refercence".indexOf("refercence",11))  //11
-console.log("javascript refercence".indexOf("refercence",12))  //-1
-console.log("javascript refercence".indexOf("r",7))  //11
-console.log("javascript refercence".indexOf("r",12))  //15
+    console.log("javascript refercence".indexOf("javascripts"))  //-1
+    console.log("javascript refercence".indexOf("j"))  //0
+    console.log("javascript refercence".indexOf("J"))  //-1
+    console.log("javascript refercence".indexOf("a"))  //1
+    console.log("javascript refercence".indexOf("ja"))  //0
+    console.log("javascript refercence".indexOf("jv"))  //-1
+    console.log("javascript refercence".indexOf("refercence"))  //11
+    console.log("javascript refercence".indexOf("r"))  //6
+    console.log("javascript refercence".indexOf("re"))  //11
+    
+    console.log("javascript refercence".indexOf("javascripts",0))  //0
+    console.log("javascript refercence".indexOf("javascripts",1))  //-1
+    console.log("javascript refercence".indexOf("refercence",0))  //11
+    console.log("javascript refercence".indexOf("refercence",11))  //11
+    console.log("javascript refercence".indexOf("refercence",12))  //-1
+    console.log("javascript refercence".indexOf("r",7))  //11
+    console.log("javascript refercence".indexOf("r",12))  //15
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            100200300400500<br>
-                            100 200 300 400 500<br>
-                            100*200*300*400*500<br>
-                            100-200-300-400-500<br>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <div id="sample07" class="sample">
-                <h3>08. lastIndexOf()</h3>
-                <div class="notice">"문자열".lastIndexOf(검색값, [위치값])</div>
-                <ul>
-                    <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
-                    <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-                    <li>대소문자를 구별합니다.</li>
-                </ul>
-                <div class="script">
-<pre><code class="language-js">
-console.log("javascript refercence".indexOf("javascript"))  //0
-console.log("javascript refercence".indexOf("javascripts"))  //-1
-console.log("javascript refercence".indexOf("j"))  //0
-console.log("javascript refercence".indexOf("J"))  //-1
-console.log("javascript refercence".indexOf("a"))  //1
-console.log("javascript refercence".indexOf("ja"))  //0
-console.log("javascript refercence".indexOf("jv"))  //-1
-console.log("javascript refercence".indexOf("refercence"))  //11
-console.log("javascript refercence".indexOf("r"))  //6
-console.log("javascript refercence".indexOf("re"))  //11
+        </div>
+        <!-- sample07 -->
 
-console.log("javascript refercence".indexOf("javascripts",0))  //0
-console.log("javascript refercence".indexOf("javascripts",1))  //-1
-console.log("javascript refercence".indexOf("refercence",0))  //11
-console.log("javascript refercence".indexOf("refercence",11))  //11
-console.log("javascript refercence".indexOf("refercence",12))  //-1
-console.log("javascript refercence".indexOf("r",7))  //11
-console.log("javascript refercence".indexOf("r",12))  //15
+        <div id="sample08" class="sample">
+            <h3>08. 문자열 메서드 : .lastIndexOf()</h3>
+            <div class="notice">"문자열".lastIndexOf()</div>
+            <ul>
+                <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
+                <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                <li>대소문자를 구별합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    console.log("javascript refercence".indexOf("javascript"))  //0
+    console.log("javascript refercence".indexOf("javascripts"))  //-1
+    console.log("javascript refercence".indexOf("j"))  //0
+    console.log("javascript refercence".indexOf("J"))  //-1
+    console.log("javascript refercence".indexOf("a"))  //1
+    console.log("javascript refercence".indexOf("ja"))  //0
+    console.log("javascript refercence".indexOf("jv"))  //-1
+    console.log("javascript refercence".indexOf("refercence"))  //11
+    console.log("javascript refercence".indexOf("r"))  //6
+    console.log("javascript refercence".indexOf("re"))  //11
+    
+    console.log("javascript refercence".indexOf("javascripts",0))  //0
+    console.log("javascript refercence".indexOf("javascripts",1))  //-1
+    console.log("javascript refercence".indexOf("refercence",0))  //11
+    console.log("javascript refercence".indexOf("refercence",11))  //11
+    console.log("javascript refercence".indexOf("refercence",12))  //-1
+    console.log("javascript refercence".indexOf("r",7))  //11
+    console.log("javascript refercence".indexOf("r",12))  //15
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            0<br>
-                            -1<br>
-                            0<br>
-                            -1<br>
-                            1<br>
-                            0<br>
-                            -1<br>
-                            11<br>
-                            6<br>
-                            11<br>
-                            0<br>
-                            -1<br>
-                            11<br>
-                            11<br>
-                            -1<br>
-                            11<br>
-                            15<br>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <div id="sample18" class="sample">
-                <h3>10. match()</h3>
-                <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
-                <ul>
-                    <li>문자열(정규식)을 검색하고, 문자값(배열)을 반환합니다.</li>
-                    <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 null을 반환합니다.</li>
-                    <li>대소문자를 구별합니다.</li>
-                    <li>match() 메서드는 문자값(배열)을 반환하고, search() 메서드는 위치값(숫자)를 반환하는 것이 다릅니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample08 -->
+
+        <div id="sample09" class="sample">
+            <h3>09. 문자열 메서드 : .localeCompare()</h3>
+            <div class="notice">"문자열".localeCompare()</div>
+            <ul>
+                <li>현재 문자열과 인수로 전달된 문자열을 유니코드 순서로 비교합니다.</li>
+                <li>현재 문자열이 전달된 문자열보다 작으면 음수를, 같으면 0을, 크면 양수를 반환합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str1 = 'hello';
+    const str2 = 'world';
+    console.log(str1.localeCompare(str2)); // -1
+    console.log(str2.localeCompare(str1)); // 1
+    console.log(str1.localeCompare(str1)); // 0
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample09 -->
+
+        <div id="sample10" class="sample">
+            <h3>10. 문자열 메서드 : . match()</h3>
+            <div class="notice">"문자열". match()</div>
+            <ul>
+                <li>문자열(정규식)을 검색하고, 문자값(배열)을 반환합니다.</li>
+                <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 null을 반환합니다.</li>
+                <li>대소문자를 구별합니다.</li>
+                <li>match() 메서드는 문자값(배열)을 반환하고, search() 메서드는 위치값(숫자)를 반환하는 것이 다릅니다.</li>
+            </ul>
+            <div class="script">
 <pre><code class="language-js">
     console.log( "javascript reference".match("javascript"))  //"javascript"
     console.log( "javascript reference".match("reference"))   //"reference"
@@ -234,31 +304,110 @@ console.log("javascript refercence".indexOf("r",12))  //15
     console.log("javascript reference".match(/r/g))            //"r r r"
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            javascript<br>
-                            reference<br>
-                            r<br>
-                            null<br>
-                            null<br>
-                            reference<br>
-                            r r r<br>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <div id="sample18" class="sample">
-                <h3>18. search()</h3>
-                <div class="notice">"문자열".search(검색값)<br>"문자열".search(정규식표현)</div>
-                <ul>
-                    <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
-                    <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-                    <li>대소문자를 구별합니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample10 -->
+
+        <div id="sample11" class="sample">
+            <h3>11. 문자열 메서드 : .matchAll()</h3>
+            <div class="notice">"문자열".matchAll()</div>
+            <ul>
+                <li>메서드는 문자열에서 정규 표현식과 매치되는 모든 부분을 찾아 이를 반복 가능한(iterable) 객체로 반환합니다.</li>
+                <li>반복 가능한 객체에서 반환되는 값은 match() 메서드가 반환하는 배열과 유사한 형태를 갖고 있습니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'hello world';
+    const regex = /\w+/g;
+    const matches = str.matchAll(regex);
+    
+    for (const match of matches) {
+      console.log(match);
+    }
+    // 출력 결과:
+    // ["hello", index: 0, input: "hello world"]
+    // ["world", index: 6, input: "hello world"]
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample11 -->
+
+        <div id="sample12" class="sample">
+            <h3>12. 문자열 메서드 : .normalize()</h3>
+            <div class="notice">"문자열".normalize()</div>
+            <ul>
+                <li>현재 문자열의 유니코드 정규화 형식을 반환합니다. </li>
+                <li>유니코드 정규화는 문자열에서 등장하는 문자들을 일관된 형식으로 변환하는 것을 말합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'n\u0303';
+    console.log(str.normalize()); // 'ñ'
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample12 -->
+
+        <div id="sample13" class="sample">
+            <h3>13. 문자열 메서드 : .padEnd()</h3>
+            <div class="notice">"문자열".padEnd()</div>
+            <ul>
+                <li>현재 문자열의 끝에 지정된 길이만큼 다른 문자열을 추가한 새로운 문자열을 반환합니다.</li>
+                <li>추가할 문자열은 필수적으로 전달되어야 합니다. 만약 현재 문자열의 길이가 지정된 길이보다 크거나 같으면 현재 문자열을 그대로 반환합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'hello';
+    console.log(str.padEnd(10, '.')); // 'hello.....'
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample13 -->
+
+        <div id="sample14" class="sample">
+            <h3>14. 문자열 메서드 : .padStart()</h3>
+            <div class="notice">"문자열".padStart()</div>
+            <ul>
+                <li>현재 문자열의 시작 부분에 지정된 길이만큼 다른 문자열을 추가한 새로운 문자열을 반환합니다.</li>
+                <li>추가할 문자열은 필수적으로 전달되어야 합니다. 만약 현재 문자열의 길이가 지정된 길이보다 크거나 같으면 현재 문자열을 그대로 반환합니다.</li>
+            </ul>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'hello';
+    console.log(str.padStart(10, '.')); // '.....hello'
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample14 -->
+
+        <div id="sample15" class="sample">
+            <h3>15. 문자열 메서드 : .repeat()</h3>
+            <div class="notice">"문자열".repeat()</div>
+            <ul>
+                <li>현재 문자열을 지정된 횟수만큼 반복한 새로운 문자열을 반환합니다.</li>
+                <li>반복 횟수는 0 이상의 정수여야 합니다.</li>
+            <div class="script">
+<pre><code class="language-js">
+    const str = 'hello';
+    console.log(str.repeat(3)); // 'hellohellohello'
+
+</code></pre> 
+            </div>
+        </div>
+        <!-- sample15 -->
+
+        <div id="sample18" class="sample">
+            <h3>18. 문자열 메서드 : .search()</h3>
+            <div class="notice">"문자열".search()</div>
+            <ul>
+                <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
+                <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                <li>대소문자를 구별합니다.</li>
+            <div class="script">
 <pre><code class="language-js">
     console.log( "javascript reference".search("javascript"))  //0
     console.log( "javascript reference".search("reference"))   //11
@@ -275,35 +424,16 @@ console.log("javascript refercence".indexOf("r",12))  //15
     console.log("javascript reference".search(/[a-z]/g))          //0
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            0<br>
-                            11<br>
-                            6<br>
-                            4<br>
-                            -1<br>
-                            -1<br>
-                            11<br>
-                            -1<br>
-                            11<br>
-                            11<br>
-                            11<br>
-                            -1<br>
-                            0<br>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <div id="sample19" class="sample">
-                <h3>문자열 메서드 : slice</h3>
-                <div class="notice">"문자열".clice(시작위치, [끝나는 위치])</div>
-                <ul>
-                    <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample18 -->
+
+        <div id="sample19" class="sample">
+            <h3>19. 문자열 메서드 : .slice(시작위치, [끝나는 위치])</h3>
+            <div class="notice">"문자열".slice(시작위치, [끝나는 위치])</div>
+            <ul>
+                <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</li>
+            <div class="script">
 <pre><code class="language-js">
     "javascript".slice(0)
     console.log("javascript".slice(0))     //javascript
@@ -313,23 +443,16 @@ console.log("javascript refercence".indexOf("r",12))  //15
     console.log("javascript".slice(-5,-2)) //cri
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <!-- 22 -->
-            <div id="sample22" class="sample">
-                <h3>배열 메서드 : split</h3>
-                <div class="notice">"배열".clice(시작위치, [끝나는 위치])</div>
-                <ul>
-                    <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample19 -->
+
+        <div id="sample22" class="sample">
+            <h3>22. 문자열 메서드 : .split(시작위치, [끝나는 위치])</h3>
+            <div class="notice">"문자열".split(시작위치, [끝나는 위치])</div>
+            <ul>
+                <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+            <div class="script">
 <pre><code class="language-js">
     console.log("javascript".split("")) //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
     console.log("jav ascr ipt".split(" ")) //['jav', 'ascr', 'ipt']
@@ -349,82 +472,55 @@ console.log("javascript refercence".indexOf("r",12))  //15
     console.log("javascript".split("").join(""))  //j,a,v,a,s,c,r,i,p,t  join을 넣어 배열이 아닌 문자열
     console.log("javascript".split("").join("*"))  //j,a,v,a,s,c,r,i,p,t  
     console.log("javascript".split("").reverse().join("/"))  // t/p/i/r/c/s/a/v/a/j   reverse는 배열만 
+
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <!-- 30 -->
-            <div id="sample30" class="sample">
-                <h3>30. 문자열 메서드 : trim</h3>
-                <div class="notice">"문자열".trim</div>
-                <ul>
-                    <li> 문자열 앞/뒤 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample22 -->
+
+        <div id="sample30" class="sample">
+            <h3>30. 문자열 메서드 : .trim()</h3>
+            <div class="notice">"문자열".trim()</div>
+            <ul>
+                <li> 문자열 앞/뒤 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
+            <div class="script">
 <pre><code class="language-js">
     console.log("javascript".trim(""))   //"javascript"
     console.log(" javascript".trim(" "))  //"javascript"
     console.log("javascript ".trim(""))  //"javascript"
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <!-- 31 -->
-            <div id="sample31" class="sample">
-                <h3>31. 문자열 메서드 : trimStart</h3>
-                <div class="notice">"문자열".trimStart</div>
-                <ul>
-                    <li> 문자열 앞 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample30 -->
+
+        <div id="sample31" class="sample">
+            <h3>31. 문자열 메서드 : .trimStart()</h3>
+            <div class="notice">"문자열".trimStart()</div>
+            <ul>
+                <li> 문자열 앞 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
+            <div class="script">
 <pre><code class="language-js">
     console.log(" javascript ".trimStart(""))   //"javascript "
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                        </div>
-                    </details>
-                </div>
             </div>
-            <!-- 32 -->
-            <div id="sample30" class="sample">
-                <h3>32. 문자열 메서드 : trimEnd</h3>
-                <div class="notice">"문자열".trimEnd</div>
-                <ul>
-                    <li> 문자열 뒤 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
-                </ul>
-                <div class="script">
+        </div>
+        <!-- sample31 -->
+
+        <div id="sample32" class="sample">
+            <h3>32. 문자열 메서드 : .trimEnd()</h3>
+            <div class="notice">"문자열".trimEnd()</div>
+            <ul>
+                <li> 문자열 뒤 공백을 제거하고 새로운 문자열을 반환 합니다.</li>
+            <div class="script">
 <pre><code class="language-js">
     console.log(" javascript ".trimEnd(""))   //" javascript"
 
 </code></pre> 
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                        </div>
-                    </details>
-                </div>
             </div>
         </div>
+        <!-- sample32 -->
     </main>
     <footer id="footer"><a href="mailto:esansi@naver.com">esansi@naver.com</a></footer>
     <script src="assets/js/highlight.min.js"></script>
@@ -439,6 +535,59 @@ console.log("javascript refercence".indexOf("r",12))  //15
     console.log("javascript reference".match(/reference/))    //"reference"     
     console.log("javascript reference".match(/r/g))            //"r r r"
 
+<<<<<<< Updated upstream
+=======
+        // console.log("javascript refercence".indexOf("javascripts",0))  //0
+        // console.log("javascript refercence".indexOf("javascripts",1))  //-1
+        // console.log("javascript refercence".indexOf("refercence",0))  //11
+        // console.log("javascript refercence".indexOf("refercence",11))  //11
+        // console.log("javascript refercence".indexOf("refercence",12))  //-1
+        // console.log("javascript refercence".indexOf("r",7))  //11
+        // console.log("javascript refercence".indexOf("r",12))  //15
+
+        // console.log( "javascript reference".includes("javascript"))
+        // console.log( "javascript reference".includes("J"))
+        // console.log( "javascript reference".includes("j"))
+        // console.log( "javascript reference".includes("a"))
+        // console.log( "javascript reference".includes("reference",11))
+        // console.log( "javascript reference".includes("reference",12))
+        
+        // console.log( "javascript reference".match("javascript"))  //"javascript"
+        // console.log( "javascript reference".match("reference"))   //"reference"
+        // console.log("javascript reference".match("r"))            //"r"
+        // console.log("javascript reference".match("R"))            //null
+        // console.log("javascript reference".match(/R/i))            //null
+        // console.log("javascript reference".match(/reference/))    //"reference" 
+        
+        // console.log("javascript reference".match(/r/g))            //"r r r" 
+        // console.log("javascript reference".match(/R/ig))           //"r r r"
+
+        // console.log( "javascript reference".lastIndexOf("javascript"))  //0
+        // console.log( "javascript reference".lastIndexOf("javascripts"))  //-1
+        // console.log( "javascript reference".lastIndexOf("j"))  //0
+        // console.log( "javascript reference".lastIndexOf("a"))  //3
+        // console.log( "javascript reference".lastIndexOf("jv"))  //0
+        // console.log( "javascript reference".lastIndexOf("reference"))  //11
+        // console.log( "javascript reference".lastIndexOf("r"))  //15
+        // console.log( "javascript reference".lastIndexOf("javascript",0))  //0
+        // console.log( "javascript reference".lastIndexOf("javascript",1))  //0
+        // console.log( "javascript reference".lastIndexOf("reference",0))  //-1
+        // console.log( "javascript reference".lastIndexOf("reference",1))  //-1
+        // console.log( "javascript reference".lastIndexOf("reference",11))  //11
+        // console.log( "javascript reference".lastIndexOf("reference",12))  //11
+        
+        // console.log("reference".lastIndexOf("e",0))  //0
+        // console.log("erference".lastIndexOf("rence",4))  //0
+        // console.log("javascript reference".includes("r"))
+
+        // console.log("javascript refercence".indexOf("javascript",9))
+
+        let num = 0;
+        while(num<5){
+            num++;
+            console.log(num);
+        }
+>>>>>>> Stashed changes
     </script>
 
         
