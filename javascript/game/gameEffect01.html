@@ -59,12 +59,22 @@
             drag: function () {
                 $("#header").attr("style", "background:red")
                 $("#header h1").attr("style", "transform: rotate(20deg)")
-                $(".info").html("뮤직듣기 1 이 드래그 되었습니다.")
+                $(".info").html("뮤직듣기1이 드래그 중 입니다.")
             },
             stop: function () {
                 $("#header").removeAttr("style");
                 $("#header h1").removeAttr("style");
                 $(".info").html("");
+                function UserOSInfo() {
+                // navigator.platform 값을 이용하여 사용자 운영체제 정보를 가져옴
+                const osInfo = navigator.platform;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // 결과를 출력
+                document.querySelector('.info').innerHTML = `Your OS is ${osInfo} ${width} x ${height} pixels.`;
+            }
+            UserOSInfo()
             }
         });
         $(".icon2").draggable({
@@ -76,12 +86,22 @@
             drag: function () {
                 $("#header").attr("style", "background:blue")
                 $("#header h1").attr("style", "transform: rotate(0deg)")
-                $(".info").html("뮤직듣기 2 이 드래그 되었습니다.")
+                $(".info").html("뮤직듣기2이 드래그 중 입니다.")
             },
             stop: function () {
                 $("#header").removeAttr("style");
                 $("#header h1").removeAttr("style");
                 $(".info").html("");
+                function UserOSInfo() {
+                // navigator.platform 값을 이용하여 사용자 운영체제 정보를 가져옴
+                const osInfo = navigator.platform;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // 결과를 출력
+                document.querySelector('.info').innerHTML = `Your OS is ${osInfo} ${width} x ${height} pixels.`;
+            }
+            UserOSInfo()
             }
         });
         $(".icon3").draggable({
@@ -93,12 +113,22 @@
             drag: function () {
                 $("#header").attr("style", "background:green")
                 $("#header h1").attr("style", "transform: rotate(20deg)")
-                $(".info").html("뮤직듣기 3 이 드래그 되었습니다.")
+                $(".info").html("뮤직듣기3 드래그 중 입니다.")
             },
             stop: function () {
                 $("#header").removeAttr("style");
                 $("#header h1").removeAttr("style");
                 $(".info").html("");
+                function UserOSInfo() {
+                // navigator.platform 값을 이용하여 사용자 운영체제 정보를 가져옴
+                const osInfo = navigator.platform;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // 결과를 출력
+                document.querySelector('.info').innerHTML = `Your OS is ${osInfo} ${width} x ${height} pixels.`;
+            }
+            UserOSInfo()
             }
         });
         $(".icon4").draggable({
@@ -109,12 +139,22 @@
             drag: function () {
                 $("#header").attr("style", "background:yellow")
                 $("#header h1").attr("style", "transform: rotate(0deg)")
-                $(".info").html("뮤직듣기 4 이 드래그 되었습니다.")
+                $(".info").html("뮤직듣기4 드래그 중 입니다.")
             },
             stop: function () {
                 $("#header").removeAttr("style");
                 $("#header h1").removeAttr("style");
                 $(".info").html("");
+                function UserOSInfo() {
+                // navigator.platform 값을 이용하여 사용자 운영체제 정보를 가져옴
+                const osInfo = navigator.platform;
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // 결과를 출력
+                document.querySelector('.info').innerHTML = `Your OS is ${osInfo} ${width} x ${height} pixels.`;
+            }
+            UserOSInfo()
             }
         });
 
