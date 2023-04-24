@@ -24,19 +24,19 @@
         <div class="icon__box">
             <div class="icon1">
                 <img src="assets/img/game_icon01.png" alt>
-                <span>뮤직 듣기</span>
+                <span>뮤직 듣기1</span>
             </div>
             <div class="icon2">
                 <img src="assets/img/game_icon02.png" alt="뮤직">
-                <span>뮤직 듣기</span>
+                <span>뮤직 듣기2</span>
             </div>
             <div class="icon3">
                 <img src="assets/img/game_icon03.png" alt="뮤직">
-                <span>뮤직 듣기</span>
+                <span>뮤직 듣기3</span>
             </div>
             <div class="icon4">
                 <img src="assets/img/game_icon04.png" alt="뮤직">
-                <span>뮤직 듣기</span>
+                <span>뮤직 듣기4</span>
             </div>
 
         </div>
@@ -54,24 +54,67 @@
             containment: ".icon__box", scroll: false,
             start: function () {
                 $(".cursor img").attr("src", "assets/img/game_mouse01.png")
+
+            },
+            drag: function () {
+                $("#header").attr("style", "background:red")
+                $("#header h1").attr("style", "transform: rotate(20deg)")
+                $(".info").html("뮤직듣기 1 이 드래그 되었습니다.")
+            },
+            stop: function () {
+                $("#header").removeAttr("style");
+                $("#header h1").removeAttr("style");
+                $(".info").html("");
             }
         });
         $(".icon2").draggable({
             containment: ".icon__box", scroll: false,
             start: function () {
                 $(".cursor img").attr("src", "assets/img/game_mouse02.png")
+
+            },
+            drag: function () {
+                $("#header").attr("style", "background:blue")
+                $("#header h1").attr("style", "transform: rotate(0deg)")
+                $(".info").html("뮤직듣기 2 이 드래그 되었습니다.")
+            },
+            stop: function () {
+                $("#header").removeAttr("style");
+                $("#header h1").removeAttr("style");
+                $(".info").html("");
             }
         });
         $(".icon3").draggable({
             containment: ".icon__box", scroll: false,
             start: function () {
-                $(".cursor img").attr("src", "assets/img/game_mouse03.png")
+                $(".cursor img").attr("src", "assets/img/game_mouse02.png")
+
+            },
+            drag: function () {
+                $("#header").attr("style", "background:green")
+                $("#header h1").attr("style", "transform: rotate(20deg)")
+                $(".info").html("뮤직듣기 3 이 드래그 되었습니다.")
+            },
+            stop: function () {
+                $("#header").removeAttr("style");
+                $("#header h1").removeAttr("style");
+                $(".info").html("");
             }
         });
         $(".icon4").draggable({
-            containment: ".icon__box", scroll: false,
             start: function () {
                 $(".cursor img").attr("src", "assets/img/game_mouse04.png")
+
+            },
+            drag: function () {
+                $("#header").attr("style", "background:yellow")
+                $("#header h1").attr("style", "transform: rotate(0deg)")
+                $(".info").html("뮤직듣기 4 이 드래그 되었습니다.")
+            },
+            stop: function () {
+                $("#header").removeAttr("style");
+                $("#header h1").removeAttr("style");
+                $(".info").html("");
             }
         });
 
@@ -89,7 +132,7 @@
                 // navigator.platform 값을 이용하여 사용자 운영체제 정보를 가져옴
                 const osInfo = navigator.platform;
                 const width = window.innerWidth;
-			    const height = window.innerHeight;
+                const height = window.innerHeight;
 
                 // 결과를 출력
                 document.querySelector('.info').innerHTML = `Your OS is ${osInfo} ${width} x ${height} pixels.`;
@@ -125,8 +168,6 @@
             printTime();   //오른쪽 상단 시간
             printAgent();   //하단 중앙 
         }
-
-
 
     </script>
 
