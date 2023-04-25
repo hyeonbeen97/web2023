@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/bg.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/music.css">
 </head>
 
 <body>
@@ -40,6 +41,49 @@
             </div>
 
         </div>
+        <!-- 뮤직플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>Recommended music</h2>
+                    <span class="right"></span>
+                </div>   
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="assets/img/music_view01.jpg" alt="음악">
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>Dangerously</h3>
+                            <p>Charlie Puth</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/Charlie Puth-Dangerously.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전곡 재생</span>
+                            <span>재생</span>
+                            <span>다음곡 재생</span>
+                            <span>재생목록</span>
+                            <!-- <span>한곡 반복</span>
+                            <span>랜덤 반복</span>
+                            <span>정지 반복</span> -->
+                        </div>
+                    </div>
+                </div>   
+                <div class="music__footer"></div>   
+            </div>
+        </div>
     </main>
     <!-- main -->
     <footer id="footer">
@@ -49,12 +93,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
     <script>
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
             start: function () {
                 $(".cursor img").attr("src", "assets/img/game_mouse01.png")
-
             },
             drag: function () {
                 $("#header").attr("style", "background:red")
@@ -107,7 +151,7 @@
         $(".icon3").draggable({
             containment: ".icon__box", scroll: false,
             start: function () {
-                $(".cursor img").attr("src", "assets/img/game_mouse02.png")
+                $(".cursor img").attr("src", "assets/img/game_mouse03.png")
 
             },
             drag: function () {
@@ -182,31 +226,26 @@
 
             const clock = document.querySelector(".time");
 
-            // 현재 시간을 초마다 업데이트하는 함수 정의
             function updateClock() {
-                // 현재 시간을 생성
+                
                 const now = new Date();
-
-                // 시, 분, 초를 추출
+               
                 const hours = now.getHours();
                 const minutes = now.getMinutes();
                 const seconds = now.getSeconds();
                 const year = now.getFullYear();
                 const month = now.getMonth() + 1;
                 const day = now.getDate();
+                
+                const timeFormat = `${year} 년 ${month} 월 ${day} 일  ${hours} 시 ${minutes} 분`;
 
-                // 시간을 표시할 형식을 설정
-                const timeFormat = `${year}년 ${month}월 ${day}일  ${hours} : ${minutes} : ${seconds}`;
-
-                // 시간을 요소의 내용으로 설정
+                
                 clock.innerHTML = timeFormat;
-            }
+             }
 
-            // 1초마다 updateClock 함수를 실행
             setInterval(updateClock, 1000);
 
-            printTime();   //오른쪽 상단 시간
-            printAgent();   //하단 중앙 
+ 
         }
 
     </script>
