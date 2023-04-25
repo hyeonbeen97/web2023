@@ -15,9 +15,11 @@
     top: 50%;
     transform: translate(-50%,-50%);
     padding: 20px;
-    border-radius: 20px;
-    background-color:rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%,  rgba(33,33,88,1) 30%,  rgb(245, 230, 20) 70%, rgb(5, 230, 255) 100%);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    opacity: 95%;
 
 }
 .music__header {
@@ -40,22 +42,24 @@
     top: 50px;
     left: 50%;
     padding: 20px;
-    width: 90%;
+    width: 95%;
 }
 .music__view .image {
 
 }
 .music__view .image img {
-    border-radius: 20px;
+    border-radius: 0px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 10px double #ffffff;
 
 }
 
 .music__control {
     height: 400px;
-    border-radius: 30% 30% 5px 5px;
-    background-color: #fff;
+    border-radius: 600px 600px 5px 5px;
+    background-color: rgba(255, 255, 255, 0.9);
     margin-top: 200px;
+    padding: 20px;
     
 }
 
@@ -72,6 +76,8 @@
 .music__control .title p {
     color: #443410;
     margin: 15px;
+    font-family: "SCoreDream";
+
 
 }
 
@@ -79,12 +85,16 @@
     background-color: #ccc;
     height: 5px;
     border-radius: 3px;
+    font-family: "Cafe24SsurroundAir";
+
 }
 .music__control .progress .bar {
     width: 30%;
     background-color: #442020;
     height: 5px;
     border-radius: 3px;
+    font-family: "Cafe24SsurroundAir";
+
 }
 .music__control .progress .timer {
     display: flex;
@@ -92,10 +102,12 @@
     margin-top: 3px;
     justify-content: space-between;
     padding: 7px;
+    font-family: "Cafe24SsurroundAir";
+
 }
 .music__control .progress .timer span {
     color: #442020;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .music__footer {}
