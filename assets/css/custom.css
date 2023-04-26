@@ -8,7 +8,7 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #top-nav{
 	border-bottom: 1px solid #e1e6dd;
 	background: #FFF;
-	-webkit-transform: translateZ(0)
+	-webkit-transform: translateZ(0);
 
 }
 #top-nav.navbar{
@@ -52,8 +52,7 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 /* Header  */
 
 #header{
-	background:#a5d5fa center 57px;
-	padding: 10px 0 10px 0px;
+background-color: #8357eb;
 }
 #header.sub {
 	background:url(../img/header_bg.png) center 7px;
@@ -128,13 +127,13 @@ pre.pre-show{
 .header_tit {margin-top:70px; }
 .header_tit h1 {display:inline-block; font-size: 45px; text-transform:uppercase; color:#fff;}
 .header_tit h2 {margin-top:4px;}
-.header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff; b}
+.header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff; }
 .header_icon {margin: 20px 0; }
 .header_icon ul {margin:20px 0;}
 
 .header_icon {text-align: center;}
 .header_icon li {display: inline; margin: 0 2px;}
-.header_icon li a {position: relative; background-color: #77b5e6; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
+.header_icon li a {position: relative; background-color: #fd0da1; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
 .header_icon li a span {
     position: absolute; left: 50%; top: -40px; transform: translateX(-50%);
     font-size: 12px; line-height: 1.6; background: #77b5e6; padding: 3px 9px;
@@ -149,11 +148,39 @@ pre.pre-show{
     border-right: 5px solid transparent;
 }
 .header_icon li a:hover span {opacity: 1; top: -33px;}
-.header_icon li a:hover {
+
+
+.header_icon li:nth-child(1) a:hover {
     box-shadow: 
-        0 0 0 3px rgba(97,148,189,0.9) inset,
+        0 0 0 3px rgba(255, 201, 6, 0.9) inset,
         0 0 0 100px rgba(0,0,0,0.1) inset;
 }
+.header_icon li:nth-child(2) a:hover {
+    box-shadow: 
+        0 0 0 3px rgba(41, 158, 255, 0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+.header_icon li:nth-child(3) a:hover {
+    box-shadow: 
+        0 0 0 3px rgba(254, 0, 237, 0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+.header_icon li:nth-child(4) a:hover {
+    box-shadow: 
+        0 0 0 3px rgba(0, 255, 38, 0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+.header_icon li:nth-child(5) a:hover {
+    box-shadow: 
+        0 0 0 3px rgba(255, 255, 255, 0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+.header_icon li:nth-child(6) a:hover {
+    box-shadow: 
+        0 0 0 3px rgba(0, 0, 0, 0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
 
 
 
@@ -490,11 +517,3 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
     
    
 }
-
-
-
-
-
-
-
-
