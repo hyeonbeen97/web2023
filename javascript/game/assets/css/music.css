@@ -10,16 +10,14 @@
     width: 350px;
     background: #000;
     position: absolute;
-    filter: blur(5%);
+    backdrop-filter: blur(5px);
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     padding: 20px;
     border-radius: 10px;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%,  rgba(33,33,88,1) 30%,  rgb(245, 230, 20) 70%, rgb(5, 230, 255) 100%);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    opacity: 90%;
+    background-color: rgba(26, 17, 59, 0.4);
+    box-shadow: rgba(150, 119, 119, 0.8);
 
 }
 .music__header {
@@ -89,8 +87,8 @@
 
 }
 .music__control .progress .bar {
-    width: 30%;
-    background-color: #442020;
+    width: 0;
+    background-color: #252044;
     height: 5px;
     border-radius: 3px;
     font-family: "Cafe24SsurroundAir";
@@ -120,44 +118,53 @@
 }
 .music__control .control span {
     display: inline-block;
-    width: 40;
+    width: 40px;
     height: 40px;
     position: relative;
 }
-.music__control .control span:nth-child(3) {
-    border-radius: 50%;
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(35,8,111,1) 42%, rgba(0,212,255,1) 100%);
-    
+.music__control .control span:active {
+    background-color: #eafaff;
+    border-radius: 5%;
 }
-.music__control .control span i {
-    margin: 8px;
-    background-image: url(../img/music_icon.svg);
-    width: 24px;
-    height: 24px;
-    display: block;
+   
     
+.music__control .control span i {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../img/music_icon.svg);
+    background-size: 500px;
 }
 .music__control .control span i.repeat {
     background-position: 0 0;
 }
 .music__control .control span i.prev {
-    background-position: -24px 0;
-
+    background-position: -120px 0;
 }
 .music__control .control span i.play {
-    background-position: -24px -24px;
+    background-position: -160px 0;
 }
 .music__control .control span i.next {
-    background-position: -48px 0;
-
+    background-position: -240px 0;
 }
 .music__control .control span i.list {
-    background-position: -72px 0;
-
+    background-position: -280px 0;
+}
+.music__control .control span i.repeat_one {
+    background-position: -40px 0;
+}
+.music__control .control span i.shuffle {
+    background-position: -80px 0;
+}
+.music__control .control span i.stop {
+    background-position: -200px 0;
+}
+.music__control .control span:nth-child(3) {
+    background: linear-gradient(90deg, rgb(0, 0, 3) 0%, rgb(23, 11, 58) 42%, rgba(0,212,255,1) 100%);
+    border-radius: 50%;
 }
 .music__control .control span i.repeat_one {}
 .music__control .control span i.shuffle {}
-.music__control .control span i.stop {}
+
 
 .music__footer {}
