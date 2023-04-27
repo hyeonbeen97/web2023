@@ -127,5 +127,6 @@ html::before {
         
         background-position: center;
         background-repeat: no-repeat;
-        background-size: calc(110%);
+        background-size: cover;
+        
     }
