@@ -83,8 +83,6 @@ const playMusic = () => {
     musicPlay.setAttribute("title", "정지");
     musicPlay.setAttribute("class", "stop");
     musicAudio.play();
-
-
 }
 
 //정지 
