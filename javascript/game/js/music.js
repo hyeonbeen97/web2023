@@ -67,7 +67,7 @@ const musicProgressCurrent= musicWrap.querySelector(".progress .timer .current")
 const musicProgressDuration= musicWrap.querySelector(".progress .timer .duration");
 
  
-let musicIndex = 1;   //현재 음악 인덱스
+let musicIndex =5;   //현재 음악 인덱스
 
 // 음악 재생
 const loadMusic = (num) => {
