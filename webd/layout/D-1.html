@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D유형 1번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 850px;
+            background-color: #2c2020;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #207fa5;
+        }
+        #aside nav {
+            width: 100%;
+            height: 750px;
+            background-color: #6db0ca;
+        }
+
+        #main {
+            width: calc(100% - 200px);
+            height: 850px;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #f1df3d;
+            position: relative;
+        }
+        #slider  .link {
+            position: absolute;
+            width: 100px;
+            height: 300px;
+            background-color: #ee3434;
+            right: 0;
+            top: 0;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #e2c12b;
+        }
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #6fac3d;
+        }
+
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #f1bdbd;
+            display: flex;
+        }
+        .footer1 {
+            width: 200px;
+            height: inherit;
+            background-color: #d847d8;
+        }
+        .footer2{
+            width:500px;
+        }
+        .footer3 {
+            width: 300px;
+            height: inherit;
+            background-color: #ec0a0a;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <section id="slider">
+                <div class="link"></div>
+            </section>
+            <section id="banner"></section>
+            <section id="contents"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+</body>
+</html>

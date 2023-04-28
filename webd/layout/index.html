@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 인덱스</title>
+
+    <style>
+        @import url('https://webfontworld.github.io/vitro/VitroCore.css');
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+        @import url('https://webfontworld.github.io/Cafe24SsurroundAir/Cafe24SsurroundAir.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "VitroCore";
+        }
+        #wrap {
+            padding: 40px;
+            display: flex;
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+        li {
+            list-style: none;
+        }
+        #nav {
+            display: flex;
+            
+        }
+        #nav ul {
+            margin-right: 2px;
+        }
+        #nav li a {
+            border: 1px ridge #0011ff;
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin-bottom: 2px;
+            text-align: center;
+            line-height: 50px;
+            text-align: center;
+        }
+        #nav li:hover a ,
+        #nav li.active a{
+            border-color: #000;
+            background-color: #000;
+            color: #fff ;
+        }
+        #main {
+            margin: 20px;
+            margin-left: 20px;
+            border: 1px solid #ccc;
+            width: calc(100% 40px);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <nav id="nav">
+            <ul>
+                <li><a href="A-1.html">A-1</a></li>
+                <li><a href="A-2.html">A-2</a></li>
+                <li><a href="A-3.html">A-3</a></li>
+                <li><a href="A-4.html">A-4</a></li>
+
+                <li><a href="B-1.html">B-1</a></li>
+                <li><a href="B-2.html">B-2</a></li>
+                <li><a href="B-3.html">B-3</a></li>
+                <li><a href="B-4.html">B-4</a></li>
+
+                <li><a href="C-1.html">C-1</a></li>
+                <li><a href="C-2.html">C-2</a></li>
+                <li><a href="C-3.html">C-3</a></li>
+                <li><a href="C-4.html">C-4</a></li>
+
+                <li><a href="D-1.html">D-1</a></li>
+                <li><a href="D-2.html">D-2</a></li>
+                <li><a href="D-3.html">D-3</a></li>
+                <li><a href="D-4.html">D-4</a></li>
+
+                <li><a href="E-1.html">E-1</a></li>
+                <li><a href="E-2.html">E-2</a></li>
+                <li><a href="E-3.html">E-3</a></li>
+                <li><a href="E-4.html">E-4</a></li>
+            </ul>
+            <ul>
+                <li><a href="menu/m1.html">M-1</a></li>
+                <li><a href="menu/m2.html">M-2</a></li>
+                <li><a href="menu/m3.html">M-3</a></li>
+                <li><a href="menu/m4.html">M-4</a></li>
+                <li><a href="menu/m5.html">M-5</a></li>
+                <li><a href="menu/m6.html">M-6</a></li>
+            </ul>
+            <ul>
+                <li><a href="menu/s1.html">S-1</a></li>
+                <li><a href="menu/s2.html">S-2</a></li>
+                <li><a href="menu/s3.html">S-3</a></li>
+            </ul>
+        </nav>
+        <main id="main">
+            <iframe src="A-1.html" frameborder="0"></iframe>
+        </main>
+    </div>
+    <script>
+        // const mainSrc = document.querySelector(".main")
+        const lis = document.querySelectorAll("#nav ul li ")
+        const list = document.querySelectorAll("#nav ul li a")
+        const iframeImg = document.querySelector("#main iframe")
+
+        lis.forEach((li)=>{
+            li.addEventListener("click",(e)=>{
+                e.preventDefault();
+                let href = li.querySelector("a").getAttribute("href");
+                iframeImg.setAttribute("src", href)
+
+                lis.forEach(el => {
+                    el.classList.remove("active")
+                })
+                li.classList.add("active")
+            })
+        })
+    </script>
+</body>
+</html>

@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 타입 04 -b1</title>
+    <title>웹디자인 기능사 실기 B유형 4번 레이아웃</title>
     <style>
         * {
             padding: 0;
             margin: 0;
-            color: #fff;
-            text-align: center;
-            font-size: 20px;
         }
         h1,h2,h3,h4,h5,h6 {
             font-size: 20px;
@@ -19,110 +16,117 @@
         }
         #wrap {
             width: 100%;
+            height: 700px;
             margin: 0 auto;
+       }
+       .container {
+           width: 1200px;
+           height: inherit;
+           background-color: rgba(255, 225, 255, 0.6);
+           margin: 0 auto;
        }
         #header {
             width: 100%;
             height: 100px;
             background-color: #1000a3;
         }
-    
         #header .container {
             display: flex;
         }
-        .container {
-            width: 1200px;
-            margin: 0 auto;
-        }
-        
-        #header .container .logo {
+        #header h1 {
             width: 20%;
-            height: 100px;
-            background-color: #03045e;
+            background-color: #2c75a5;
         }
-        #header .container .menu {
+        #header nav {
             width: 80%;
-            height: 100px;
-            background-color: #898bee;
+            background-color: #374752;
+
         }
-        #slider .container {
-            background-color: #3861d3;
+        #slider {
+            width: 100%;
             height: 300px;
+        }
+        #contents {
+            width: 100%;
+            height: 200px;
         }
         #contents .container {
             display: flex;
         }
-        #contents .container .cont1 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #2f3e81;
+        #contents .content1{
+            width: 33.333%;
+            background-color: #fc0a0a;
         }
-        #contents .container .cont2 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #4d6cf7;
+        #contents .content2{
+            width: 33.333%;
+            background-color: #523131;
         }
-        #contents .container .cont3 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #131830;
+        #contents .content3{
+            width: 33.333%;
+            background-color: #221515;
         }
         #footer {
-            background-color: #6e13aa;
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
         }
         #footer .container {
             display: flex;
-            height: 100px;
-            flex-wrap: wrap;
-            flex-direction: column;
         }
-        #footer .container .foot1 {
+        #footer .footer1{
             width: 80%;
-            height: 50px;
-            background-color: #197dac;
         }
-        #footer .container .foot2 {
-            width: 80%;
-            height: 50px;
-            background-color: #205a75;
+        #footer .footer1-1{
+            width: 100%;
+            height: 50%;
+            background-color: #3b1010;
         }
-        #footer .container .foot3 {
+        #footer .footer1-2{
+            width: 100%;
+            height: 50%;
+            background-color: #ec2727;
+        }
+
+        #footer .footer2{
             width: 20%;
-            height: 100px;
-            background-color: #0c2c3b;
+            background-color: #49c9a9;
         }
-        
+
+    
     </style>
 </head>
 <body>
-        <header id="header">
+    <div id="wrap">
+        <div id="header">
             <div class="container">
-                <h1 class="logo">로고</h1>
-                <nav class="menu">메뉴</nav>
+                <h1></h1>
+                <nav></nav>
             </div>
-        </header> 
-        <!--header -->
-        <article id="slider">
+        </div>
+        <div id="slider">
             <div class="container">
-                이미지 슬라이더
+
             </div>
-        </article>
-        <!--slider -->
-        <section id="contents">
+
+        </div>
+        <div id="contents">
             <div class="container">
-                <article class="cont1">공지사항</article>
-                <article class="cont2">배너</article>
-                <article class="cont3">바로가기</article>
+                <div class="content1"></div>
+                <div class="content2"></div>
+                <div class="content3"></div>
             </div>
-        </section>
-        <!--contents -->
-        <footer id="footer">
+
+        </div>
+        <div id="footer">
             <div class="container">
-                <div class="foot1">로고</div>
-                <div class="foot2">하단메뉴</div>
-                <div class="foot3">카피라이터</div>
+                <div class="footer1">
+                    <div class="footer1-1"></div>
+                    <div class="footer1-2"></div>
+                </div>
+                <div class="footer2"></div>
             </div>
-        </footer>
-        <!--footer -->
+
+        </div>
+    </div>
 </body>
 </html>
