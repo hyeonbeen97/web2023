@@ -215,7 +215,7 @@
 }
 .music__list ul::-webkit-scrollbar-thumb {
     height: 30%;
-    background: #00ffdd;
+    background: #e42d5b;
     border-radius: 10px;
 }
 .music__list::-webkit-scrollbar-track {
