@@ -239,7 +239,7 @@ musicNextBtn.addEventListener("click", () =>{
 
 //뮤직리스트 버튼
 musicListbtn.addEventListener("click",() => {
-    musicList.classList.add("show")
+    musicList.classList.toggle("show")
 })
 
 musicListClose.addEventListener("click",() => {
@@ -266,41 +266,35 @@ for(let i=0; i<allMusic.length; i++){
 
     //리스트에 음악 시간 불러오기
     let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);  //리스트에서 시간을 표시할 선택자
-    let liAudio  = musicListUl.querySelector(`.${allMusic[i].audio}`);  //리스트에서 오디오 파일 선택자
-    liAudio.addEventListener("loadeddata", () => {
+    let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);  //리스트에서 오디오 파일 선택자
+    liAudio.addEventListener("loadeddata",() => {
         let audioDuration = liAudio.duration;
-        // console.log(audioDuration)
-        let totalMin =Math.floor(audioDuration/60);
-        let totalSec =Math.floor(audioDuration%60);
-        
+        let totalMin = Math.floor(audioDuration / 60);
+        let totalSec = Math.floor(audioDuration % 60);
         if(totalSec < 10) totalSec = `0${totalSec}`;
         liAudioDuration.innerText = `${totalMin}:${totalSec}`
-        liAudioDuration.setAttribute = ("data-duration",`${totalMin}:${totalSec}`)
+        liAudioDuration.setAttribute ("data-duration",`${totalMin}:${totalSec}`);
     });
-
 }
 
 //뮤직 리스트를 클릭하면 재생
 function playListMusic(){
-    const musicListAll = musicListUl.querySelectorAll("li");  //뮤직 리스트 목록
+    const musicListAll = musicListUl.querySelectorAll("li");       // 뮤직 리스트 목록
+    
+    for(let i=0; i<musicListAll.length; i++){
+        let audioTag = musicListAll[i].querySelector(".audio-duration");
 
-    for(let i =0 ; i<musicListAll.length; i++){
-        let audioTag = musicListAll[i].querySelector(".audio-duration")
-        
-        musicListAll[i].setAttribute("onclick","clicked(this)");
+        musicListAll[i].setAttribute("onclick", "clicked(this)");
 
         if(musicListAll[i].classList.contains("playing")){
             musicListAll[i].classList.remove("playing");
             let dataAudioDuration = audioTag.getAttribute("data-duration");
-            audioTag.innerText = dataAudioDuration;
-
+           audioTag.innerText = dataAudioDuration;
         }
 
         if(musicListAll[i].getAttribute("data-index") == musicIndex){
             musicListAll[i].classList.add("playing");
             audioTag.innerText = "재생중";
-
-
         }
     }
 }
