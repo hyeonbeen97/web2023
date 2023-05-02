@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +22,20 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
 
-    <!-- CSS(섹션별) @import --> 
-  
+    <!-- CSS(섹션별) @import -->
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
 </head>
+
 <body>
     <div id="skip">
         <a href="#">헤더 영역 바로가기</a>
@@ -63,7 +73,69 @@
         <!-- sliderType -->
         <section id="sliderType" class="nexon">
             <div class="slider__inner">
-                <div class="slider">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">가구의 선택은 색상부터</h3>
+                                    <p class="desc">가구 색을 고르는 것은 방의 분위기와 느낌을 결정하는 중요한 요소 중 하나입니다.
+                                        가구 색상을 선택할 때, 방의 전체적인 색상 조화를 고려해야 합니다. 일반적으로, 
+                                        세 가지 색상을 조화롭게 조합하여 균형있는 디자인을 만들 수 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">가구의 선택은 색상부터</h3>
+                                    <p class="desc">가구 색을 고르는 것은 방의 분위기와 느낌을 결정하는 중요한 요소 중 하나입니다.
+                                        가구 색상을 선택할 때, 방의 전체적인 색상 조화를 고려해야 합니다. 일반적으로, 
+                                        세 가지 색상을 조화롭게 조합하여 균형있는 디자인을 만들 수 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">가구의 선택은 색상부터</h3>
+                                    <p class="desc">가구 색을 고르는 것은 방의 분위기와 느낌을 결정하는 중요한 요소 중 하나입니다.
+                                        가구 색상을 선택할 때, 방의 전체적인 색상 조화를 고려해야 합니다. 일반적으로, 
+                                        세 가지 색상을 조화롭게 조합하여 균형있는 디자인을 만들 수 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">EVENT</span>
                         <h3 class="title">가구의 선택은 색상부터</h3>
@@ -86,7 +158,7 @@
                         <a href="#" class="play"><span class="blind">플레이</span></a>
                         <a href="#" class="stop"><span class="blind">정지</span></a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- sliderType -->
@@ -104,7 +176,7 @@
                         <div class="image__body">
                             <h3 class="title">비슷한 색을 찾아라!</h3>
                             <p class="desc">자신의 방의 색이 무엇인지 확인하고 <br>
-                            그 색에 맞는 가구를 선택한다.</p>
+                                그 색에 맞는 가구를 선택한다.</p>
                             <a href="#" class="btn">자세히보기</a>
                         </div>
                     </artcle>
@@ -128,14 +200,16 @@
             <h2 class="blind">나에게 맞는인테리어</h2>
             <div class="container">
                 <div class="imgText__inner">
-                    <article class="text" >
+                    <article class="text">
                         <span>NOTICE</span>
                         <h3>나에게 맞는<br>인테리어</h3>
                         <p>인테리어를 선택하는 것은 매우 개인적인 결정입니다. <br>그러나 일반적으로는 다음과 같은 단계를 거쳐 진행됩니다.</p>
                         <ul>
-                            <li><a href="#">1. 스타일 결정하기: 먼저 자신이 선호하는 스타일을 결정해야 합니다. 전통적인, 현대적인, 귀여운, 거친 등 다양한 스타일이 있으며, 이 중 하나를 선택해야 합니다.<br></a></li>
+                            <li><a href="#">1. 스타일 결정하기: 먼저 자신이 선호하는 스타일을 결정해야 합니다. 전통적인, 현대적인, 귀여운, 거친 등 다양한 스타일이 있으며,
+                                    이 중 하나를 선택해야 합니다.<br></a></li>
                             <li><a href="#">2. 공간 파악하기: 다음으로는 공간을 파악해야 합니다. 방의 크기, 형태, 창문의 위치, 문의 위치 등을 고려해야 합니다.</li>
-                            <li><a href="#">3. 가구 선택하기: 가구를 선택할 때는 공간과 스타일을 고려해야 합니다. 가구의 크기, 색상, 재질 등을 결정할 때도 스타일을 기반으로 선택해야 합니다.</a></li></a></li>
+                            <li><a href="#">3. 가구 선택하기: 가구를 선택할 때는 공간과 스타일을 고려해야 합니다. 가구의 크기, 색상, 재질 등을 결정할 때도 스타일을 기반으로
+                                    선택해야 합니다.</a></li></a></li>
                         </ul>
                     </article>
                     <article class="img i1">
@@ -152,38 +226,38 @@
         <!-- cardType -->
         <section id="cardType" class="nexon section container">
             <div class="container">
-            <h2 class="section__h2">가구를 고르는 방법</h2>
-            <p class="section__desc">가구를 선택하기 전에 원하는 스타일을 결정합니다. 현대적인 디자인, 전통적인 디자인, 미니멀한 디자인 등 다양한 스타일이<br> 
-            있으므로, 자신이 원하는 스타일을 먼저 결정해야 합니다.</p>
+                <h2 class="section__h2">가구를 고르는 방법</h2>
+                <p class="section__desc">가구를 선택하기 전에 원하는 스타일을 결정합니다. 현대적인 디자인, 전통적인 디자인, 미니멀한 디자인 등 다양한 스타일이<br>
+                    있으므로, 자신이 원하는 스타일을 먼저 결정해야 합니다.</p>
             </div>
-                <artcle class="card__inner container">
-                    <div class="card">
-                        <figure class="card__header">
-                            <img src="assets/img/cardType01_01.jpg" alt="기능과 사용성 검토">
-                        </figure>
-                        <div class="card__body">
-                            <h3 class="title">기능과 사용성 검토</h3>
-                        </div>  
+            <artcle class="card__inner container">
+                <div class="card">
+                    <figure class="card__header">
+                        <img src="assets/img/cardType01_01.jpg" alt="기능과 사용성 검토">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">기능과 사용성 검토</h3>
                     </div>
-    
-                    <div class="card">
-                        <figure class="card__header">
-                            <img src="assets/img/cardType01_02.jpg" alt="공간 계획">
-                        </figure>
-                        <div class="card__body">
-                            <h3 class="title">공간 계획</h3>
-                        </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card__header">
+                        <img src="assets/img/cardType01_02.jpg" alt="공간 계획">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">공간 계획</h3>
                     </div>
-    
-                    <div class="card">
-                        <figure class="card__header">
-                            <img src="assets/img/cardType01_03.jpg" alt="스타일 결정">
-                        </figure>
-                        <div class="card__body">
-                            <h3 class="title">스타일 결정</h3>
-                        </div>
+                </div>
+
+                <div class="card">
+                    <figure class="card__header">
+                        <img src="assets/img/cardType01_03.jpg" alt="스타일 결정">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">스타일 결정</h3>
                     </div>
-                </artcle>
+                </div>
+            </artcle>
         </section>
         <!-- cardType -->
 
@@ -194,7 +268,7 @@
                 <h3>셀프 플래닝</h3>
                 <p>꿈의 주방, 완벽한 우리 집, 홈오피스 또는 옷장 수납시스템을 설계해 보세요. 간단한 방식의 IKEA 플래<br>
                     닝 툴을 활용해 색상, 스타일, 크기, 구성을 마음대로 바꿔 보면서 내게 꼭 맞는 디자인으로 꾸며 보세요.
-                    </p>
+                </p>
                 <a href="https://webeen.tistory.co">https://webeen.tistory.co</a>
             </div>
         </section>
@@ -208,35 +282,41 @@
                 <div class="text__inner">
                     <div class="text t1">
                         <h3 class="text__title">미니멀리즘?</h3>
-                        <p class="text__desc">미니멀리즘(minimalism)은 극도로 단순한 것을 추구하는 미술 및 디자인 용어로, 극단적으로 간결하고 단순한 것을 만드는 것을 목표로 합니다. 이는 미술 분야뿐만 아니라 일상생활에도 적용되는 철학이 될 수 있습니다.</p>
+                        <p class="text__desc">미니멀리즘(minimalism)은 극도로 단순한 것을 추구하는 미술 및 디자인 용어로, 극단적으로 간결하고 단순한 것을 만드는 것을
+                            목표로 합니다. 이는 미술 분야뿐만 아니라 일상생활에도 적용되는 철학이 될 수 있습니다.</p>
                         <a href="#" class="text__btn">더보기</a>
                     </div>
                     <div class="text t2">
                         <h3 class="text__title">간결함</h3>
-                        <p class="text__desc">미니멀리즘의 가치 중 하나는 간결함입니다. 복잡한 것을 단순화하면서도 중요한 것들만을 추려내어 집중하는 것입니다. 이를 통해 삶이 더욱 단순하고 깨끗하며, 중요한 것에 대한 집중력을 높일 수 있다는 것입니다.</p>
+                        <p class="text__desc">미니멀리즘의 가치 중 하나는 간결함입니다. 복잡한 것을 단순화하면서도 중요한 것들만을 추려내어 집중하는 것입니다. 이를 통해 삶이
+                            더욱 단순하고 깨끗하며, 중요한 것에 대한 집중력을 높일 수 있다는 것입니다.</p>
                         <a href="#" class="text__btn">더보기</a>
                     </div>
                     <div class="text t3">
                         <h3 class="text__title">미니멀 인테리어</h3>
-                        <p class="text__desc">미니멀 인테리어는 불필요한 소품이나 장식을 최소한으로 줄이고, 깔끔하고 간결한 가구와 인테리어 소품을 사용하여 조용하고 심플한 공간을 만들어냅니다. 이 스타일은 간결함과 깔끔함을 추구한다.</p>
+                        <p class="text__desc">미니멀 인테리어는 불필요한 소품이나 장식을 최소한으로 줄이고, 깔끔하고 간결한 가구와 인테리어 소품을 사용하여 조용하고 심플한 공간을
+                            만들어냅니다. 이 스타일은 간결함과 깔끔함을 추구한다.</p>
                         <a href="#" class="text__btn">더보기</a>
                     </div>
                     <div class="text t4">
                         <h3 class="text__title">미니멀리즘 가구</h3>
-                        <p class="text__desc">미니멀리즘 가구는 극도로 단순하면서도 기능적이며 실용적인 가구 디자인을 의미합니다. 불필요한 장식이나 장식적인 요소를 배제하고, 필요한 기능만을 갖춘 간결한 디자인을 특징으로 합니다.간결함</p>
+                        <p class="text__desc">미니멀리즘 가구는 극도로 단순하면서도 기능적이며 실용적인 가구 디자인을 의미합니다. 불필요한 장식이나 장식적인 요소를 배제하고,
+                            필요한 기능만을 갖춘 간결한 디자인을 특징으로 합니다.간결함</p>
                         <a href="#" class="text__btn">더보기</a>
                     </div>
                     <div class="text t5">
                         <h3 class="text__title">대표적인 예시</h3>
-                        <p class="text__desc">미니멀리즘 가구의 대표적인 예시로는 플랫폼 베드, 모던 소파, 간단한 책상, 간이 침대, 빈티지 의자 등이 있습니다. 이러한 가구들은 깔끔하고 모던한 분위기를 연출하며, 공간 활용성도 뛰어납니다.</p>
+                        <p class="text__desc">미니멀리즘 가구의 대표적인 예시로는 플랫폼 베드, 모던 소파, 간단한 책상, 간이 침대, 빈티지 의자 등이 있습니다. 이러한 가구들은
+                            깔끔하고 모던한 분위기를 연출하며, 공간 활용성도 뛰어납니다.</p>
                         <a href="#" class="text__btn">더보기</a>
                     </div>
                     <div class="text t6">
                         <h3 class="text__title">간소화</h3>
-                        <p class="text__desc">미니멀리즘 가구는 소비자들이 소유하는 물건의 양을 줄이는 미니멀리즘 운동과도 관련이 있습니다. 소유하고 있는 물건의 수를 최소화함으로써 삶의 단순함과 가치를 높이는 것을 목적으로 합니다. </p>
+                        <p class="text__desc">미니멀리즘 가구는 소비자들이 소유하는 물건의 양을 줄이는 미니멀리즘 운동과도 관련이 있습니다. 소유하고 있는 물건의 수를
+                            최소화함으로써 삶의 단순함과 가치를 높이는 것을 목적으로 합니다. </p>
                         <a href="#" class="text__btn">더보기</a>
                     </div>
-    
+
                 </div>
             </div>
         </section>
@@ -316,11 +396,47 @@
                     </div>
                 </div>
                 <address class="footer__right">
-                    2023 kimhyeonbeen 가구 사이트 Portfolio is Power<br>All Right  Reserved
+                    2023 kimhyeonbeen 가구 사이트 Portfolio is Power<br>All Right Reserved
                 </address>
             </div>
-        </div>  
+        </div>
     </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable:true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    document.querySelector(".swiper-button-play").style.display = "none";
+
+    document.querySelector(".swiper-button-play").addEventListener("click", ()=>{
+        swiper.autoplay.start();
+        document.querySelector(".swiper-button-stop").style.display = "block";
+        document.querySelector(".swiper-button-play").style.display = "none";
+
+    })
+    document.querySelector(".swiper-button-stop").addEventListener("click", ()=>{
+        swiper.autoplay.stop();
+        document.querySelector(".swiper-button-stop").style.display = "none";
+        document.querySelector(".swiper-button-play").style.display = "block";
+    })
+</script>
+
 </html>
