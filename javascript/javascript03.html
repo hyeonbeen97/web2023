@@ -1128,16 +1128,16 @@
     //함수가 실행되었습니다.12
 
 // 콜백함수 반복
-// {
-//     function func(index){
-//         console.log("함수가 실행되었습니다."+ index);
-//     }
-//     function callback(num){
-//         for(let i=1; i<=10; i++)
-//         num(i);
-//     }
-//     callback(func)
-// }
+{
+    function func(index){
+        console.log("함수가 실행되었습니다."+ index);
+    }
+    function callback(num){
+        for(let i=1; i<=10; i++)
+        num(i);
+    }
+    callback(func)
+}
 
 28//콜백함수 (동기/비동기)
 {
@@ -1163,18 +1163,18 @@
     // }
 
     // //03
-    // function funcA(){
-    //     setTimeout(()=>{
-    //         console.log("funcA가 실행되었습니다.");
-    //         callback();
-    //     },1000)
-    // }
-    // function funcB(){
-    //     console.log("funcB가 실행되었습니다.");
-    // }
-    // funcA(function(){
-    //     funcB()
-    // });
+    function funcA(){
+        setTimeout(()=>{
+            console.log("funcA가 실행되었습니다.");
+            callback();
+        },1000)
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+    funcA(function(){
+        funcB()
+    });
 
     //04 : 콜백지옥
     function funcA(callback){
