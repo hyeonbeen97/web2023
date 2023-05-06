@@ -51,9 +51,12 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 
 /* Header  */
 
-#header{
-background-color: #8357eb;
-}
+#header {
+	background-image: url(/assets/img/Linear\ Gradient-1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
 #header.sub {
 	background:url(../img/header_bg.png) center 7px;
 	padding: 35px 0 55px 0px;

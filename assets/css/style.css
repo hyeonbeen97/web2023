@@ -392,11 +392,12 @@
 	text-transform: uppercase;
 	text-align: center;
 	padding-top:130px; 
-	opacity: 1;
 	filter: alpha(opacity=100);
+	background-image: url(/assets/img/Linear\ Gradient-2.png);
 }
 
 .image-wrap .hover-wrap .overlay-img-donut.black {
+	background-image: url(/assets/img/Linear\ Gradient-2.png);
 
 	background: #000;
 
