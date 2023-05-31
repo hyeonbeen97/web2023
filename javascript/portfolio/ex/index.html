@@ -241,7 +241,7 @@
     <script>
         //글씨 분리하기
         document.querySelectorAll(".split").forEach(desc=>{
-            let splitText =desc.innerText;
+            let splitText = desc.innerText;
             let spitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
                 spitWrap = "<span aria-hidden='true'>" + spitWrap + "</span>"
                 desc.innerHTML = spitWrap;
@@ -259,6 +259,7 @@
         gsap.set(".img__inner .ii1", {opacity:0, scale:50, rotationY:"+=720", x:700})
         gsap.set(".img__inner .ii2", {opacity:0, scale:50, rotationY:"+=720", y:700})
         gsap.set(".img__inner .ii3", {opacity:0, scale:50, rotationY:"+=720", x:700})
+        
         //메인 애니메이션
         setTimeout(()=>{
             let tl = gsap.timeline();
@@ -271,7 +272,7 @@
             tl.to("#header",{duration: 0.4, opacity:1, y:0, ease: "elastic.out(1, 0.3)"})
             tl.to("#footer",{duration: 0.4, opacity:1, bottom:100, ease: "elastic.out(1, 0.3)"})
             tl.to("#webgl",{opacity:1})
-        },1000)
+        }, 1000)
     </script>
 </body>
 </html>
