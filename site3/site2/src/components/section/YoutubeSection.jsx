@@ -15,16 +15,16 @@ function YoutubeSection(props) {
                 </div>
                 <div className="youtube__item">
                     <div>
-                        <img src="./assets/images/" alt="유튜브" />
+                        <img src="./assets/images/youtube/x1.png" alt="유튜브" />
                     </div>
                     <div>
-                        <img src="./assets/images/" alt="유튜브" />
+                        <img src="./assets/images/youtube/x1.png" alt="유튜브" />
                     </div>
                     <div>
-                        <img src="./assets/images/" alt="유튜브" />
+                        <img src="./assets/images/youtube/x1.png" alt="유튜브" />
                     </div>
                     <div>
-                        <img src="./assets/images/" alt="유튜브" />
+                        <img src="./assets/images/youtube/x1.png" alt="유튜브" />
                     </div>
                 </div>
             </div>

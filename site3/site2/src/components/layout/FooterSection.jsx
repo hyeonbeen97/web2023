@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function FooterSection(props) {
     return (
         <footer id="footer" role="contentinfo"  className={props.attr}>

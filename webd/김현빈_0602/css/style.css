@@ -142,14 +142,14 @@ ul.submenu {
     background-size: cover;
 }
 .slider__inner .slide.s1  {
-    background-image: url(/images/image\ 1.png);
+    background-image: url(../images/image\ 1.png);
 }
 .slider__inner .slide.s2  {
-    background-image: url(/images/image\ 2.png);
+    background-image: url(../images/image\ 2.png);
 
 }
 .slider__inner .slide.s3 {
-    background-image: url(/images/image\ 3.png);
+    background-image: url(../images/image\ 3.png);
 
 }
 .slide {
@@ -182,7 +182,7 @@ ul.submenu {
 .banner__inner {
     width: 100%;
     height: 100%;
-    background-image: url(/images/banner.png);
+    background-image: url(../images/banner.png);
     box-sizing: border-box;
     background-size: cover;
     background-position: top center;
