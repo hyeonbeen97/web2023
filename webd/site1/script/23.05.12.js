@@ -48,7 +48,7 @@ $(function(){
         $(this).find(".submenu").stop().slideUp(200);
     });  
 
-    //슬라이드 : 페이드 효과
+    //슬라이드 : 페이드 효과 
 
     let currentIndex = 0
     const $slider = $(".slider");
