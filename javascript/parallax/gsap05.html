@@ -12,9 +12,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
         <style>
-            body {
-                overflow-x: hidden;
-            }
+        body {
+            overflow-x: hidden;
+        }
         #header {
             position: fixed;
             z-index: 10000;
@@ -292,6 +292,63 @@
                 markers: true,
             }) 
 
+
+            const ani5 = gsap.timeline();
+            ani5.fromTo("#section5 .parallaxs__item__img",
+            { rotation: 720, y:-300, scale: 1},
+            { rotation: 0 , y: 300, scale: 0}
+            )
+
+
+
+            ScrollTrigger.create({
+                animation: ani5,
+                trigger: "#section5",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin:true,
+                anticipatePin: true,
+                markers: true,
+            }) 
+
+            const ani6 = gsap.timeline();
+            ani6.fromTo("#section6 .parallaxs__item__img",
+            { rotation: 720, x:-300, scale: 1},
+            { rotation: 0 , x: 300, scale: 2},
+            )
+
+
+
+            ScrollTrigger.create({
+                animation: ani6,
+                trigger: "#section6",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin:true,
+                anticipatePin: true,
+                markers: true,
+            }) 
+
+            const ani7 = gsap.timeline();
+            ani7.fromTo("#section7 .parallaxs__item__img",
+            { rotation: 720, x:-300, y:300, scale: 1, ani1},
+            { rotation: 0 , x: 300, y:0, scale: 2, ani1}
+            )
+
+
+
+            ScrollTrigger.create({
+                animation: ani7,
+                trigger: "#section7",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin:true,
+                anticipatePin: true,
+                markers: true,
+            }) 
 
         </script>
     </body>
