@@ -1,0 +1,129 @@
+#textImgType {
+    padding: 50px 0;
+}
+.textImgType__inner {
+
+}
+.textImgType__inner div {
+}
+
+.women h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.women__inner {
+    display: flex;
+}
+/* textImgType__left */
+.textImgType__left {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.textImgType__left img {
+    margin-top: 50px;
+    width: 50%;
+}
+.textImgType__left .womendesc1 {
+    margin-top: 50px;
+    width: 40%;
+}
+.womendesc1 h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.womendesc1 p {
+    font-size: 12px;
+}
+.womenBtn a {
+    font-size: 10px;
+}
+
+/* textImgType__right */
+.textImgType__right {
+    width: 50%;
+    position: relative;
+
+}
+.textImgType__right img {
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    transform: scale(80%);
+}
+.womendesc2 {
+    position: absolute;
+    top: 63%;
+    left: 10%;
+}
+.womendesc2 h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.womendesc2 p {
+    font-size: 12px;
+}
+.men h3 {
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.men__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.textImgTypem__left {
+    width: 50%;
+    position: relative;
+}
+
+.textImgTypem__left img {
+    position: absolute;
+    top: 0%;
+    left: -30%;
+    /* transform: scale(80%); */
+}
+.mendesc1 {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    
+}
+.mendesc1 h4 {
+    font-size: 16px;
+}
+.mendesc1 p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.textImgTypem__right {
+    width: 50%;
+    display: flex;
+    text-align: right;
+}
+.textImgTypem__right img {
+    width: 50%;
+    margin-top: 35%;
+    margin-left: 50px;
+}
+.mendesc2 {
+    margin-top: 65%;
+    margin-left: 30px;
+}
+.menBtn {
+    text-align: right;
+    margin-top: 15%;
+}
+.mendesc2 h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.mendesc2 p {
+    font-size: 12px;
+}
+.men {
+    margin-top: 120px;
+}
+

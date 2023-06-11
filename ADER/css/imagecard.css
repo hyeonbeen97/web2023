@@ -1,0 +1,54 @@
+#cardsliderType {
+    margin-top: 70px;
+    position: relative;
+    margin-bottom: 150px;
+
+
+}
+#cardsliderType h3{
+    font-size: 20px;
+    margin-left: 160px;
+}
+.cardsliderType__slider {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 400px;
+}
+.cardsliderType__slide {
+    margin-left: 15px;
+}
+.cardsliderType__slide1 img {
+    object-fit: cover;
+    object-position: center;
+}
+.cardsliderType__btn {
+    display: flex;
+    justify-content: space-between;
+}
+.cst__btn__left::before{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 55px;
+    top:  55%;
+    left: 15%;    
+    background-image: url(../images/cst_icon_L.png);
+    background-size: contain;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.cst__btn__right::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 55px;
+    top:  55%;
+    right: 3%;    
+    background-size: contain;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-image: url(../images/cst_icon_R.png);
+
+}

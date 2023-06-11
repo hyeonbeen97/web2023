@@ -1,0 +1,60 @@
+#header {
+    width: 100%;
+    height: 100px;
+}
+.header__inner {
+    display: flex;
+    margin: 0 auto;
+}
+.header__logo {
+    width: 20%;
+    margin-top: 1.5em;
+}
+.header__logo > a {
+    font-size: 30px;
+    font-family: "Futura";
+    font-weight: 900;
+}
+.header__menu__left {
+    width: 50%;
+    margin-top: 2em;
+
+}
+.header__menu__left > ul  {}
+.header__menu__left > ul > li {
+    display: inline-block;
+    padding-left: 30px;
+}
+.header__menu__left > ul > li > a  {}
+
+.header__menu__right {
+    width: 15%;
+    margin-top: 2em;
+    text-align: right;
+
+}
+
+.header__menu__right > ul {}
+.header__menu__right > ul > li {
+    display: inline-block;
+    padding-left: 10px;
+    
+}
+.header__menu__right > ul > li > a {}
+
+
+.header__menu__icon {
+    width: 15%;
+    margin-top: 2em;
+    text-align: right;
+
+}
+
+.header__menu__icon > ul {}
+.header__menu__icon > ul > li {
+    display: inline-block;
+    
+}
+.header__menu__icon > ul > li > a {
+    font-size: 10px;
+}
