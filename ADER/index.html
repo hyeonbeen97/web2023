@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <script defer src="./js/scrtipt.js"></script>
 </head>
 <body>
     <div id="skip">
@@ -250,43 +252,47 @@
         </section>
     </main>
     <!-- main -->
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="footer__inner container">
+            <div class="bluemark">
+                <input type="text" placeholder="BLUE MARK 인증번호를 입력하세요!">
+                <button>확인</button>
+            </div>
+            <div class="footer__desc">
+                블루 마크는 아더 브랜드의 가품 근절을 통해 가품으로부터 소비자를 보호하고 정품인증과 소비자 보호를 넘어 청렴한 문화 의식을 알리기 위한 문화 캠페인이다.
+                이를 위해 만들어진 ‘블루 마크 택’은 아더가 제조한 정식 제품임을 보증하는 역할을 한다. 이 캠페인은 블루 컬러에서부터 시작되는데, 여기서 블루라는 컬러는
+                ‘청렴함, 순수함, 오리지널리티’의 의미를 함축하고 있다.
+            </div>
+            <div class="footer__main">
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리 방침</a></li>
+                </ul>
+                <div class="footer__r">
+                    <p>
+                        회사정보
+                    Company ADER | Business Name FIVE SPACE CO.,LTD | Business License 760-87-01757 |
+                    MAIL-ORDER LICENSE NO. 2021-서울성동-01588 | CEO Hann | office ADER 3F 53, Yeonmujang-gil, Seongdong-gu, Seoul, Korea
+                    
+                    C/S office ADER 3F 53, Yeonmujang-gil, Seongdong-gu, Seoul, Korea
+                    TEL. 02-792-2232 | Office hour Mon - Fri AM 10:00 - PM 5:00
+                    
+                    ©2021 ADER All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- footer -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <script>
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-
-        pagination: {
-            el: '.swiper-pagination',
-            clickable:true,
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    document.querySelector(".swiper-button-play").style.display = "none";
-
-    document.querySelector(".swiper-button-play").addEventListener("click", ()=>{
-        swiper.autoplay.start();
-        document.querySelector(".swiper-button-stop").style.display = "block";
-        document.querySelector(".swiper-button-play").style.display = "none";
-
-    })
-    document.querySelector(".swiper-button-stop").addEventListener("click", ()=>{
-        swiper.autoplay.stop();
-        document.querySelector(".swiper-button-stop").style.display = "none";
-        document.querySelector(".swiper-button-play").style.display = "block";
-    })
+    
 
 
 </script>

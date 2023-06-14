@@ -1,0 +1,48 @@
+#footer {
+    border-top: 3px solid blue;
+    margin-bottom: 50px;
+}
+.footer__inner {
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+}
+.footer__inner .bluemark input {
+    width: 500px;
+    height: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 3px solid blue;
+}
+.footer__inner .bluemark button {
+    background-color: blue;
+    color: #fff;
+    width: 50px;
+    height: 45px;
+}
+.footer__desc {
+    font-size: 12px;
+}
+.footer__main {
+    margin-top: 30px;
+    display: flex;
+}
+.footer__main > ul {
+    text-align: left;
+}
+.footer__main > ul > li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer__r {
+    width: 220px;
+    display: inline-block;
+    text-align: right;
+    margin-left: 460px;
+    
+}
+.footer__r p {
+    font-size: 10px;
+}
