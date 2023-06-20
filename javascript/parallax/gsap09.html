@@ -143,6 +143,8 @@
         skewSetter = gsap.quickSetter(".parallax__item__img", "skewY", "deg"), // fast
         clamp = gsap.utils.clamp(-20, 20);
 
+        //스무스?
+
         ScrollTrigger.create({
             onUpdate: (self) => {
                 let skew = clamp(self.getVelocity() / -300);
