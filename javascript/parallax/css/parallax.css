@@ -129,7 +129,6 @@
     background-position: center center;
     background-size: cover;
     filter: saturate(0%);
-    background-position: center center;
     transition: filter 1s;
 }
 .parallax__item__img:hover {
